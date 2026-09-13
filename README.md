@@ -2,7 +2,7 @@
 
 GEVR lets you play **GoldenEye 007 in VR** on PC (OpenXR). It is a **native** port track — not an emulator and not a ROM dump.
 
-**Beta status:** the game **works** and is fun enough to test. It also still **crashes and has rough edges** while we optimize. That is expected. If something breaks or looks wrong, please **[open a GitHub Issue](https://github.com/no6969el/GEVR/issues)** so we can fix it.
+**What “Beta” means here:** we are inviting outside testers and Issues. Maturity is still **early** (think **Beta 0 / public alpha**): the game **works** and is fun enough to play, but it **crashes**, has unfinished corners, and we are actively optimizing. That is expected — please **[open a GitHub Issue](https://github.com/no6969el/GEVR/issues)** when something breaks.
 
 You must already own a legal GoldenEye ROM. **We never provide ROMs.**
 
@@ -22,9 +22,11 @@ Screenshots or a short clip help. No need for huge log dumps unless we ask.
 
 ---
 
-## How to play (when a Beta build is published)
+## How to play (when a build is published)
 
-Playable Beta builds will appear under **[Releases](https://github.com/no6969el/GEVR/releases)** when we publish one. **Right now this page is ready for testers and Issues; a downloadable zip is not attached yet.**
+Playable builds will appear under **[Releases](https://github.com/no6969el/GEVR/releases)** when we publish one. **Right now this page is ready for testers and Issues; a downloadable zip is not attached yet.**
+
+The first public zip will be tagged as an early **Beta 0** build (alpha-level stability, Beta-style tester invite). Later zips stay under the Beta label as things firm up.
 
 When a Release zip is up:
 
@@ -41,7 +43,7 @@ More detail for testers: [`docs/BETA.md`](docs/BETA.md).
 
 ## What works / what's rough (plain English)
 
-**In good shape for Beta testing (private wear, mid-September 2026):**
+**In good shape for testing (private wear, mid-September 2026):**
 - VR headset play (OpenXR) with head look and controller aiming
 - Walking / turning feel usable
 - Gun aim and on-gun sight when you squeeze ADS
