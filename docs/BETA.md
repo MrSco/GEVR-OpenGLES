@@ -1,6 +1,6 @@
 # Beta testing guide
 
-GEVR is in **public Beta preparation**. The game is playable on the private workshop and will be offered as Release zips for testers. Expect **crashes** and unfinished corners — file them on Issues.
+GEVR’s public label is **Beta** (outside testers + Issues). Build maturity is still **early** — the first public zip is **Beta 0** (alpha-level stability). Expect **crashes** and unfinished corners; file them on Issues.
 
 ## Before you start
 
@@ -11,7 +11,7 @@ GEVR is in **public Beta preparation**. The game is playable on the private work
 
 ## Install and run (Release zip)
 
-1. Download and unzip the Beta build.
+1. Download and unzip the Beta build (start with **Beta 0** when it lands).
 2. Point the launcher at your ROM (see that Release's notes — paths can change between builds).
 3. Start the game. **VR is default**; use the flat / desktop option if you only need a quick check.
 4. Play a bit. If it crashes or looks wrong, [open an Issue](https://github.com/no6969el/GEVR/issues).
@@ -26,7 +26,7 @@ GEVR is in **public Beta preparation**. The game is playable on the private work
 
 ## What not to expect yet
 
-- A polished store-style installer on every OS
+- Store-polish stability or a finished installer on every OS
 - Quest-as-primary (PC VR first)
 - Perfect body / hands
 - Zero crashes
