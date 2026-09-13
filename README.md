@@ -10,9 +10,10 @@ You must already own a legal GoldenEye ROM. **We never provide ROMs.**
 
 ## Report bugs (please do this)
 
-→ **[Issues](https://github.com/no6969el/GEVR/issues)**
+→ **[Issues](https://github.com/no6969el/GEVR/issues)** for crashes and bugs  
+→ **[Discussions](https://github.com/no6969el/GEVR/discussions)** for questions, ideas, and setup chat ([welcome post](https://github.com/no6969el/GEVR/discussions/1))
 
-A useful report is short:
+A useful bug report is short:
 - Flat screen or VR? Which headset?
 - What were you doing?
 - Crash, freeze, missing characters, wrong graphics, aim off, etc.?
