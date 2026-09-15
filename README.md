@@ -20,7 +20,7 @@ GEVR is a from-source PC port of *GoldenEye 007* built for real VR (OpenXR). Not
 2. Unzip anywhere.
 3. Put your **USA GoldenEye `.z64` ROM** where the starter asks (or drop it on the app).
 4. Launch. Default is **VR**; flat/monitor works too.
-5. Put on the headset. Recenter. Enjoy Facility.
+5. Put on the headset. Recenter. Enjoy GEVR!
 
 No ROM in the download. You bring yours.
 
