@@ -68,7 +68,7 @@ Fuller list: [`docs/ROADMAP.md`](docs/ROADMAP.md). Star + Watch if you want the 
 
 One-liner: *Native from-source GoldenEye VR for PC OpenXR - bring your own ROM.*
 
-Longer: GEVR rebuilds GoldenEye on PC so VR can be done properly (stereo, 6DOF, controller aim), instead of stretching | emulator. Beta means it is playable and imperfect on purpose while we clear crashes and comfort. Multiplayer and bigger social features are on the roadmap after the solo VR base is something we are proud to hand strangers.
+Longer: GEVR rebuilds GoldenEye on PC so VR can be done properly (stereo, 6DOF, controller aim), instead of stretching an emulator. Beta means it is playable and imperfect on purpose while we clear crashes and comfort. Multiplayer and bigger social features are on the roadmap after the solo VR base is something we are proud to hand strangers.
 
 Credits (who / what for): see [CREDITS.md](CREDITS.md). Boundaries: [PRIOR-ART.md](PRIOR-ART.md), [LICENSE](LICENSE). We do not claim Nintendo's game data, Rare's assets, or third-party engines we did not write.
 
