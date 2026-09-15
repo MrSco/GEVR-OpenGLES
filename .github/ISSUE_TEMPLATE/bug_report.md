@@ -5,6 +5,8 @@ title: "[Bug] "
 labels: bug, beta
 ---
 
+> **Beta — expect crashes; still file it.**
+
 **Flat or VR?**
 
 **Headset (if VR):**
