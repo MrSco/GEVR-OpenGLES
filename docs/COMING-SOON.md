@@ -12,3 +12,5 @@ Also useful:
 Crashes are expected in Beta - please file [Issues](https://github.com/no6969el/GEVR/issues).
 
 **Headset note:** Beta has been tested on **Pimax Crystal Super (Micro OLED)** only so far. Controls: [CONTROLS.md](CONTROLS.md).
+
+The attract sheet (cover + VR features): [FEATURES.md](../FEATURES.md).
