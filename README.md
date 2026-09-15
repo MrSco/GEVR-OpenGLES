@@ -1,10 +1,10 @@
 <p align="center">
-  <img src="GEVR-box-cover.png" alt="GoldenEye 007 VR — GEVR box art" width="480" />
+  <img src="GEVR-box-cover.png" alt="GoldenEye 007 VR  -  GEVR box art" width="480" />
 </p>
 
 # GEVR
 
-**GoldenEye, native, in VR â€” bring your own ROM.**
+**GoldenEye, native, in VR  -  bring your own ROM.**
 
 GEVR is a from-source PC port of *GoldenEye 007* built for real VR (OpenXR). Not an emulator overlay. Not a flat game with a 3D wrapper. You drop in a **USA GoldenEye ROM you legally own**, hit Start, and play in the headset (or on a monitor).
 
@@ -16,7 +16,7 @@ GEVR is a from-source PC port of *GoldenEye 007* built for real VR (OpenXR). Not
 
 ## Play (when a Release zip is up)
 
-1. Download the latest **Release** zip (full build â€” not a script-only patch).
+1. Download the latest **Release** zip (full build  -  not a script-only patch).
 2. Unzip anywhere.
 3. Put your **USA GoldenEye `.z64` ROM** where the starter asks (or drop it on the app).
 4. Launch. Default is **VR**; flat/monitor works too.
@@ -24,7 +24,7 @@ GEVR is a from-source PC port of *GoldenEye 007* built for real VR (OpenXR). Not
 
 No ROM in the download. You bring yours.
 
-**If the Release section is empty:** the playable zip is packing now â€” star the repo and [watch Releases](https://github.com/no6969el/GEVR/releases) so you catch the drop. See [Coming soon](docs/COMING-SOON.md). The story and [roadmap](docs/ROADMAP.md) below are already real.
+**If the Release section is empty:** the playable zip is packing now  -  star the repo and [watch Releases](https://github.com/no6969el/GEVR/releases) so you catch the drop. See [Coming soon](docs/COMING-SOON.md). The story and [roadmap](docs/ROADMAP.md) below are already real.
 
 ---
 
@@ -32,10 +32,10 @@ No ROM in the download. You bring yours.
 
 GoldenEye is one of the most-wanted â€œI wish I could stand inside itâ€ games. GEVRâ€™s north star is simple:
 
-- **Native / from-source** â€” full ownership of the game loop for proper VR
-- **OpenXR** â€” Pimax, Quest via PC link, SteamVR-class headsets
-- **Your ROM** â€” legal ownership stays with you
-- **Feel first** â€” 6DOF, aiming, presence; then polish, then extras
+- **Native / from-source**  -  full ownership of the game loop for proper VR
+- **OpenXR**  -  Pimax, Quest via PC link, SteamVR-class headsets
+- **Your ROM**  -  legal ownership stays with you
+- **Feel first**  -  6DOF, aiming, presence; then polish, then extras
 
 We publish the **thinking and measurements** in `docs/` so others can learn. The **playable workshop binary** ships as GitHub Releases when each Beta cut is ready.
 
@@ -43,7 +43,7 @@ We publish the **thinking and measurements** in `docs/` so others can learn. The
 
 ## Roadmap (honest, not a promise calendar)
 
-**Now â€” enjoy the Beta**
+**Now  -  enjoy the Beta**
 - Solo VR campaign feel (Facility and friends)
 - Comfort and aiming polish
 - â€œIt boots, it shoots, it sometimes crashesâ€ honesty
@@ -53,8 +53,8 @@ We publish the **thinking and measurements** in `docs/` so others can learn. The
 - Clearer first-run (ROM drop-in, saves that survive updates)
 - Visual and HUD comfort for long sits
 
-**Later â€” the fun extras**
-- **Multiplayer** â€” we want people in the same Bond world together (design + net still ahead; calling it early so you know where this is pointed)
+**Later  -  the fun extras**
+- **Multiplayer**  -  we want people in the same Bond world together (design + net still ahead; calling it early so you know where this is pointed)
 - More levels / modes as the base stays stable
 - Optional quality and accessibility knobs without breaking the classic feel
 
@@ -64,7 +64,7 @@ Fuller list: [`docs/ROADMAP.md`](docs/ROADMAP.md). Star + Watch if you want the 
 
 ## For press / curious readers
 
-One-liner: *Native from-source GoldenEye VR for PC OpenXR â€” bring your own ROM.*
+One-liner: *Native from-source GoldenEye VR for PC OpenXR  -  bring your own ROM.*
 
 Longer: GEVR rebuilds GoldenEye on PC so VR can be done properly (stereo, 6DOF, controller aim), instead of stretching an emulator. Beta means it is playable and imperfect on purpose while we clear crashes and comfort. Multiplayer and bigger social features are on the roadmap after the solo VR base is something we are proud to hand strangers.
 
@@ -86,10 +86,10 @@ Most players never need those. Play first. File [Issues](https://github.com/no69
 
 | | |
 |---|---|
-| Playable Beta zip | Watch [Releases](https://github.com/no6969el/GEVR/releases) â€” [Coming soon](docs/COMING-SOON.md) until a zip is attached |
+| Playable Beta zip | Watch [Releases](https://github.com/no6969el/GEVR/releases)  -  [Coming soon](docs/COMING-SOON.md) until a zip is attached |
 | Your ROM | USA GoldenEye `.z64` you own |
 | Report | [GitHub Issues](https://github.com/no6969el/GEVR/issues) |
-| Multiplayer | [Roadmap](docs/ROADMAP.md) â€” not in this Beta cut |
+| Multiplayer | [Roadmap](docs/ROADMAP.md)  -  not in this Beta cut |
 
 ## Licence
 
