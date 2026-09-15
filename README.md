@@ -6,6 +6,10 @@
 
 **GoldenEye, native, in VR - bring your own ROM.**
 
+**Right now this Beta only works on Pimax (Crystal Super) as a SteamVR headset via [CustomHeadsetOpenVR](https://github.com/sboys3/CustomHeadsetOpenVR) (sboys3), at 90 Hz.** Set the headset and SteamVR to 90 Hz. We don't maintain that driver; this cut was built and tested on it. Native PimaxXR, Quest, other rates (80/120/144), and other OpenXR runtimes aren't a supported path yet.
+
+More is coming as soon as we can - **Star** this repo and **Watch** it (**Watch → Releases**) if you want Quest, other refresh rates, and PimaxXR support to show up without refreshing every day.
+
 GEVR is a from-source PC port of *GoldenEye 007* built for real VR (OpenXR). Not | emulator overlay. Not a flat game with a 3D wrapper. You drop in a **USA GoldenEye ROM you legally own**, hit Start, and play in the headset (or on a monitor).
 
 > **Beta is live for play.** Crashes and rough edges are being sorted | we go. That is expected. Jump in, have fun, and tell us what breaks.
