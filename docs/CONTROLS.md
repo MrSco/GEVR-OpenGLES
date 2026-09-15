@@ -50,6 +50,7 @@ GEVR uses **OpenXR**. Which runtime Windows hands us matters a lot on this Beta.
 - **Headset:** Pimax Crystal Super (Micro OLED)
 - **Path:** **SteamVR as the OpenXR runtime**
 - That includes setups where the Pimax is presented as a SteamVR headset (for example a SteamVR / "Pimax as SteamVR" style bridge). If your Crystal is on **native PimaxXR** instead, expect problems on this cut.
+- Pimax users who need SteamVR OpenXR can use the optional community driver [CustomHeadsetOpenVR](https://github.com/sboys3/CustomHeadsetOpenVR) (sboys3) so the headset shows up as a SteamVR HMD.
 
 **Practical recipe:** SteamVR installed and running; Windows **default OpenXR runtime = SteamVR**; launch with **`Start-GEVR.bat`**; put the headset on; recenter with both stick clicks.
 
