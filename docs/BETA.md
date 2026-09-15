@@ -9,6 +9,15 @@ GEVR’s public label is **Beta** (outside testers + Issues). Build maturity is 
 - Optional: OpenXR headset (SteamVR / native OpenXR). Flat monitor is fine for some tests
 - When published: a Beta zip from [Releases](https://github.com/no6969el/GEVR/releases)
 
+
+## VR runtime (important)
+
+**Verified path:** Pimax Crystal Super (Micro OLED) with **SteamVR as Windows' OpenXR runtime** (including Pimax-as-SteamVR bridges). Use `Start-GEVR.bat`.
+
+**Not working yet (under dig):** native PimaxXR; Quest 3 + Virtual Desktop (VDXR) - often attaches flat on the monitor. Still file Issues; say runtime + whether you saw the HMD or only the monitor.
+
+Details: [CONTROLS.md](CONTROLS.md).
+
 ## Install and run (Release zip)
 
 1. Download and unzip the Beta build (start with **Beta 0** when it lands).

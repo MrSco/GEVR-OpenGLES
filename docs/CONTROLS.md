@@ -41,15 +41,33 @@ Face buttons (A/B style) are only partly wired in this Beta cut. Menu / folder n
 
 While the flat cinema or frontend menus are up, you are in a small hub room looking at a **world-locked** screen: turn your head and the screen stays put in the room.
 
-## Headset testing (honest)
+## Getting VR working (read this)
 
-**Tested on:** Pimax Crystal Super (Micro OLED) only, so far.
+GEVR uses **OpenXR**. Which runtime Windows hands us matters a lot on this Beta.
 
-GEVR talks **OpenXR**, so other PC VR headsets (SteamVR-class, other Pimax, Quest via PC link, etc.) may work. They are **not** verified on this Beta cut yet. If you try one, please say which headset + runtime in an [Issue](https://github.com/no6969el/GEVR/issues) (no ROM uploads).
+### Works today (verified)
 
-## If controls feel dead
+- **Headset:** Pimax Crystal Super (Micro OLED)
+- **Path:** **SteamVR as the OpenXR runtime**, with the Pimax presented as a SteamVR HMD
+- This cut was verified on that path using [CustomHeadsetOpenVR](https://github.com/sboys3/CustomHeadsetOpenVR) (sboys3). We don't maintain that driver (it's their project), but that's the path this Beta was built and tested on.
+- If your Crystal is on **native PimaxXR** instead, expect problems on this cut.
 
-1. Confirm you launched with **`Start-GEVR.bat`**, not bare `goldeneye.exe`
-2. Confirm your OpenXR runtime is active (SteamVR / Pimax client / etc.)
+**Practical recipe:** SteamVR installed and running; Windows **default OpenXR runtime = SteamVR**; launch with **`Start-GEVR.bat`**; put the headset on; recenter with both stick clicks.
+
+### Not working yet (we are fixing)
+
+| Setup | What people see | Status |
+|---|---|---|
+| **Pimax native XR (PimaxXR)** | Often fails to attach as a proper HMD session | Open - attach dig |
+| **Quest 3 + Virtual Desktop (VDXR)** | Often opens **flat on the monitor** instead of the headset (regression) | Open - attach dig |
+
+Please still file Issues for those - they help the dig. Say **runtime name** and whether the picture was **HMD / monitor-only / black / crash**.
+
+Native Quest (standalone APK) is a later port, not this PC zip.
+
+### If controls or VR feel dead
+
+1. Launch with **`Start-GEVR.bat`**, not bare `goldeneye.exe`
+2. Confirm Windows OpenXR default is **SteamVR** (not PimaxXR / VDXR) while we sort those
 3. Recenter with **both** stick clicks
-4. File an Issue with headset + runtime name
+4. File an Issue and fill the headset / runtime fields (no ROM uploads)

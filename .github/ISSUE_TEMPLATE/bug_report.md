@@ -5,11 +5,29 @@ title: "[Bug] "
 labels: bug, beta
 ---
 
-> **Beta — expect crashes; still file it.**
+> **Beta — expect crashes; still file it.** Do **not** attach ROM files.
 
 **Flat or VR?**
 
-**Headset (if VR):**
+**Headset** (model, e.g. Pimax Crystal Super / Quest 3 / ...):
+
+**OpenXR runtime** (pick one or write it in):
+- [ ] SteamVR
+- [ ] PimaxXR (native Pimax)
+- [ ] Virtual Desktop (VDXR)
+- [ ] Other (name it):
+
+**SteamVR running?** Yes / No / Not installed
+
+**Where was the picture?**
+- [ ] In the headset
+- [ ] Flat on the monitor only
+- [ ] Black / no image
+- [ ] Crash before picture
+
+**Started with `Start-GEVR.bat`?** Yes / No
+
+**Build / Release tag** (e.g. vr420):
 
 **What were you doing?**
 
@@ -17,6 +35,6 @@ labels: bug, beta
 
 **Can you make it happen again?** (steps)
 
-**Build / Release tag** (if you know it):
-
 **Screenshots or short clip?** (optional — no ROM files)
+
+**First `[getv]` / OpenXR log lines** (optional, a few lines help a lot):

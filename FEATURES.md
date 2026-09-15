@@ -36,7 +36,8 @@ Facility and friends, OpenXR on PC. Mission Report / NEXT actually takes input a
 
 ## Honest Beta notes
 
-- **Tested on:** Pimax Crystal Super (Micro OLED) so far. OpenXR means other PC headsets may work - [tell us](https://github.com/no6969el/GEVR/issues) which one.
+- **Works today:** Pimax Crystal Super (Micro OLED) with **SteamVR as OpenXR** (including Pimax-as-SteamVR bridges). See [CONTROLS.md](docs/CONTROLS.md).
+- **Not working yet (fixing):** native **PimaxXR**, and **Quest 3 + Virtual Desktop (VDXR)** (often attaches flat on the monitor). Please report those with runtime + HMD vs monitor.
 - Crashes and rough edges are expected. That is why it is Beta.
 - You bring a **USA GoldenEye `.z64` you own**. No ROM in the download.
 - Full colocated Bond body, multiplayer, and a fancier hub room are later - see the [roadmap](docs/ROADMAP.md).
