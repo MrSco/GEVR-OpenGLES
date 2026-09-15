@@ -6,11 +6,11 @@
 
 **GoldenEye, native, in VR - bring your own ROM.**
 
-GEVR is a from-source PC port of *GoldenEye 007* built for real VR (OpenXR). Not an emulator overlay. Not a flat game with a 3D wrapper. You drop in a **USA GoldenEye ROM you legally own**, hit Start, and play in the headset (or on a monitor).
+GEVR is a from-source PC port of *GoldenEye 007* built for real VR (OpenXR). Not | emulator overlay. Not a flat game with a 3D wrapper. You drop in a **USA GoldenEye ROM you legally own**, hit Start, and play in the headset (or on a monitor).
 
-> **Beta is live for play.** Crashes and rough edges are being sorted as we go. That is expected. Jump in, have fun, and tell us what breaks.
+> **Beta is live for play.** Crashes and rough edges are being sorted | we go. That is expected. Jump in, have fun, and tell us what breaks.
 
-[Watch Releases](https://github.com/no6969el/GEVR/releases) Â· [Coming soon](docs/COMING-SOON.md) Â· [Report a bug](https://github.com/no6969el/GEVR/issues/new/choose) Â· [Roadmap](docs/ROADMAP.md) Â· [Discussions](https://github.com/no6969el/GEVR/discussions)
+[Watch Releases](https://github.com/no6969el/GEVR/releases) | [Coming soon](docs/COMING-SOON.md) | [Report a bug](https://github.com/no6969el/GEVR/issues/new/choose) | [Roadmap](docs/ROADMAP.md) | [Discussions](https://github.com/no6969el/GEVR/discussions) | [Credits](CREDITS.md)
 
 ---
 
@@ -37,7 +37,7 @@ GoldenEye is one of the most-wanted "I wish I could stand inside it" games. GEVR
 - **Your ROM** - legal ownership stays with you
 - **Feel first** - 6DOF, aiming, presence; then polish, then extras
 
-We publish the **thinking and measurements** in `docs/` so others can learn. The **playable workshop binary** ships as GitHub Releases when each Beta cut is ready.
+We publish the **thinking and measurements** in `docs/` so others can learn. The **playable workshop binary** ships | GitHub Releases when each Beta cut is ready.
 
 ---
 
@@ -55,7 +55,7 @@ We publish the **thinking and measurements** in `docs/` so others can learn. The
 
 **Later - the fun extras**
 - **Multiplayer** - we want people in the same Bond world together (design + net still ahead; calling it early so you know where this is pointed)
-- More levels / modes as the base stays stable
+- More levels / modes | the base stays stable
 - Optional quality and accessibility knobs without breaking the classic feel
 
 Fuller list: [`docs/ROADMAP.md`](docs/ROADMAP.md). Star + Watch if you want the multiplayer and Beta drops without refreshing every day.
@@ -66,17 +66,18 @@ Fuller list: [`docs/ROADMAP.md`](docs/ROADMAP.md). Star + Watch if you want the 
 
 One-liner: *Native from-source GoldenEye VR for PC OpenXR - bring your own ROM.*
 
-Longer: GEVR rebuilds GoldenEye on PC so VR can be done properly (stereo, 6DOF, controller aim), instead of stretching an emulator. Beta means it is playable and imperfect on purpose while we clear crashes and comfort. Multiplayer and bigger social features are on the roadmap after the solo VR base is something we are proud to hand strangers.
+Longer: GEVR rebuilds GoldenEye on PC so VR can be done properly (stereo, 6DOF, controller aim), instead of stretching | emulator. Beta means it is playable and imperfect on purpose while we clear crashes and comfort. Multiplayer and bigger social features are on the roadmap after the solo VR base is something we are proud to hand strangers.
 
-Prior art and credit boundaries: see [PRIOR-ART.md](PRIOR-ART.md) and [LICENSE](LICENSE). We do not claim Nintendo's game data, Rare's assets, or third-party engines we did not write.
+Credits (who / what for): see [CREDITS.md](CREDITS.md). Boundaries: [PRIOR-ART.md](PRIOR-ART.md), [LICENSE](LICENSE). We do not claim Nintendo's game data, Rare's assets, or third-party engines we did not write.
 
 ---
 
 ## Docs (secondary)
 
-Deep technical trail (build notes, measured digs): start at [`docs/00-START-HERE.md`](docs/00-START-HERE.md).  
-Release policy: [`docs/RELEASE-POLICY.md`](docs/RELEASE-POLICY.md).  
-Tester snapshot: [`docs/BETA.md`](docs/BETA.md) Â· [`docs/FEATURES-CURRENT.md`](docs/FEATURES-CURRENT.md).
+Deep technical trail (build notes, measured digs): start | [`docs/00-START-HERE.md`](docs/00-START-HERE.md).  
+Release policy: [`docs/RELEASE-POLICY.md`](docs/RELEASE-POLICY.md).
+Credits: [`CREDITS.md`](CREDITS.md) | [`docs/ORIGIN.md`](docs/ORIGIN.md).
+Tester snapshot: [`docs/BETA.md`](docs/BETA.md) Ã‚  |   [`docs/FEATURES-CURRENT.md`](docs/FEATURES-CURRENT.md).
 
 Most players never need those. Play first. File [Issues](https://github.com/no6969el/GEVR/issues) when something weird happens. Chat in [Discussions](https://github.com/no6969el/GEVR/discussions) if you prefer.
 
@@ -93,7 +94,8 @@ Most players never need those. Play first. File [Issues](https://github.com/no69
 
 ## Licence
 
-MIT for this public docs/tools tree. **No ROM or game assets.** We do not claim ownership of GoldenEye, Nintendo, or Rare.
+MIT for this public docs/tools tree. See also [CREDITS.md](CREDITS.md). **No ROM or game assets.** We do not claim ownership of GoldenEye, Nintendo, or Rare.
 
 **Right now is for enjoying it.** The bigger stuff is coming; the headset is already waiting.
+
 

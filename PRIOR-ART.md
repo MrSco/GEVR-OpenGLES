@@ -1,4 +1,6 @@
-﻿# PRIOR-ART
+# PRIOR-ART
+
+Human-facing thank-you sheet (who / what for): **[CREDITS.md](CREDITS.md)**.
 
 Credits owed for prior art that influenced GEVR designs. Required before the first public push (see `PUBLISH-MANIFEST.md` in the private workspace).
 
@@ -21,3 +23,4 @@ Designs / constants informed by that work (details in `docs/102`, `docs/160`, an
 - Drawn-vs-shot clamp split
 
 The MIT notice travels with anything derived from it. See also `docs/55-prior-art-licence-check.md` and `docs/81-prior-art-perfect-dark-VR.md`.
+
