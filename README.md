@@ -10,7 +10,7 @@ GEVR is a from-source PC port of *GoldenEye 007* built for real VR (OpenXR). Not
 
 > **Beta is live for play.** Crashes and rough edges are being sorted | we go. That is expected. Jump in, have fun, and tell us what breaks.
 
-[Watch Releases](https://github.com/no6969el/GEVR/releases) | [Coming soon](docs/COMING-SOON.md) | [Report a bug](https://github.com/no6969el/GEVR/issues/new/choose) | [Roadmap](docs/ROADMAP.md) | [Discussions](https://github.com/no6969el/GEVR/discussions) | [Credits](CREDITS.md)
+[Watch Releases](https://github.com/no6969el/GEVR/releases) | [Coming soon](docs/COMING-SOON.md) | [Report a bug](https://github.com/no6969el/GEVR/issues/new/choose) | [Roadmap](docs/ROADMAP.md) | [Discussions](https://github.com/no6969el/GEVR/discussions) | [Credits](CREDITS.md) | [Controls](docs/CONTROLS.md)
 
 ---
 

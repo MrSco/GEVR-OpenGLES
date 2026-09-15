@@ -10,3 +10,5 @@ Also useful:
 3. [Credits](../CREDITS.md)
 
 Crashes are expected in Beta - please file [Issues](https://github.com/no6969el/GEVR/issues).
+
+**Headset note:** Beta has been tested on **Pimax Crystal Super (Micro OLED)** only so far. Controls: [CONTROLS.md](CONTROLS.md).
