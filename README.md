@@ -24,7 +24,7 @@ GEVR is a from-source PC port of *GoldenEye 007* built for real VR (OpenXR). Not
 
 No ROM in the download. You bring yours.
 
-**If the Release section is empty:** the playable zip is packing now - star the repo and [watch Releases](https://github.com/no6969el/GEVR/releases) so you catch the drop. See [Coming soon](docs/COMING-SOON.md). The story and [roadmap](docs/ROADMAP.md) below are already real.
+**Latest playable zip: [GEVR Beta vr420](https://github.com/no6969el/GEVR/releases/tag/vr420). See [Coming soon](docs/COMING-SOON.md). The story and [roadmap](docs/ROADMAP.md) below are already real.
 
 ---
 

@@ -1,11 +1,12 @@
 # Coming soon / watch this space
 
-GEVR's playable **Beta Release zip** lands on the [Releases](https://github.com/no6969el/GEVR/releases) page as a full package (exe + deps + short notes).
+**Beta zip is live:** [GEVR Beta vr420](https://github.com/no6969el/GEVR/releases/tag/vr420)
 
-Until that asset is attached:
+Download the full win64 package (exe + DLLs + Start-GEVR.bat). Bring your own USA GoldenEye `.z64`. No ROM in the download.
 
-1. **Star** the repo
-2. **Watch -> Custom -> Releases**
-3. Read the [README](../README.md) roadmap (solo VR now; multiplayer later)
+Also useful:
+1. **Star** the repo / **Watch -> Releases** for the next cut
+2. [README](../README.md) roadmap (solo VR now; multiplayer later)
+3. [Credits](../CREDITS.md)
 
-We will not fake a download button. When the zip is up, this page will point straight at it.
+Crashes are expected in Beta - please file [Issues](https://github.com/no6969el/GEVR/issues).
