@@ -22,3 +22,9 @@ High-level status of the **private** playable wear. This is an ideas / honesty t
 - No ROM redistribution
 
 Update this file when wear PASSes change; keep it short and non-recipe.
+
+## Headset / runtime (2026-09-15)
+
+- **PASS / verified:** Pimax Crystal Super + **SteamVR OpenXR**
+- **OPEN attach digs:** native PimaxXR; Quest 3 + Virtual Desktop (VDXR) flat attach
+
