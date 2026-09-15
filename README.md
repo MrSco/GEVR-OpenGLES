@@ -16,7 +16,7 @@ GEVR is a from-source PC port of *GoldenEye 007* built for real VR (OpenXR). Not
 
 ## Play (when a Release zip is up)
 
-**VR that works right now:** Pimax Crystal Super with **SteamVR as OpenXR** (see [CONTROLS.md](docs/CONTROLS.md)). Native PimaxXR and Quest+Virtual Desktop are **not** solid yet - we are on those; please report with runtime + HMD vs monitor. Pimax users who need SteamVR OpenXR can use the optional community driver [CustomHeadsetOpenVR](https://github.com/sboys3/CustomHeadsetOpenVR) (sboys3) so the headset shows up as a SteamVR HMD.
+**VR that works right now:** Pimax Crystal Super with **SteamVR as OpenXR** (see [CONTROLS.md](docs/CONTROLS.md)). This cut was verified on Pimax Crystal Super as a SteamVR HMD using [CustomHeadsetOpenVR](https://github.com/sboys3/CustomHeadsetOpenVR) (sboys3). We don't maintain that driver (it's their project), but that's the path this Beta was built and tested on. Native PimaxXR and Quest+Virtual Desktop are **not** solid yet - we are on those; please report with runtime + HMD vs monitor.
 
 1. Download the latest **Release** zip (full build - not a script-only patch).
 2. Unzip anywhere.
