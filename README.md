@@ -77,7 +77,7 @@ Credits (who / what for): see [CREDITS.md](CREDITS.md). Boundaries: [PRIOR-ART.m
 Deep technical trail (build notes, measured digs): start | [`docs/00-START-HERE.md`](docs/00-START-HERE.md).  
 Release policy: [`docs/RELEASE-POLICY.md`](docs/RELEASE-POLICY.md).
 Credits: [`CREDITS.md`](CREDITS.md) | [`docs/ORIGIN.md`](docs/ORIGIN.md).
-Tester snapshot: [`docs/BETA.md`](docs/BETA.md) Ã‚  |   [`docs/FEATURES-CURRENT.md`](docs/FEATURES-CURRENT.md).
+Tester snapshot: [`docs/BETA.md`](docs/BETA.md) | [`docs/FEATURES-CURRENT.md`](docs/FEATURES-CURRENT.md).
 
 Most players never need those. Play first. File [Issues](https://github.com/no6969el/GEVR/issues) when something weird happens. Chat in [Discussions](https://github.com/no6969el/GEVR/discussions) if you prefer.
 
@@ -85,12 +85,7 @@ Most players never need those. Play first. File [Issues](https://github.com/no69
 
 ## Status strip
 
-| | |
-|---|---|
-| Playable Beta zip | Watch [Releases](https://github.com/no6969el/GEVR/releases) - [Coming soon](docs/COMING-SOON.md) until a zip is attached |
-| Your ROM | USA GoldenEye `.z64` you own |
-| Report | [GitHub Issues](https://github.com/no6969el/GEVR/issues) |
-| Multiplayer | [Roadmap](docs/ROADMAP.md) - not in this Beta cut |
+| |---|---| Playable Beta zip | Watch [Releases](https://github.com/no6969el/GEVR/releases) - [Coming soon](docs/COMING-SOON.md) until a zip is attached | Your ROM | USA GoldenEye `.z64` you own | Report | [GitHub Issues](https://github.com/no6969el/GEVR/issues) | Multiplayer | [Roadmap](docs/ROADMAP.md) - not in this Beta cut |
 
 ## Licence
 

@@ -8,10 +8,7 @@ We credit only real influence or reuse. Survey-only reads and projects we did **
 
 ## Not ours (please do not credit us for these)
 
-| | |
-|---|---|
-| **GoldenEye 007** | Nintendo / Rareware. The game, ROM, and assets are theirs. GEVR does **not** ship a ROM or game assets. You bring a USA `.z64` you own. |
-| **GEVR workshop binary** | Our OpenXR / VR delta on top of the native port. Separate from the game data and from upstream licences below. |
+| |---|---| **GoldenEye 007** | Nintendo / Rareware. The game, ROM, and assets are theirs. GEVR does **not** ship a ROM or game assets. You bring a USA `.z64` you own. | **GEVR workshop binary** | Our OpenXR / VR delta on top of the native port. Separate from the game data and from upstream licences below. |
 
 ---
 
@@ -24,11 +21,11 @@ We credit only real influence or reuse. Survey-only reads and projects we did **
 - **Not claiming:** Their MIT work as closed or as "GEVR-only." Their notice travels with derived portions.
 - **Licence in tree:** see the GETV / `goldeneye-native` `LICENSE` (Copyright (c) 2026 Evan King).
 
-### Alex-LeTux / perfect_dark_VR (MIT) — design map, not vendored code
+### Alex-LeTux / perfect_dark_VR (MIT) - design map, not vendored code
 
 - **Repo:** https://github.com/Alex-LeTux/perfect_dark_VR  
 - **Surveyed:** branch `port` @ `67ea20c86986c6bc85687f26a27418b266af309c`
-- **What we took (recorded influence only — their VR tree is not copied into GEVR):**
+- **What we took (recorded influence only - their VR tree is not copied into GEVR):**
   - Controller quaternion basis of the form `{w, -x, y, -z}` (hand-axis knobs)
   - Pistol grip offset `(0, 16, -4)` scaled into our gun-offset knobs
   - `x/(1-damp)` integrator pre-load idea
@@ -36,17 +33,17 @@ We credit only real influence or reuse. Survey-only reads and projects we did **
 - **Also:** Perfect Dark VR's *waiting-room / hub feel* informed our cinema-hub direction (procedural room + world-locked board). We map the idea; we do **not** vendor their hub sources.
 - **Upstream notices that travel with that lineage:** Perfect Dark decomp (Ryan Dwyer et al.) and the Perfect Dark PC port (MIT).
 
-### Perfect Dark PC port / decomp (MIT) — sibling engine reference
+### Perfect Dark PC port / decomp (MIT) - sibling engine reference
 
 - **Repos:** https://github.com/perfect-dark-pc-port/perfect_dark (and `n64decomp/perfect_dark`)
 - **What for:** Same Rare N64 FPS family. Used as architecture and feel reference (menus, aim/sway family, Fast3D ancestry notes). Not a wholesale copy into GEVR.
 
-### Emill / n64-fast3d-engine — renderer ancestry
+### Emill / n64-fast3d-engine - renderer ancestry
 
 - **Repo:** https://github.com/Emill/n64-fast3d-engine
 - **What for:** Lineage of the Fast3D / `gfx_pc` path used by the native port (and related PD/GE ports). Credit for the engine ancestry, not for inventing a new RDP from scratch.
 
-### n64decomp / 007 — GoldenEye decompilation upstream
+### n64decomp / 007 - GoldenEye decompilation upstream
 
 - **Repo:** https://github.com/n64decomp/007
 - **What for:** Decompiled C and symbols that make a from-source port possible. Upstream posture is **not** a blanket open licence for the game; GEVR does not claim ownership of decomp or retail assets. ROM still required.
@@ -67,29 +64,24 @@ We credit only real influence or reuse. Survey-only reads and projects we did **
 
 These showed up in prior-art surveys. They are **not** credited as sources of GEVR code or knobs unless a later note says otherwise.
 
-| Project | Why listed | Used in GEVR? |
-|---|---|---|
-| StarFox64-VR | Licence unclear; rule was do not read source | **No** |
-| GoldenEye64Recomp / N64ModernRuntime | GPL host stack; kept external on purpose | **Not vendored** |
-| Xbox 360 GoldenEye recomps | Different game build / assets | **No** |
-| MGB64 (akratch) | Sibling native-port survey / control read | **Reference only** |
+| Project | Why listed | Used in GEVR? |---|---|---| StarFox64-VR | Licence unclear; rule was do not read source | **No** | GoldenEye64Recomp / N64ModernRuntime | GPL host stack; kept external on purpose | **Not vendored** | Xbox 360 GoldenEye recomps | Different game build / assets | **No** | MGB64 (akratch) | Sibling native-port survey / control read | **Reference only** |
 
 ---
 
 ## How we keep this honest
 
-1. **Licence first** — unclear or proprietary prior art does not influence design (see `docs/55-prior-art-licence-check.md`).
-2. **Name the borrow** — constants, transforms, and clamp splits get a recorded "what for," not a vague thank-you.
-3. **Map vs vendor** — Perfect Dark VR is **prior-art map** unless a future commit says code was brought in (then MIT notice + this sheet update).
-4. **Game data stays with the player** — ROM and assets are never in the download.
+1. **Licence first** - unclear or proprietary prior art does not influence design (see `docs/55-prior-art-licence-check.md`).
+2. **Name the borrow** - constants, transforms, and clamp splits get a recorded "what for," not a vague thank-you.
+3. **Map vs vendor** - Perfect Dark VR is **prior-art map** unless a future commit says code was brought in (then MIT notice + this sheet update).
+4. **Game data stays with the player** - ROM and assets are never in the download.
 
-If you spot a missing credit for something we really used, open an Issue titled `Credits: …` and point at the borrow. We will add a specific line, not a blanket shout-out.
+If you spot a missing credit for something we really used, open an Issue titled `Credits: ...` and point at the borrow. We will add a specific line, not a blanket shout-out.
 
 ---
 
 ## Quick links
 
-- [PRIOR-ART.md](PRIOR-ART.md) — Perfect Dark VR influence detail
-- [docs/ORIGIN.md](docs/ORIGIN.md) — ours vs upstream tags
-- [LICENSE](LICENSE) — this public docs/tools tree
-- [Roadmap](docs/ROADMAP.md)  |  [Coming soon](docs/COMING-SOON.md)
+- [PRIOR-ART.md](PRIOR-ART.md) - Perfect Dark VR influence detail
+- [docs/ORIGIN.md](docs/ORIGIN.md) - ours vs upstream tags
+- [LICENSE](LICENSE) - this public docs/tools tree
+- [Roadmap](docs/ROADMAP.md)  | [Coming soon](docs/COMING-SOON.md)

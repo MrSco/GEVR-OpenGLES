@@ -11,7 +11,7 @@
 - First-run ROM starter + save continuity across updates
 
 ## Planned
-- **Multiplayer** — shared Bond world (biggest bookmark feature; not dated)
+- **Multiplayer** - shared Bond world (biggest bookmark feature; not dated)
 - More campaign coverage as the base hardens
 - Optional quality / accessibility without killing the classic feel
 
