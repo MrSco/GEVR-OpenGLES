@@ -8,25 +8,37 @@
 
 GEVR is a from-source PC port of *GoldenEye 007* built for real VR (OpenXR). Not | emulator overlay. Not a flat game with a 3D wrapper. You drop in a **USA GoldenEye ROM you legally own**, hit Start, and play in the headset (or on a monitor).
 
-> **Beta is live for play.** Crashes and rough edges are being sorted | we go. That is expected. Jump in, have fun, and tell us what breaks.
+```
+================================================================================
+  WAIT FOR THE NEXT UPDATE
+================================================================================
+```
+
+**Wait for the next update** before downloading or expecting a clean public play path — a follow-up cut is coming soon with the bat/runtime fixes. **Star** this repo and **Watch -> Releases** so you catch it: [Releases](https://github.com/no6969el/GEVR/releases).
+
+**VR on the verified cut:** Pimax Crystal Super with **SteamVR as OpenXR** via [CustomHeadsetOpenVR](https://github.com/sboys3/CustomHeadsetOpenVR) (sboys3). **90 Hz only** on that path for now. Native PimaxXR and Quest+Virtual Desktop are **not** solid yet — we are on those; please report with runtime + HMD vs monitor. Details: [CONTROLS.md](docs/CONTROLS.md).
+
+Reference zip (rough Beta — not the clean public play path yet): [GEVR Beta vr420](https://github.com/no6969el/GEVR/releases/tag/vr420). See [Coming soon](docs/COMING-SOON.md).
 
 [Watch Releases](https://github.com/no6969el/GEVR/releases) | [Coming soon](docs/COMING-SOON.md) | [Report a bug](https://github.com/no6969el/GEVR/issues/new/choose) | [Roadmap](docs/ROADMAP.md) | [Discussions](https://github.com/no6969el/GEVR/discussions) | [Credits](CREDITS.md) | [Features](FEATURES.md) | [Controls](docs/CONTROLS.md)
 
 ---
 
-## Play (when a Release zip is up)
+## Play (next Release cut — wait for it)
 
-**VR that works right now:** Pimax Crystal Super with **SteamVR as OpenXR** (see [CONTROLS.md](docs/CONTROLS.md)). This cut was verified on Pimax Crystal Super as a SteamVR HMD using [CustomHeadsetOpenVR](https://github.com/sboys3/CustomHeadsetOpenVR) (sboys3). We don't maintain that driver (it's their project), but that's the path this Beta was built and tested on. Native PimaxXR and Quest+Virtual Desktop are **not** solid yet - we are on those; please report with runtime + HMD vs monitor.
+**Do not chase the current public zip as the main play path.** Hold for the next update (bat/runtime fixes). **Star + Watch -> [Releases](https://github.com/no6969el/GEVR/releases)**.
 
-1. Download the latest **Release** zip (full build - not a script-only patch).
+When the follow-up cut lands:
+
+1. Download that **Release** zip (full build — not a script-only patch).
 2. Unzip anywhere.
 3. Put your **USA GoldenEye `.z64` ROM** where the starter asks (or drop it on the app).
-4. Launch. Default is **VR**; flat/monitor works too.
+4. Launch with **`Start-GEVR.bat`**. Default is **VR**; flat/monitor works too.
 5. Put on the headset. Recenter. Enjoy GEVR!
 
 No ROM in the download. You bring yours.
 
-**Latest playable zip: [GEVR Beta vr420](https://github.com/no6969el/GEVR/releases/tag/vr420). See [Coming soon](docs/COMING-SOON.md). The story and [roadmap](docs/ROADMAP.md) below are already real.
+**Reference only (rough Beta):** [GEVR Beta vr420](https://github.com/no6969el/GEVR/releases/tag/vr420). The story and [roadmap](docs/ROADMAP.md) below are already real.
 
 ---
 
@@ -89,12 +101,12 @@ Most players never need those. Play first. File [Issues](https://github.com/no69
 
 ## Status strip
 
-| |---|---| Playable Beta zip | Watch [Releases](https://github.com/no6969el/GEVR/releases) - [Coming soon](docs/COMING-SOON.md) until a zip is attached | Your ROM | USA GoldenEye `.z64` you own | Report | [GitHub Issues](https://github.com/no6969el/GEVR/issues) | Multiplayer | [Roadmap](docs/ROADMAP.md) - not in this Beta cut |
+| |---|---| Next public cut | **Wait for the next update** — Watch [Releases](https://github.com/no6969el/GEVR/releases) / [Coming soon](docs/COMING-SOON.md) | Your ROM | USA GoldenEye `.z64` you own | Report | [GitHub Issues](https://github.com/no6969el/GEVR/issues) | Multiplayer | [Roadmap](docs/ROADMAP.md) - not in this Beta cut |
 
 ## Licence
 
 MIT for this public docs/tools tree. See also [CREDITS.md](CREDITS.md). **No ROM or game assets.** We do not claim ownership of GoldenEye, Nintendo, or Rare.
 
-**Right now is for enjoying it.** The bigger stuff is coming; the headset is already waiting.
+**Wait for the next update** — then enjoy it. The bigger stuff is coming; the headset is already waiting.
 
 

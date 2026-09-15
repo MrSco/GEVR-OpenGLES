@@ -1,8 +1,8 @@
 # Coming soon / watch this space
 
-**Beta zip is live:** [GEVR Beta vr420](https://github.com/no6969el/GEVR/releases/tag/vr420)
+**Wait for the next update** before downloading or expecting a clean public play path — a follow-up cut is coming soon with the bat/runtime fixes. **Star + Watch -> [Releases](https://github.com/no6969el/GEVR/releases)** so you catch it.
 
-Download the full win64 package (exe + DLLs + Start-GEVR.bat). Bring your own USA GoldenEye `.z64`. No ROM in the download.
+Reference zip (rough Beta, not the clean play path yet): [GEVR Beta vr420](https://github.com/no6969el/GEVR/releases/tag/vr420). Full win64 package (exe + DLLs + Start-GEVR.bat). Bring your own USA GoldenEye `.z64`. No ROM in the download.
 
 ## VR that works right now
 
