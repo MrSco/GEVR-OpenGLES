@@ -47,6 +47,7 @@ GEVR uses **OpenXR**. Which runtime Windows hands us matters a lot on this Beta.
 
 ### Works today (verified)
 
+- **90 Hz only** on this Beta - set the headset and SteamVR to 90 Hz before you play.
 - **Headset:** Pimax Crystal Super (Micro OLED)
 - **Path:** **SteamVR as the OpenXR runtime**, with the Pimax presented as a SteamVR HMD
 - This cut was verified on that path using [CustomHeadsetOpenVR](https://github.com/sboys3/CustomHeadsetOpenVR) (sboys3). We don't maintain that driver (it's their project), but that's the path this Beta was built and tested on.
