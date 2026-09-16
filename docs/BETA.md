@@ -1,45 +1,46 @@
 # Beta testing guide
 
-GEVR’s public label is **Beta** (outside testers + Issues). Build maturity is still **early** — the first public zip is **Beta 0** (alpha-level stability). Expect **crashes** and unfinished corners; file them on Issues.
+GEVR’s public label is **Beta**. Expect crashes and unfinished corners — file them on Issues. The current public play zip is **[vr434](https://github.com/no6969el/GEVR/releases/tag/vr434)**.
 
 ## Before you start
 
-- A **legal** GoldenEye ROM you already own (we do not supply one)
+- A **legal** USA GoldenEye ROM you already own (we do not supply one)
 - Windows PC
-- Optional: OpenXR headset (SteamVR / native OpenXR). Flat monitor is fine for some tests
-- When published: a Beta zip from [Releases](https://github.com/no6969el/GEVR/releases)
+- Optional: OpenXR headset. Flat monitor is fine for a quick look
+- Download: [Releases](https://github.com/no6969el/GEVR/releases)
 
+## VR runtime
 
-## VR runtime (important)
+**Verified:**
+- Pimax Crystal Super + **SteamVR as OpenXR** via [CustomHeadsetOpenVR](https://github.com/sboys3/CustomHeadsetOpenVR)
+- Native **PimaxXR**
+- **Quest 3 + Virtual Desktop (VDXR)**
 
-**Verified path:** Pimax Crystal Super (Micro OLED) with **SteamVR as Windows' OpenXR runtime** (including Pimax-as-SteamVR bridges). Use `Start-GEVR.bat`.
+Use `Start-GEVR.bat` from the zip. Details: [CONTROLS.md](CONTROLS.md).
 
-**Not working yet (under dig):** native PimaxXR; Quest 3 + Virtual Desktop (VDXR) - often attaches flat on the monitor. Still file Issues; say runtime + whether you saw the HMD or only the monitor.
+**Hz:** 72 / 80 / 90 should work; default is 90. Above 90 = still beta — report what you see.
 
-Details: [CONTROLS.md](CONTROLS.md).
+## Install and run
 
-## Install and run (Release zip)
-
-1. Download and unzip the Beta build (start with **Beta 0** when it lands).
-2. Point the launcher at your ROM (see that Release's notes — paths can change between builds).
-3. Start the game. **VR is default**; use the flat / desktop option if you only need a quick check.
-4. Play a bit. If it crashes or looks wrong, [open an Issue](https://github.com/no6969el/GEVR/issues).
+1. Download and unzip **vr434** (or newer).
+2. Point the starter at your ROM.
+3. Run **`Start-GEVR.bat`**. VR is default; flat/desktop works too.
+4. Play. If it crashes or looks wrong, [open an Issue](https://github.com/no6969el/GEVR/issues/new/choose).
 
 ## What to test first
 
 - Boot into VR and look around (comfort / tracking)
-- Aim and shoot (holes should match where you point)
+- Aim and shoot
 - Explosions and sparks
-- Walking through Facility halls — do guards stay visible without spinning in place?
+- Dam mid-range crates (known pop — still useful reports)
+- Dam water look (known flat/murky — still useful)
+- Facility halls / guards
 - Note any crash: what map, what action
 
 ## What not to expect yet
 
-- Store-polish stability or a finished installer on every OS
-- Quest-as-primary (PC VR first)
+- Store-polish stability
 - Perfect body / hands
-- Zero crashes
+- Multiplayer (roadmap later)
 
-## Privacy / ROMs
-
-Never upload your ROM to GitHub Issues. Describe the problem in text; attach screenshots of the game, not the ROM file.
+Jump in and enjoy finally being Bond in GoldenEye VR.
