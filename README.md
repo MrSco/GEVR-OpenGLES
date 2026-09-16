@@ -69,7 +69,7 @@ We would rather tell you than surprise you:
 
 Still worth playing — absolutely. Especially if you miss levels like Facility and want to get brushed up for when we eventually ship the multiplayer add-on. Dam, Facility, that first-person Bond feeling: we are shipping updates as fast as we can.
 
-On a **flat / monitor** setup, classic **local multiplayer** is still there — split-screen couch chaos, same as you remember, while we build toward online play later.
+On a **flat / monitor** setup, classic **local multiplayer** is still there - split-screen couch chaos, same as you remember. The next multiplayer step we are aiming for is a **LAN / local-network add-on**; true online play is further out after that.
 
 ---
 
@@ -100,7 +100,7 @@ More pitch and cover energy: [FEATURES.md](FEATURES.md).
 - Those Dam crates / water / glass quirks above
 
 **Later — the fun extras**
-- **Multiplayer** — we want people in the same Bond world together (design + net still ahead; calling it early so you know where this is pointed)
+- **Multiplayer add-on** — first goal is **LAN / same-network** play; full online is further after that (calling it early so you know where this is pointed)
 - More levels / modes once the base stays stable
 - Optional quality knobs without breaking the classic feel
 
