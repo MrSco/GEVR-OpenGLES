@@ -23,7 +23,7 @@ If this brings you back, **Star** the repo so you can catch the next drops. **Wa
 1. Download the **[vr438 Release zip](https://github.com/no6969el/GEVR/releases/tag/vr438)** (exe, `glew32.dll`, other runtime DLLs, ROM starter, launcher, notes). **No ROM inside the zip.**
 2. Unzip anywhere.
 3. Run **`Start-GEVR.bat`** - it sets VR boot knobs and starts **GevrRomStarter.exe**.
-4. Point at your **USA GoldenEye `.z64`** when asked. Images extract to `%LOCALAPPDATA%\GEVR_CACHE`.
+4. Point at your **USA GoldenEye `.z64`** when asked. Images extract to `%LOCALAPPDATA%\GEVR\cache\<ROM-hash>\`. Each Beta tag bumps a **ship stamp** so the first launch after an update rebuilds that cache once from your ROM.
 5. Put the headset on. Recenter with **both thumbstick clicks**. Enjoy.
 
 **Please use the bat** - it locks in the good VR settings and runs the ROM starter we ship for this cut (not bare `goldeneye.exe`).
