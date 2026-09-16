@@ -6,9 +6,9 @@ body:
   - type: markdown
     attributes:
       value: |
-        Sorry it crashed - reports like this help a lot. Current zip is **vr439**.
+        Sorry it crashed - reports like this help a lot. Current zip is **vr440**.
 
-        Play steps: [README Play](https://github.com/no6969el/GEVR/blob/main/README.md#play). Download: [Releases/latest](https://github.com/no6969el/GEVR/releases/latest). How to report: [CONTRIBUTING](https://github.com/no6969el/GEVR/blob/main/CONTRIBUTING.md).
+        Play steps: [README Play](https://github.com/no6969el/GEVR/blob/main/README.md#play-vr440). Download: [vr440 zip](https://github.com/no6969el/GEVR/releases/tag/vr440). How to report: [CONTRIBUTING](https://github.com/no6969el/GEVR/blob/main/CONTRIBUTING.md).
 
         **Do not upload ROM files** (no `.z64` / `.n64` / `.v64`, no dumps, no paste of ROM bytes).
 
@@ -65,7 +65,7 @@ body:
     id: start_gevr_bat
     attributes:
       label: Did you start with Start-GEVR.bat?
-      description: Headset KEEP launcher in the vr439 zip. If you have no headset, use Play-on-monitor.bat from the same zip, then pick No (used Play-on-monitor.bat).
+      description: Headset KEEP launcher in the vr440 zip. If you have no headset, use Play-on-monitor.bat from the same zip, then pick No (used Play-on-monitor.bat).
       options:
         - Yes
         - No (used Play-on-monitor.bat)
@@ -78,9 +78,9 @@ body:
     id: build_tag
     attributes:
       label: Which Beta zip?
-      description: Current Latest is vr439. See README Play and Releases/latest. Older GitHub tags may still exist; those zips were removed.
+      description: Current Latest is vr440. See README Play. Only vr440 has a zip; older tag pages may remain without zips.
       options:
-        - vr439 (current Latest)
+        - vr440 (current Latest)
         - Older tag (name it in the notes)
         - Not sure
     validations:

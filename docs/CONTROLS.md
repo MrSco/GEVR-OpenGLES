@@ -1,15 +1,15 @@
 # Controls (Beta)
 
-How to move, aim, and reset your position in [GEVR Beta vr439](https://github.com/no6969el/GEVR/releases/tag/vr439).
+How to move, aim, and reset your position in [GEVR Beta vr440](https://github.com/no6969el/GEVR/releases/tag/vr440).
 
-Play steps: [README Play](../README.md#play). Download: [Releases/latest](https://github.com/no6969el/GEVR/releases/latest). Tester notes: [BETA.md](BETA.md). Pitch: [FEATURES.md](../FEATURES.md). What is next: [ROADMAP.md](ROADMAP.md). How to report: [CONTRIBUTING.md](../CONTRIBUTING.md).
+Play steps: [README Play](../README.md#play-vr440). Download: [vr440 zip](https://github.com/no6969el/GEVR/releases/tag/vr440). Tester notes: [BETA.md](BETA.md). Pitch: [FEATURES.md](../FEATURES.md). What is next: [ROADMAP.md](ROADMAP.md). How to report: [CONTRIBUTING.md](../CONTRIBUTING.md).
 
 ## Which bat
 
 - **Headset:** `Start-GEVR.bat` - KEEP VR picture (XR stereo source, SrcFbo, supersample 3, sky / playspace) plus recenter / stick-turn.
 - **Monitor / no headset:** `Play-on-monitor.bat` - VR off, no stereo eyes. This is also the path for **local split-screen**.
 
-Use those bats from the vr439 zip. Do not double-click `goldeneye.exe`. Bare exe can skip the ROM cache update and leave VR input off.
+Use those bats from the vr440 zip. Do not double-click `goldeneye.exe`. Bare exe can skip the ROM cache update and leave VR input off.
 
 ## Reset position (recenter)
 
@@ -42,7 +42,13 @@ After recenter, standing still and turning your head should not slide the world.
 | **Trigger** | Fire |
 | **Squeeze / grip** | ADS / aim mark on the gun ray (not stuck in face centre) |
 
-Face buttons (A/B style) are only partly wired in this Beta cut. Menu / folder navigation is more reliable with the stick and trigger path. If a face button does nothing, that is a known gap, not you.
+**vr440:** Auto-Aim defaults **OFF** in this build.
+
+## Pause and menus (vr440)
+
+- **B/Y** opens pause and options in headset. **Tab** still works on keyboard / monitor.
+- In the **pause watch**, **left stick** moves the menu highlight in VR (look-stick steal fixed in vr440).
+- Face-button confirm in menus is still partly wired. If a face button does nothing, that may still be a known gap - file an Issue with your headset and bat.
 
 ## Cinema / menus
 
@@ -50,9 +56,9 @@ While the flat cinema or frontend menus are up, you are in a small hub room look
 
 ## Getting VR working
 
-GEVR uses **OpenXR**. Which runtime Windows hands us matters. Current zip: [README Play](../README.md#play) / [Releases/latest](https://github.com/no6969el/GEVR/releases/latest).
+GEVR uses **OpenXR**. Which runtime Windows hands us matters. Current zip: [README Play](../README.md#play-vr440) / [vr440 release](https://github.com/no6969el/GEVR/releases/tag/vr440).
 
-**Verified on vr439:**
+**Verified on vr440:**
 
 - **Pimax Crystal Super + SteamVR OpenXR** via [CustomHeadsetOpenVR](https://github.com/sboys3/CustomHeadsetOpenVR) (sboys3). We do not maintain that driver. We do support this experience.
 - **Native PimaxXR**
@@ -60,7 +66,7 @@ GEVR uses **OpenXR**. Which runtime Windows hands us matters. Current zip: [READ
 
 **Hz:** 72 / 80 / **90** should work. The headset bat defaults to **90**. Over 90 is still beta-test territory. Try it and [file an Issue](https://github.com/no6969el/GEVR/issues/new/choose) if it feels off.
 
-**Headset recipe:** unzip vr439, run **`Start-GEVR.bat`**, point at your USA `.z64`, put the headset on, recenter with both stick clicks.
+**Headset recipe:** unzip vr440, run **`Start-GEVR.bat`**, point at your USA `.z64`, put the headset on, recenter with both stick clicks.
 
 **No headset:** **`Play-on-monitor.bat`** (flat 2D, no OpenXR).
 
