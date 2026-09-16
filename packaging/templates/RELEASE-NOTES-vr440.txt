@@ -1,0 +1,77 @@
+GEVR Beta vr440
+===============
+
+From-source GoldenEye 007 in real OpenXR VR. Bring your own USA ROM.
+
+This zip has no ROM. You supply a USA GoldenEye .z64 you legally own.
+
+Play
+----
+1. Unzip anywhere.
+2. Pick a launcher:
+   - Headset: Start-GEVR.bat (KEEP: XR stereo, SrcFbo, supersample 3, sky / playspace)
+   - Monitor / no headset: Play-on-monitor.bat (flat, no OpenXR)
+3. Point it at a USA GoldenEye .z64 you own.
+4. In VR, recenter with both thumbstick clicks.
+
+Where data lives
+----------------
+Prepared ROM images (cache):
+  %LOCALAPPDATA%\GEVR\cache\<your-ROM-SHA-256>\
+
+Save-game progress stays under %LOCALAPPDATA%\GEVR but outside the cache
+folder. Updates should keep your progress.
+
+Updating from an older Beta
+---------------------------
+Keep the same .z64 and your saves. Each cut carries a ship stamp
+(GEVR_SHIP_TAG=vr440), so the first launch after an update rebuilds the
+image cache once automatically. You do not need to delete anything for a
+normal vr439 -> vr440 update.
+
+If the picture still looks wrong after that, run Clear-GEVR-cache.bat
+(type YES). That deletes ONLY %LOCALAPPDATA%\GEVR\cache (not your saves,
+not your .z64 ROM). Then run Start-GEVR.bat or Play-on-monitor.bat again.
+
+Optional nuclear reset (not in a bat): delete the whole
+%LOCALAPPDATA%\GEVR folder yourself if you want to wipe cache AND saves.
+We do not ship a bat for that.
+
+First time
+----------
+The first launch waits once while images prepare into the cache folder,
+then you play.
+
+What is new in vr440
+--------------------
+- Auto-Aim defaults OFF in this build.
+- Pause watch: left stick moves the highlight in VR (look-stick steal fixed).
+- B/Y opens pause and options in headset. Tab on keyboard/monitor still works.
+
+Older tags (history only)
+-------------------------
+- vr434 was pulled: ROM images were baked into goldeneye.exe.
+- vr438 shipped a broken VR boot stub. Do not use it.
+- vr439 zip was removed when vr440 shipped. Tag page stays for record.
+
+Headset notes
+-------------
+Pimax Crystal Super + SteamVR OpenXR, native PimaxXR, Quest 3 +
+Virtual Desktop OpenXR.
+
+72 / 80 / 90 Hz should work (default 90). Over 90 is still
+beta-test territory. Please report issues.
+
+Still rough (honest)
+--------------------
+- Occasional crashes. File an Issue with headset, OpenXR runtime,
+  SteamVR on/off, HMD vs monitor, and which bat you used.
+- Dam crates can still pop in.
+- Dam water can look murky.
+- Glass bullet holes can be one-eye.
+- Local split-screen multiplayer works on a monitor. A LAN /
+  same-network multiplayer add-on is later.
+
+https://github.com/no6969el/GEVR/issues/new/choose
+
+Do not upload your ROM.

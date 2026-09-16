@@ -6,7 +6,7 @@ param(
     [string]$StagingDir = "",
     [Parameter(Mandatory = $true)]
     [string]$CombinedBin,
-    [string]$ShipTag = "vr439"
+    [string]$ShipTag = "vr440"
 )
 
 $ErrorActionPreference = "Stop"
@@ -34,6 +34,7 @@ $requiredFiles = @(
     "EXPECTED-ROM.txt",
     "Start-GEVR.bat",
     "Play-on-monitor.bat",
+    "Clear-GEVR-cache.bat",
     "RELEASE-NOTES.txt",
     "filelist.gevr-images.csv"
 )

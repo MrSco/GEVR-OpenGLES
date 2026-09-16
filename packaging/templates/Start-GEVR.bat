@@ -2,8 +2,10 @@
 setlocal
 cd /d "%~dp0"
 
-rem GEVR Beta vr439 - ROM starter + KEEP VR boot.
-call "%~dp0gevr-vr439-boot.cmd"
+rem GEVR Beta vr440 - always launch through the ROM starter (BYO-ROM).
+rem Do not run the game binary directly; cache, GEVR_SHIP_TAG, and VR boot env are set here.
+
+call "%~dp0gevr-vr440-boot.cmd"
 
 if not exist "%~dp0GevrRomStarter.exe" (
   echo FATAL: GevrRomStarter.exe missing. Re-download the full GEVR Beta zip.
