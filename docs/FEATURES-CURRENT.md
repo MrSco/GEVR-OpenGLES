@@ -1,8 +1,8 @@
 # Feature snapshot (public) - 2026-09-16
 
-> Player snapshot: [FEATURES.md](../FEATURES.md). Play [vr439](https://github.com/no6969el/GEVR/releases/latest). This file is an older wear trail. Native PimaxXR and Quest 3 + Virtual Desktop OpenXR are verified on vr439.
+> Player snapshot: [FEATURES.md](../FEATURES.md). Play [vr440](https://github.com/no6969el/GEVR/releases/tag/vr440). This file is an older wear trail. Native PimaxXR and Quest 3 + Virtual Desktop OpenXR are verified on vr440.
 
-High-level status of the playable wear. Current zip is **vr439**. Play steps: [README Play](../README.md#play). Download: [Releases/latest](https://github.com/no6969el/GEVR/releases/latest). This page is not a second Play guide.
+High-level status of the playable wear. Current zip is **vr440**. Play steps: [README Play](../README.md#play-vr440). Download: [vr440 release](https://github.com/no6969el/GEVR/releases/tag/vr440). This page is not a second Play guide.
 
 ## Working enough for Beta focus
 - OpenXR VR present (true stereo path)
@@ -24,7 +24,7 @@ High-level status of the playable wear. Current zip is **vr439**. Play steps: [R
 
 Update this file when wear PASSes change; keep it short and non-recipe.
 
-## Headset / runtime (vr439)
+## Headset / runtime (vr440)
 
 Verified on this Beta (details in README Play):
 

@@ -8,7 +8,7 @@
 
 The N64 classic you can finally *stand inside*. Not an emulator overlay. Not a flat game with a headset stuck on. GEVR is a from-source PC port of *GoldenEye 007* for real OpenXR. You supply a **USA GoldenEye ROM you legally own**. We never ship the cart.
 
-**Play this cut:** [**GEVR Beta vr439**](https://github.com/no6969el/GEVR/releases/tag/vr439) (GitHub Latest). It is the only tag with a zip. Download it, unzip, play.
+**Play this cut:** [**GEVR Beta vr440**](https://github.com/no6969el/GEVR/releases/tag/vr440) (GitHub **Latest**). Download **`GEVR-Beta-vr440-win64.zip`** on that page. It is the **only** tag with a zip right now. Unzip, pick a bat, point at your `.z64`.
 
 Star the repo if this brings you back. Watch -> Releases if you want a ping when the next cut ships.
 
@@ -16,37 +16,62 @@ Star the repo if this brings you back. Watch -> Releases if you want a ping when
 
 ---
 
-## Play (vr439)
+## Play (vr440)
 
-1. Download the **[vr439 zip](https://github.com/no6969el/GEVR/releases/tag/vr439)**. **No ROM in the zip.**
-2. Unzip anywhere. Leave the files together.
-3. Pick a launcher:
-   - **Headset:** `Start-GEVR.bat` (KEEP picture: XR stereo source, SrcFbo sharpness, supersample 3, sky / playspace).
-   - **Monitor / no headset:** `Play-on-monitor.bat` (VR off, no stereo eyes).
-4. Point it at your **USA GoldenEye `.z64`** when asked.
-5. In VR, recenter with **both thumbstick clicks**. Enjoy.
+| Step | What to do |
+|------|------------|
+| 1 | Open **[vr440 on GitHub Releases](https://github.com/no6969el/GEVR/releases/tag/vr440)** and download **`GEVR-Beta-vr440-win64.zip`**. **No ROM in the zip.** |
+| 2 | Unzip anywhere. Keep the files together. |
+| 3 | **Headset:** double-click **`Start-GEVR.bat`** (KEEP picture: XR stereo source, SrcFbo sharpness, supersample 3, sky / playspace). **Monitor / no headset:** **`Play-on-monitor.bat`** (VR off, no stereo eyes). |
+| 4 | When asked, point at your **USA GoldenEye `.z64`**. |
+| 5 | In VR, recenter with **both thumbstick clicks**. Enjoy. |
 
-Please use those bats. They lock in the settings this cut was worn with. Do not double-click `goldeneye.exe`.
+Please use those bats. They lock in the settings this cut was worn with. **Do not** double-click `goldeneye.exe`.
+
+### Where your data lives
+
+| What | Where |
+|------|--------|
+| Prepared ROM images (cache) | `%LOCALAPPDATA%\GEVR\cache\<your-ROM-SHA-256>\` |
+| Save-game progress | Under `%LOCALAPPDATA%\GEVR`, **outside** the `cache` folder |
+| Your ROM | Wherever **you** keep it. GEVR never copies the `.z64` into the zip folder. |
 
 ### First time
 
 The first launch waits once while images prepare into `%LOCALAPPDATA%\GEVR\cache`. Then you play.
 
-### Updating from an older Beta
+### Updating from an older Beta (keep your saves)
 
-Keep the same `.z64`. Each cut carries a **ship stamp**, so the first launch after an update rebuilds that cache once. You do not wipe anything by hand for a normal update.
+1. Download the **vr440** zip from the link above. Do **not** hunt old tag zips (see **Older tags** below).
+2. Keep the **same** `.z64` path you already use.
+3. Unzip the new folder (or replace your old unzip folder - your choice).
+4. Run **`Start-GEVR.bat`** or **`Play-on-monitor.bat`** again.
 
-Troubleshooting only: if the picture still looks wrong after that, delete `%LOCALAPPDATA%\GEVR\cache` and run the bat again.
+Each cut carries a **ship stamp** (`GEVR_SHIP_TAG=vr440`). The **first** launch after you move to vr440 rebuilds the **image cache** once automatically. **Save progress is kept.** You do not wipe anything by hand for a normal update.
+
+**If the picture still looks wrong after that one re-prepare:** run **`Clear-GEVR-cache.bat`** from the vr440 zip (type **YES** when it asks). That deletes **only** `%LOCALAPPDATA%\GEVR\cache` - not your saves, not your `.z64`. Then run your launcher again.
+
+**Optional nuclear clean slate (manual only):** delete the whole **`%LOCALAPPDATA%\GEVR`** folder yourself if you want to wipe cache **and** saves. We do not ship a bat for that. Not the default update path.
+
+### What is new in vr440
+
+- **Auto-Aim defaults OFF** in this build (`GETV_AUTOAIM` in the shipped exe).
+- **Pause watch:** **left stick** moves the highlight in VR (look-stick steal fixed).
+- **B/Y** opens pause and options in headset. **Tab** still works on keyboard / monitor.
+
+Menu confirm with face buttons is still rough in places. If pause select misbehaves, say so in an Issue - do not assume every binding is finished.
 
 ---
 
 ## Older tags (history, not play)
 
-[vr420](https://github.com/no6969el/GEVR/releases/tag/vr420), [vr434](https://github.com/no6969el/GEVR/releases/tag/vr434), and [vr438](https://github.com/no6969el/GEVR/releases/tag/vr438) stay up as history. Their zip assets were removed. Play **[vr439](https://github.com/no6969el/GEVR/releases/tag/vr439)**.
+These release **pages** stay on GitHub for the record. **Only vr440 has a zip.** Do not download from older tags.
 
-- **vr434** was pulled. ROM images were baked into `goldeneye.exe`.
-- **vr438** was BYO-ROM, but the VR boot file was a stub. It looked like an old build. Do not use it.
-- **vr439** restores the vr434 KEEP picture on BYO-ROM. That is why this is the cut.
+| Tag | Notes |
+|-----|--------|
+| [vr420](https://github.com/no6969el/GEVR/releases/tag/vr420) / [vr434](https://github.com/no6969el/GEVR/releases/tag/vr434) / [vr438](https://github.com/no6969el/GEVR/releases/tag/vr438) | History only. Zips removed. **vr438** had a stub VR boot - do not resurrect it. |
+| [vr439](https://github.com/no6969el/GEVR/releases/tag/vr439) | Tag page stays. **Zip removed** when vr440 shipped. Play **[vr440](https://github.com/no6969el/GEVR/releases/tag/vr440)**. |
+| **vr434** (detail) | Pulled. ROM images were baked into `goldeneye.exe`. |
 
 ---
 

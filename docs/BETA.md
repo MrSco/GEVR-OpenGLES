@@ -2,22 +2,22 @@
 
 GEVR's public label is **Beta**. Expect crashes and unfinished corners. File them on Issues. We would rather hear from you than guess.
 
-**Play this cut:** [**vr439**](https://github.com/no6969el/GEVR/releases/latest) (GitHub Latest). It is the only tag with a zip. Play steps: [README Play](../README.md#play).
+**Play this cut:** [**vr440**](https://github.com/no6969el/GEVR/releases/tag/vr440) (GitHub Latest). Download **`GEVR-Beta-vr440-win64.zip`** on that page. It is the only tag with a zip. Play steps: [README Play](../README.md#play-vr440).
 
-Older tags [vr420](https://github.com/no6969el/GEVR/releases/tag/vr420) / [vr434](https://github.com/no6969el/GEVR/releases/tag/vr434) / [vr438](https://github.com/no6969el/GEVR/releases/tag/vr438) stay for history. Their zips were removed.
+Older tag **pages** stay for history. **Only vr440 has a zip.** Do not download from [vr420](https://github.com/no6969el/GEVR/releases/tag/vr420) / [vr434](https://github.com/no6969el/GEVR/releases/tag/vr434) / [vr438](https://github.com/no6969el/GEVR/releases/tag/vr438) / [vr439](https://github.com/no6969el/GEVR/releases/tag/vr439).
 
 - **vr434** was pulled. ROM images were baked into `goldeneye.exe`.
-- **vr438** was BYO-ROM, but VR boot was a stub. It looked like an old build.
-- **vr439** restores the vr434 KEEP picture on BYO-ROM. Grab that.
+- **vr438** was BYO-ROM, but VR boot was a stub. Do not resurrect it.
+- **vr439** zip removed when vr440 shipped. Tag page stays for record.
 
-Player door: [00-START-HERE.md](00-START-HERE.md). Play steps: [README Play](../README.md#play). Hands: [CONTROLS.md](CONTROLS.md). What is coming: [ROADMAP.md](ROADMAP.md). Pitch: [FEATURES.md](../FEATURES.md). How to report: [CONTRIBUTING.md](../CONTRIBUTING.md). License map: [LICENSE-MAP.md](../LICENSE-MAP.md).
+Player door: [00-START-HERE.md](00-START-HERE.md). Play steps: [README Play](../README.md#play-vr440). Hands: [CONTROLS.md](CONTROLS.md). What is coming: [ROADMAP.md](ROADMAP.md). Pitch: [FEATURES.md](../FEATURES.md). How to report: [CONTRIBUTING.md](../CONTRIBUTING.md). License map: [LICENSE-MAP.md](../LICENSE-MAP.md).
 
 ## Before you start
 
 - A **legal** USA GoldenEye ROM you already own (we do not supply one)
 - Windows PC
 - Optional: OpenXR headset. No headset? Use the monitor bat.
-- Download: [Releases/latest](https://github.com/no6969el/GEVR/releases/latest) (**vr439**) - play steps in [README Play](../README.md#play)
+- Download: [vr440 zip](https://github.com/no6969el/GEVR/releases/tag/vr440) (**vr440**) - play steps in [README Play](../README.md#play-vr440)
 
 ## Launchers
 
@@ -32,7 +32,7 @@ Use the bats. Do not double-click `goldeneye.exe`. Details: [CONTROLS.md](CONTRO
 
 ## Install and run
 
-1. Download and unzip **vr439**.
+1. Download and unzip **vr440** (`GEVR-Beta-vr440-win64.zip`).
 2. Headset: `Start-GEVR.bat`. Monitor / no headset: `Play-on-monitor.bat`.
 3. Point at your USA `.z64`.
 4. First prepare waits once while images land in `%LOCALAPPDATA%\GEVR\cache`. Then play.
@@ -41,8 +41,14 @@ Use the bats. Do not double-click `goldeneye.exe`. Details: [CONTROLS.md](CONTRO
 ## First run vs updating
 
 - **New install:** run `Start-GEVR.bat` (headset) or `Play-on-monitor.bat` (no headset), pick your USA `.z64`, wait once, play.
-- **After a Beta update:** keep the same `.z64`. The ship stamp forces one re-prepare. You do not delete the cache for a normal update.
-- **Troubleshooting only:** delete `%LOCALAPPDATA%\GEVR\cache` and run the bat again.
+- **After a Beta update:** keep the same `.z64`. The ship stamp forces one re-prepare. **Saves are kept.** You do not delete the cache for a normal update.
+- **Troubleshooting only:** run **`Clear-GEVR-cache.bat`** from the zip (deletes `%LOCALAPPDATA%\GEVR\cache` only). Optional manual wipe of all `%LOCALAPPDATA%\GEVR` if you want cache **and** saves gone - not the default path. Details: [README updating](../README.md#updating-from-an-older-beta-keep-your-saves).
+
+## vr440 wear notes
+
+- **Auto-Aim defaults OFF** (`GETV_AUTOAIM` in the shipped exe).
+- **Pause watch:** **left stick** moves the highlight in VR.
+- **B/Y** opens pause in headset. **Tab** on keyboard / monitor still works.
 
 ## How to report
 
@@ -61,7 +67,8 @@ Do **not** upload your ROM. We do not need it and we do not want it. Forms: [CON
 ## What to test first
 
 - Boot into VR and look around
-- Aim and shoot
+- Aim and shoot (Auto-Aim should default OFF)
+- Pause watch: move highlight with **left stick**
 - Explosions and sparks
 - Dam mid-range crates (known pop - still useful)
 - Dam water look (known murky - still useful)

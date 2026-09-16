@@ -4,14 +4,14 @@ Fan testers first. Thanks for helping GEVR Beta.
 
 ## Play the current zip
 
-Current zip is **vr439**. Grab [Releases/latest](https://github.com/no6969el/GEVR/releases/latest) and follow [README Play](README.md#play).
+Current zip is **vr440**. Grab **[GEVR-Beta-vr440-win64.zip](https://github.com/no6969el/GEVR/releases/tag/vr440)** and follow [README Play](README.md#play-vr440).
 
 - **Headset:** `Start-GEVR.bat`
 - **No headset / monitor only:** `Play-on-monitor.bat`
 
 Bring a **USA GoldenEye `.z64` you own**. The zip has no ROM. We will not ask you to upload one.
 
-Older tags (vr438, vr434, ...) may still show on GitHub. Their zips were removed. Do not hunt those.
+Older tags may still show on GitHub. **Only vr440 has a zip.** Do not hunt vr439 or older tag downloads.
 
 ## File a bug or crash
 

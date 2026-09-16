@@ -2,7 +2,7 @@
 
 Honest list. No dates. Watch [Releases](https://github.com/no6969el/GEVR/releases) for what you can play this week.
 
-**Play now:** [GEVR Beta vr439](https://github.com/no6969el/GEVR/releases/tag/vr439) (GitHub Latest; only this tag has a zip).
+**Play now:** [GEVR Beta vr440](https://github.com/no6969el/GEVR/releases/tag/vr440) (GitHub Latest; only this tag has a zip).
 
 How to run it: [README](../README.md). Hands: [CONTROLS.md](CONTROLS.md). Tester notes: [BETA.md](BETA.md). Pitch: [FEATURES.md](../FEATURES.md). Watch list: [COMING-SOON.md](COMING-SOON.md).
 
