@@ -49,9 +49,9 @@ The first launch waits once while images prepare into `%LOCALAPPDATA%\GEVR\cache
 
 Each cut carries a **ship stamp** (`GEVR_SHIP_TAG=vr440`). The **first** launch after you move to vr440 rebuilds the **image cache** once automatically. **Save progress is kept.** You do not wipe anything by hand for a normal update.
 
-**If the picture still looks wrong after that one re-prepare:** delete the folder **`%LOCALAPPDATA%\GEVR\cache`** yourself (File Explorer or `Win+R`, paste that path). That removes **only** prepared images - not your saves (they live outside `cache`), not your `.z64`. Then run your launcher again.
+**If the picture still looks wrong after that one re-prepare:** run **`Clear-GEVR-cache.bat`** from the zip (type **YES**). It deletes **only** **`%LOCALAPPDATA%\GEVR\cache`** - not your saves (they live outside `cache`), not your `.z64`. Then run **`Start-GEVR.bat`** or **`Play-on-monitor.bat`** again.
 
-A **`Clear-GEVR-cache.bat`** helper is planned for a future zip refresh; it is **not** in the current **vr440** download yet.
+You can also delete that **`cache`** folder yourself in File Explorer or with `Win+R` if you prefer.
 
 **Optional nuclear clean slate (manual only):** delete the whole **`%LOCALAPPDATA%\GEVR`** folder if you want to wipe cache **and** saves. Not the default update path.
 
