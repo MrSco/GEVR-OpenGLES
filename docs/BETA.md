@@ -1,15 +1,17 @@
 # Beta testing guide
 
-GEVR's public label is **Beta**. Expect crashes and unfinished corners - file them on Issues. The current public play zip is **[vr438](https://github.com/no6969el/GEVR/releases/tag/vr438)** (BYO-ROM, file-backed images).
+GEVR's public label is **Beta**. Expect crashes and unfinished corners - file them on Issues. The current public play zip is **[vr439](https://github.com/no6969el/GEVR/releases/tag/vr439)** (BYO-ROM, file-backed images).
 
-**vr434 was pulled** on 2026-09-16 because that build linked ROM-derived image data into `goldeneye.exe` and could boot without a ROM. Do not use an old vr434 download - grab **vr438** instead.
+**vr438 had a broken VR boot stub.** Grab **vr439**, not another vr438 zip.
+
+**vr434 was pulled** on 2026-09-16 because that build linked ROM-derived image data into `goldeneye.exe` and could boot without a ROM. Do not use an old vr434 download.
 
 ## Before you start
 
 - A **legal** USA GoldenEye ROM you already own (we do not supply one)
 - Windows PC
 - Optional: OpenXR headset. Flat monitor is fine for a quick look
-- Download: [vr438 Release](https://github.com/no6969el/GEVR/releases/tag/vr438) or [all Releases](https://github.com/no6969el/GEVR/releases)
+- Download: [vr439 Release](https://github.com/no6969el/GEVR/releases/tag/vr439) or [all Releases](https://github.com/no6969el/GEVR/releases)
 
 ## VR runtime
 
@@ -18,17 +20,18 @@ GEVR's public label is **Beta**. Expect crashes and unfinished corners - file th
 - Native **PimaxXR**
 - **Quest 3 + Virtual Desktop (VDXR)**
 
-Always use **`Start-GEVR.bat`** from the zip (launches **GevrRomStarter**, not bare `goldeneye.exe`). Details: [CONTROLS.md](CONTROLS.md).
+Always use **`Start-GEVR.bat`** from the zip for headset play (launches **GevrRomStarter**, not bare `goldeneye.exe`). **Monitor / no headset:** **`Play-on-monitor.bat`**. Details: [CONTROLS.md](CONTROLS.md).
 
 **Hz:** 72 / 80 / 90 should work; default is 90. Above 90 = still beta - report what you see.
 
 ## Install and run
 
-1. Download and unzip **vr438**.
-2. Run **`Start-GEVR.bat`** and point **GevrRomStarter** at your USA `.z64`.
-3. First prepare can take a bit while images land in a local cache. Then play.
-4. The zip ships **`glew32.dll`** and the other runtime DLLs - keep them next to the exe when you unzip.
-5. VR is default; flat/desktop works too.
+1. Download and unzip **vr439**.
+2. Headset: **`Start-GEVR.bat`**. Monitor / no headset: **`Play-on-monitor.bat`**.
+3. Point **GevrRomStarter** at your USA `.z64`.
+4. First prepare can take a bit while images land in a local cache. Then play.
+5. The zip ships **`glew32.dll`** and the other runtime DLLs - keep them next to the exe when you unzip.
+6. VR is default; flat/desktop works too.
 
 ## First run vs updating
 

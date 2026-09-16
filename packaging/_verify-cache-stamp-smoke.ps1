@@ -3,7 +3,7 @@
 
 [CmdletBinding()]
 param(
-    [string]$ShipTag = "vr438",
+    [string]$ShipTag = "vr439",
     [string]$FakeSha = "deadbeefdeadbeefdeadbeefdeadbeefdeadbeefdeadbeefdeadbeefdeadbeef"
 )
 

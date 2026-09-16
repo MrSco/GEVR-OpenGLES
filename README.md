@@ -8,7 +8,9 @@
 
 The N64 classic you can finally *stand inside* - not an emulator overlay, not a flat game with a headset stuck on. GEVR is a from-source PC port of *GoldenEye 007* built for real OpenXR VR. You bring a **USA GoldenEye ROM you legally own**, run **`Start-GEVR.bat`**, wait once while it prepares, and go.
 
-**Latest playable cut:** [**GEVR Beta vr438**](https://github.com/no6969el/GEVR/releases/tag/vr438) - public Beta (BYO-ROM, file-backed images from your cart). Download it, unzip, play.
+**Latest playable cut:** [**GEVR Beta vr439**](https://github.com/no6969el/GEVR/releases/tag/vr439) - public Beta (BYO-ROM, file-backed images from your cart). Download it, unzip, play.
+
+**vr438 had a broken VR boot stub** (old stereo, wrong SrcFbo name). Grab **vr439**, not another vr438 zip.
 
 **vr434 was pulled** on 2026-09-16 because that build still had ROM-derived image data linked into `goldeneye.exe` and could boot without you dropping a ROM. Do not use an old vr434 download.
 
@@ -20,9 +22,9 @@ If this brings you back, **Star** the repo so you can catch the next drops. **Wa
 
 ## Play
 
-1. Download the **[vr438 Release zip](https://github.com/no6969el/GEVR/releases/tag/vr438)**. **No ROM inside the zip.**
+1. Download the **[vr439 Release zip](https://github.com/no6969el/GEVR/releases/tag/vr439)**. **No ROM inside the zip.**
 2. Unzip anywhere.
-3. **Headset:** run **`Start-GEVR.bat`**. **Monitor / no headset:** run **`Play-on-monitor.bat`**.
+3. **Headset:** run **`Start-GEVR.bat`** (same picture as the vr434 quality KEEP). **Monitor / no headset:** run **`Play-on-monitor.bat`**.
 4. Point it at your **USA `.z64`**.
 5. Recenter with **both thumbstick clicks**.
 
@@ -42,21 +44,20 @@ No ROM in the download. You bring yours.
 
 ---
 
-## What went wrong with vr434 (honest)
+## What went wrong with vr438 and vr434 (honest)
 
-- The first vr434 zip could boot **without** you dropping a ROM because `combined.bin` was still embedded in `goldeneye.exe`.
-- That release asset was removed; the tag page explains why.
-- The replacement is **vr438**: file-backed images, ROM starter, and automated pack smoke gates under [`packaging/`](packaging/README.md).
+- **vr438** shipped a broken VR boot stub, so headset play looked like an old build (blue, messed-up right eye, flicker). Use **[vr439](https://github.com/no6969el/GEVR/releases/tag/vr439)**.
+- **vr434** could boot **without** you dropping a ROM because `combined.bin` was still embedded in `goldeneye.exe`. That zip was pulled.
 
 ---
 
-## What is new in vr438
+## What is new in vr439
 
 - **BYO-ROM enforced** - `Start-GEVR.bat` launches **GevrRomStarter**; you must supply a USA GoldenEye `.z64` you own.
 - **File-backed images** - in-game textures and UI art come from your ROM on disk; the zip does not ship Nintendo cart data.
 - **Cache rebuilds itself on a new tag** - first launch after you update waits once; you do not wipe `%LOCALAPPDATA%\GEVR` by hand.
 - **Full runtime in the zip** - includes `glew32.dll` and the other Windows DLLs the build needs.
-- **Same headset KEEP as vr434** - `Start-GEVR.bat` still applies that quality boot (XR stereo src, SrcFbo, skymesh, playspace). Only the ROM / file-backed image path is new.
+- **Same headset KEEP as vr434** - `Start-GEVR.bat` applies that quality boot (XR stereo src, SrcFbo, skymesh, playspace). Only the ROM / file-backed image path is new.
 - **Sharper VR** (carried forward) - supersample 3 with the SrcFbo path we chaired and kept.
 - **Boot that actually hands over** - the bat sets FPS + stereo / view-restore so eyes fuse.
 - **Movement feel** locked to the 90 Hz loco reference we preferred in the chair.
@@ -149,7 +150,7 @@ Deep technical trail: [`docs/00-START-HERE.md`](docs/00-START-HERE.md)
 Controls: [`docs/CONTROLS.md`](docs/CONTROLS.md)  
 Beta snapshot: [`docs/BETA.md`](docs/BETA.md) · [`docs/FEATURES-CURRENT.md`](docs/FEATURES-CURRENT.md)  
 Coming soon / release policy: [`docs/COMING-SOON.md`](docs/COMING-SOON.md) · [`docs/RELEASE-POLICY.md`](docs/RELEASE-POLICY.md)  
-Pack / smoke (vr438): [`packaging/README.md`](packaging/README.md)
+Pack / smoke (vr439): [`packaging/README.md`](packaging/README.md)
 
 ---
 
