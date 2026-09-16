@@ -57,7 +57,7 @@ When you report a bug or crash, please include: **headset**, **OpenXR runtime**,
 - Crashes and rough edges are expected. That is why it is Beta.
 - You bring a **USA GoldenEye `.z64` you own**. No ROM in the download.
 - **Headset:** `Start-GEVR.bat` (KEEP picture: XR stereo source, SrcFbo, supersample 3, sky / playspace). **Monitor / no headset:** `Play-on-monitor.bat`.
-- First launch prepares images once into `%LOCALAPPDATA%\GEVR\cache`. A new zip rebuilds that cache once via a ship stamp. Saves stay outside `cache`. Troubleshooting: **`Clear-GEVR-cache.bat`** (cache only) - see [README updating](README.md#updating-from-an-older-beta-keep-your-saves).
+- First launch prepares images once into `%LOCALAPPDATA%\GEVR\cache`. A new zip rebuilds that cache once via a ship stamp. Saves stay outside `cache`. Troubleshooting: delete `%LOCALAPPDATA%\GEVR\cache` by hand (see [README updating](README.md#updating-from-an-older-beta-keep-your-saves)). A cache-clear bat is coming in a later zip refresh.
 - **vr440:** Auto-Aim defaults OFF. Pause watch: **left stick** moves the highlight in VR. **B/Y** opens pause in headset.
 - **vr439** zip removed when vr440 shipped (tag page stays). **vr438** stub VR boot - do not use. **vr434** pulled (baked ROM images).
 - **Dam crates** can still pop in. **Dam water** can look murky. **Glass bullet holes** can show in one eye.

@@ -42,7 +42,7 @@ Use the bats. Do not double-click `goldeneye.exe`. Details: [CONTROLS.md](CONTRO
 
 - **New install:** run `Start-GEVR.bat` (headset) or `Play-on-monitor.bat` (no headset), pick your USA `.z64`, wait once, play.
 - **After a Beta update:** keep the same `.z64`. The ship stamp forces one re-prepare. **Saves are kept.** You do not delete the cache for a normal update.
-- **Troubleshooting only:** run **`Clear-GEVR-cache.bat`** from the zip (deletes `%LOCALAPPDATA%\GEVR\cache` only). Optional manual wipe of all `%LOCALAPPDATA%\GEVR` if you want cache **and** saves gone - not the default path. Details: [README updating](../README.md#updating-from-an-older-beta-keep-your-saves).
+- **Troubleshooting only:** delete **`%LOCALAPPDATA%\GEVR\cache`** by hand (keeps saves). Optional: delete all **`%LOCALAPPDATA%\GEVR`** if you want cache **and** saves gone - not the default path. A **`Clear-GEVR-cache.bat`** may ship in a later zip; it is not in today's vr440 zip. Details: [README updating](../README.md#updating-from-an-older-beta-keep-your-saves).
 
 ## vr440 wear notes
 
