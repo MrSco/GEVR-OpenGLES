@@ -1,6 +1,6 @@
 # Beta testing guide
 
-GEVR’s public label is **Beta**. Expect crashes and unfinished corners - file them on Issues. The current public play zip is **[vr438](https://github.com/no6969el/GEVR/releases/tag/vr438)** (BYO-ROM, file-backed images).
+GEVR's public label is **Beta**. Expect crashes and unfinished corners - file them on Issues. The current public play zip is **[vr438](https://github.com/no6969el/GEVR/releases/tag/vr438)** (BYO-ROM, file-backed images).
 
 **vr434 was pulled** on 2026-09-16 because that build linked ROM-derived image data into `goldeneye.exe` and could boot without a ROM. Do not use an old vr434 download - grab **vr438** instead.
 
@@ -18,7 +18,7 @@ GEVR’s public label is **Beta**. Expect crashes and unfinished corners - file 
 - Native **PimaxXR**
 - **Quest 3 + Virtual Desktop (VDXR)**
 
-Use `Start-GEVR.bat` from the zip (launches **GevrRomStarter**, not bare `goldeneye.exe`). Details: [CONTROLS.md](CONTROLS.md).
+Always use **`Start-GEVR.bat`** from the zip (launches **GevrRomStarter**, not bare `goldeneye.exe`). Details: [CONTROLS.md](CONTROLS.md).
 
 **Hz:** 72 / 80 / 90 should work; default is 90. Above 90 = still beta - report what you see.
 
@@ -26,8 +26,26 @@ Use `Start-GEVR.bat` from the zip (launches **GevrRomStarter**, not bare `golden
 
 1. Download and unzip **vr438**.
 2. Run **`Start-GEVR.bat`** and point **GevrRomStarter** at your USA `.z64`.
-3. The zip ships **`glew32.dll`** and the other runtime DLLs - keep them next to the exe when you unzip.
-4. Play. VR is default; flat/desktop works too. If it crashes or looks wrong, [open an Issue](https://github.com/no6969el/GEVR/issues/new/choose).
+3. First prepare can take a bit while images land in a local cache. Then play.
+4. The zip ships **`glew32.dll`** and the other runtime DLLs - keep them next to the exe when you unzip.
+5. VR is default; flat/desktop works too.
+
+## First run vs updating
+
+- New install: run Start-GEVR.bat, pick your USA GoldenEye .z64, wait once while images prepare into `%LOCALAPPDATA%\GEVR\cache`, then play.
+- Returning after a Beta update: keep the same .z64. Each cut carries a ship stamp so the first launch rebuilds that cache once automatically. You should not need to delete the cache folder by hand for a normal update.
+- Only if something still looks wrong: delete `%LOCALAPPDATA%\GEVR` and re-run the bat.
+
+## How to report
+
+[Open an Issue](https://github.com/no6969el/GEVR/issues/new/choose) with:
+
+- Headset, OpenXR runtime, SteamVR on/off, HMD vs monitor
+- Whether you used **`Start-GEVR.bat`**
+- Whether this was a first install, the **first launch after a new zip**, or a later launch
+- Map / action if it crashed
+
+Do **not** upload your ROM or any `.z64`. We only need setup details.
 
 ## What to test first
 
