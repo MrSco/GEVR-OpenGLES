@@ -1,6 +1,6 @@
 # Beta testing guide
 
-GEVR’s public label is **Beta**. Expect crashes and unfinished corners — file them on Issues. The current public play zip is **[vr434](https://github.com/no6969el/GEVR/releases/tag/vr434)**.
+GEVR’s public label is **Beta**. Expect crashes and unfinished corners - file them on Issues. The current public play zip is **[vr434](https://github.com/no6969el/GEVR/releases/tag/vr434)**.
 
 ## Before you start
 
@@ -18,7 +18,7 @@ GEVR’s public label is **Beta**. Expect crashes and unfinished corners — fil
 
 Use `Start-GEVR.bat` from the zip. Details: [CONTROLS.md](CONTROLS.md).
 
-**Hz:** 72 / 80 / 90 should work; default is 90. Above 90 = still beta — report what you see.
+**Hz:** 72 / 80 / 90 should work; default is 90. Above 90 = still beta - report what you see.
 
 ## Install and run
 
@@ -32,8 +32,8 @@ Use `Start-GEVR.bat` from the zip. Details: [CONTROLS.md](CONTROLS.md).
 - Boot into VR and look around (comfort / tracking)
 - Aim and shoot
 - Explosions and sparks
-- Dam mid-range crates (known pop — still useful reports)
-- Dam water look (known flat/murky — still useful)
+- Dam mid-range crates (known pop - still useful reports)
+- Dam water look (known flat/murky - still useful)
 - Facility halls / guards
 - Note any crash: what map, what action
 
