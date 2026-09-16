@@ -108,6 +108,25 @@ function Test-BootCmdShipTag([string]$root, [string]$expectedTag) {
         Fail "$($boot.Name) must set GEVR_SHIP_TAG=$expectedTag"
     }
     Pass "$($boot.Name) sets GEVR_SHIP_TAG=$expectedTag"
+
+    if ($text -notmatch '(?im)^\s*set\s+GETV_STEREO_SRC\s*=\s*xr\s*$') {
+        Fail "$($boot.Name) must set GETV_STEREO_SRC=xr"
+    }
+    Pass "$($boot.Name) sets GETV_STEREO_SRC=xr"
+
+    if ($text -notmatch '(?im)^\s*set\s+GETV_XR_PLAY_SRCFBO\s*=\s*1\s*$') {
+        Fail "$($boot.Name) must set GETV_XR_PLAY_SRCFBO=1"
+    }
+    Pass "$($boot.Name) sets GETV_XR_PLAY_SRCFBO=1"
+
+    $lines = Get-Content -LiteralPath $boot.FullName
+    $nonRem = @($lines | Where-Object { $_ -notmatch '^\s*rem\b' -and $_.Trim() -ne '' })
+    foreach ($line in $nonRem) {
+        if ($line -match '(?i)goldeneye\.exe') {
+            Fail "$($boot.Name) must not invoke goldeneye.exe (Start-GEVR.bat launches GevrRomStarter.exe)"
+        }
+    }
+    Pass "$($boot.Name) does not launch goldeneye.exe"
 }
 
 function Test-ReleaseNotesShipStamp([string]$notesPath) {
@@ -128,6 +147,9 @@ function Test-StartBat([string]$batPath) {
     $lines = Get-Content -LiteralPath $batPath
     $nonRem = @($lines | Where-Object { $_ -notmatch '^\s*rem\b' -and $_.Trim() -ne '' })
     $text = $nonRem -join "`n"
+    if ($text -notmatch '(?i)gevr-vr438-boot\.cmd') {
+        Fail "Start-GEVR.bat must call gevr-vr438-boot.cmd"
+    }
     if ($text -notmatch '(?i)GevrRomStarter\.exe') {
         Fail "Start-GEVR.bat must launch GevrRomStarter.exe"
     }
@@ -136,7 +158,7 @@ function Test-StartBat([string]$batPath) {
             Fail "Start-GEVR.bat must not invoke goldeneye.exe directly"
         }
     }
-    Pass "Start-GEVR.bat routes through GevrRomStarter.exe"
+    Pass "Start-GEVR.bat calls gevr-vr438-boot.cmd then GevrRomStarter.exe"
 }
 
 function Test-MonitorBat([string]$batPath) {

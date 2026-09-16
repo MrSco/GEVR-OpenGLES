@@ -56,6 +56,7 @@ No ROM in the download. You bring yours.
 - **File-backed images** - in-game textures and UI art come from your ROM on disk; the zip does not ship Nintendo cart data.
 - **Cache rebuilds itself on a new tag** - first launch after you update waits once; you do not wipe `%LOCALAPPDATA%\GEVR` by hand.
 - **Full runtime in the zip** - includes `glew32.dll` and the other Windows DLLs the build needs.
+- **Same headset KEEP as vr434** - `Start-GEVR.bat` still applies that quality boot (XR stereo src, SrcFbo, skymesh, playspace). Only the ROM / file-backed image path is new.
 - **Sharper VR** (carried forward) - supersample 3 with the SrcFbo path we chaired and kept.
 - **Boot that actually hands over** - the bat sets FPS + stereo / view-restore so eyes fuse.
 - **Movement feel** locked to the 90 Hz loco reference we preferred in the chair.
