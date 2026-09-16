@@ -12,7 +12,7 @@ The N64 classic you can finally *stand inside* - not an emulator overlay, not a 
 
 **vr440** is still on Releases for comparison, but it is **not** Latest - same `goldeneye.exe` as vr441, picture-only boot. Grab **vr441** unless you are deliberately comparing boots (see **What went wrong in vr440** below).
 
-If this brings you back, **Star** the repo so you can catch the next drops. **Watch → Releases** if you want a ping when we ship.
+If this brings you back, **Star** the repo so you can catch the next drops. **Watch → Releases** if you want a ping when we ship. Between cuts, we keep a [living status on Reddit](https://www.reddit.com/r/QuietWindows/comments/1whmk8l/gevr_living_status_goldeneye_in_native_openxr_vr/) - honest fan wear notes, not a second readme.
 
 [Releases](https://github.com/no6969el/GEVR/releases) · [Report a bug](https://github.com/no6969el/GEVR/issues/new/choose) · [Roadmap](docs/ROADMAP.md) · [Controls](docs/CONTROLS.md) · [Credits](CREDITS.md) · [Features](FEATURES.md)
 
