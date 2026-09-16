@@ -30,6 +30,9 @@ Why vr434 is gone
 That zip had ROM images baked into goldeneye.exe and could boot
 without a ROM. It was pulled. This cut loads images from your cart.
 
+Headset play uses the same quality KEEP as vr434 (XR stereo, SrcFbo,
+skymesh, playspace). Only the ROM / file-backed image path is new.
+
 Headset notes
 -------------
 Pimax Crystal Super + SteamVR OpenXR, native PimaxXR, Quest 3 +

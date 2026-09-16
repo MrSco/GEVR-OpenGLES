@@ -77,6 +77,8 @@ Fails the run if any of these are true:
 - `Start-GEVR.bat` launches bare `goldeneye.exe` without going through `GevrRomStarter.exe`.
 - `Play-on-monitor.bat` does not set `GE_VR_XR=0` and `GETV_STEREO=0`, or it calls `gevr-vr438-boot.cmd`.
 - `gevr-*-boot.cmd` missing `GEVR_SHIP_TAG` matching the pack `-Tag`.
+- `gevr-*-boot.cmd` missing `GETV_STEREO_SRC=xr` or `GETV_XR_PLAY_SRCFBO=1`, or it launches `goldeneye.exe`.
+- `Start-GEVR.bat` does not call `gevr-vr438-boot.cmd` before `GevrRomStarter.exe`.
 - `RELEASE-NOTES.txt` missing ship stamp / cache rebuild documentation.
 
 ### Verify force-rebuild (owner)
