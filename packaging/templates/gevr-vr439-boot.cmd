@@ -57,6 +57,10 @@ set GETV_XR_TURN=1
 set GETV_XR_TURN_SCALE=60
 set GETV_XR_TURN_DEAD=20
 set GETV_XR_BUTTONS=1
+rem B/Y = Start/pause so options work in headset (was unbound). GETV_XR_BTN_B=weapon restores weapon.
+set GETV_XR_BTN_B=start
+rem Ship Auto-Aim OFF once goldeneye.exe has GETV_AUTOAIM (next rebuild).
+set GETV_AUTOAIM=0
 
 rem --- Aim / hands / playspace ---
 set GETV_VR_HEADYAW=1
