@@ -67,7 +67,9 @@ We would rather tell you than surprise you:
 - **Glass bullet holes** can still show in one eye in places.
 - Expect occasional **crashes** while we keep optimizing.
 
-Still worth playing. Facility. Dam. That first-person Bond feeling. We are shipping updates as fast as we can.
+Still worth playing — absolutely. Especially if you miss levels like Facility and want to get brushed up for when we eventually ship the multiplayer add-on. Dam, Facility, that first-person Bond feeling: we are shipping updates as fast as we can.
+
+On a **flat / monitor** setup, classic **local multiplayer** is still there — split-screen couch chaos, same as you remember, while we build toward online play later.
 
 ---
 
