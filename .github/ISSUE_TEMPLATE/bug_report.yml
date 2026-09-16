@@ -6,19 +6,15 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for helping improve GEVR Beta. Current zip is **vr440**.
+        Thanks for helping improve GEVR Beta. **Please do not attach ROM files** to this issue.
 
-        Play steps: [README Play](https://github.com/no6969el/GEVR/blob/main/README.md#play-vr440). Download: [vr440 zip](https://github.com/no6969el/GEVR/releases/tag/vr440). How to report: [CONTRIBUTING](https://github.com/no6969el/GEVR/blob/main/CONTRIBUTING.md).
-
-        **Do not upload ROM files** (no `.z64` / `.n64` / `.v64`, no dumps, no paste of ROM bytes).
-
-        Crashes are common in Beta - if the game closed on you, use the **Crash report** template instead.
+        Crashes are common in Beta — if the game closed on you, use the **Crash report** template instead.
 
   - type: input
     id: headset_model
     attributes:
       label: Headset model
-      description: Which headset are you using? (e.g. Pimax Crystal Super, Quest 3, or none - monitor only)
+      description: Which headset are you using? (e.g. Pimax Crystal Super, Quest 3, none — monitor only)
       placeholder: Pimax Crystal Super
     validations:
       required: true
@@ -41,7 +37,7 @@ body:
     id: steamvr_running
     attributes:
       label: Is SteamVR running?
-      description: SteamVR can be installed but off - pick what matches your session.
+      description: SteamVR can be installed but off — pick what matches your session.
       options:
         - Yes
         - No
@@ -67,32 +63,37 @@ body:
     id: start_gevr_bat
     attributes:
       label: Did you start with Start-GEVR.bat?
-      description: Headset KEEP launcher in the vr440 zip. If you have no headset, use Play-on-monitor.bat from the same zip, then pick No (used Play-on-monitor.bat).
+      description: The recommended launcher in the Release zip — not a download from this repo alone.
       options:
         - Yes
-        - No (used Play-on-monitor.bat)
-        - No (something else)
+        - No
         - Not sure
     validations:
       required: true
 
-  - type: dropdown
+  - type: input
     id: build_tag
     attributes:
-      label: Which Beta zip?
-      description: Current Latest is vr440. See README Play. Only vr440 has a zip; older tag pages may remain without zips.
-      options:
-        - vr440 (current Latest)
-        - Older tag (name it in the notes)
-        - Not sure
+      label: Build or Release tag
+      description: Optional but helpful (e.g. vr441 from Releases).
+      placeholder: vr441
     validations:
-      required: true
+      required: false
+
+  - type: input
+    id: boot_cmd
+    attributes:
+      label: Boot script filename
+      description: The `gevr-*-boot.cmd` file next to Start-GEVR.bat in your unzip folder (e.g. gevr-vr441-boot.cmd). Fast way to spot a stale unzip vs a real bug.
+      placeholder: gevr-vr441-boot.cmd
+    validations:
+      required: false
 
   - type: textarea
     id: repro_steps
     attributes:
       label: Short steps to reproduce
-      description: What were you doing? Keep it brief - a few steps is enough.
+      description: What were you doing? Keep it brief — a few steps is enough.
       placeholder: |
         1. Launched with Start-GEVR.bat
         2. Loaded Facility
@@ -120,6 +121,6 @@ body:
     id: extra
     attributes:
       label: Screenshots, clip, or log lines
-      description: Optional - a short clip or the first few `[getv]` / OpenXR log lines can help. No ROM files.
+      description: Optional — a short clip or the first few `[getv]` / OpenXR log lines can help. No ROM files.
     validations:
       required: false

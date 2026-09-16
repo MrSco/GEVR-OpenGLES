@@ -1,6 +1,6 @@
-# Assemble GEVR Beta vr439 staging folder (BYO-ROM, file-backed images).
+# Assemble GEVR Beta vr441 staging folder (BYO-ROM, file-backed images).
 # Owner runs on SimRig after build + rom-starter binaries are present.
-# Copies gevr-vr439-boot.cmd (live KEEP: STEREO_SRC=xr, XR_PLAY_SRCFBO, SS3, sky, playspace)
+# Copies gevr-vr441-boot.cmd (live KEEP: STEREO_SRC=xr, XR_PLAY_SRCFBO, SS3, sky, playspace)
 # and filelist.gevr-images.csv (gevr_prepare exit 3 without it).
 
 [CmdletBinding()]
@@ -12,7 +12,7 @@ param(
     [string]$OutDir,
 
     [string]$PackagingRoot = "",
-    [string]$Tag = "vr439",
+    [string]$Tag = "vr441",
     [switch]$SkipSmoke,
 
     [string]$CombinedBin = ""
@@ -79,14 +79,14 @@ if (Test-Path -LiteralPath $filelistRepo) {
 
 Copy-Item -LiteralPath (Join-Path $templates "Start-GEVR.bat") -Destination (Join-Path $OutDir "Start-GEVR.bat") -Force
 Copy-IfExists (Join-Path $templates "Play-on-monitor.bat") $OutDir
-Copy-Item -LiteralPath (Join-Path $templates "gevr-vr439-boot.cmd") -Destination (Join-Path $OutDir "gevr-vr439-boot.cmd") -Force
-Copy-Item -LiteralPath (Join-Path $templates "RELEASE-NOTES-vr439.txt") -Destination (Join-Path $OutDir "RELEASE-NOTES.txt") -Force
+Copy-Item -LiteralPath (Join-Path $templates "gevr-vr441-boot.cmd") -Destination (Join-Path $OutDir "gevr-vr441-boot.cmd") -Force
+Copy-Item -LiteralPath (Join-Path $templates "RELEASE-NOTES-vr441.txt") -Destination (Join-Path $OutDir "RELEASE-NOTES.txt") -Force
 
 $zipPath = Join-Path (Split-Path -Parent $OutDir) ("GEVR-Beta-{0}-win64.zip" -f $Tag)
 if (Test-Path -LiteralPath $zipPath) {
     Remove-Item -LiteralPath $zipPath -Force
 }
-Compress-Archive -LiteralPath (Join-Path $OutDir "*") -DestinationPath $zipPath -CompressionLevel Optimal
+Compress-Archive -Path (Join-Path $OutDir "*") -DestinationPath $zipPath -CompressionLevel Optimal
 
 Write-Host "[pack] Staging: $OutDir"
 Write-Host "[pack] Zip: $zipPath"

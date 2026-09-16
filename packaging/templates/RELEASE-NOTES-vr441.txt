@@ -1,9 +1,24 @@
-GEVR Beta vr439
+GEVR Beta vr441
 ===============
 
 From-source GoldenEye 007 in real OpenXR VR. Bring your own USA ROM.
 
 This zip has no ROM. You supply a USA GoldenEye .z64 you legally own.
+
+What changed since vr440
+------------------------
+The game binary is unchanged - vr440 and vr441 ship the same goldeneye.exe.
+What changed is the boot script that turns features on.
+
+vr440 booted the picture KEEP only. The chair features were in the binary the
+whole time and the boot never switched them on, so bodies vanished, explosion
+texture was wrong, and the aim / arm behaviour was not the tuned one. vr441
+boots the full set:
+
+- Bodies stay after a kill (up to 48)
+- Explosion and fire draw with the right texture and byte order
+- The tuned aim path: ADS sight, hit-mark mapping, ADS cull, vertex guard
+- Correct floor height, so hands and gun sit where they should
 
 Play
 ----
@@ -12,10 +27,6 @@ Play
    Monitor / no headset: run Play-on-monitor.bat
 3. Point it at your USA .z64.
 4. In VR, recenter with both thumbstick clicks.
-
-Start-GEVR.bat boots the same quality KEEP as the vr434 picture (stereo from the
-headset, SrcFbo sharpness, sky/eye isolation, playspace). vr438 boot was a stub
-and looked like an old build - use this vr439 zip instead.
 
 First time
   The first launch waits once while images prepare into
@@ -32,10 +43,14 @@ run the bat again.
 Why older zips
 --------------
 - vr434 was pulled: ROM images were baked into goldeneye.exe.
-- vr438 required your ROM but shipped a stripped VR boot. Grab vr439.
+- vr438 required your ROM but shipped a stripped VR boot.
+- vr440 had the right picture but never turned the chair features on.
+  Grab vr441.
 
 Headset notes
 -------------
+Auto-Aim defaults OFF. Left stick moves the pause highlight in VR (was look-stick only).
+
 In headset, B/Y opens pause and options. Tab on keyboard/monitor still works.
 
 Pimax Crystal Super + SteamVR OpenXR, native PimaxXR, Quest 3 +

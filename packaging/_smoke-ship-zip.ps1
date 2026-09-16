@@ -1,12 +1,16 @@
 # Ship-blocker smoke gates for GEVR Beta zips (BYO-ROM, file-backed images).
-
+#
+# 2026-09-16: this file was a SINGLE LINE with no newlines, so PowerShell read the
+# whole thing as one comment. It ran, did nothing, and gated nothing -- which is how
+# the vr440 short boot template reached the public zip. Rewritten with real line
+# endings, and the boot-content gate below is the one that would have caught it.
 [CmdletBinding()]
 param(
     [string]$ZipPath = "",
     [string]$StagingDir = "",
     [Parameter(Mandatory = $true)]
     [string]$CombinedBin,
-    [string]$ShipTag = "vr440"
+    [string]$ShipTag = "vr441"
 )
 
 $ErrorActionPreference = "Stop"
@@ -31,12 +35,93 @@ $requiredFiles = @(
     "goldeneye.exe",
     "GevrRomStarter.exe",
     "gevr_prepare.exe",
+    "filelist.gevr-images.csv",
     "EXPECTED-ROM.txt",
     "Start-GEVR.bat",
     "Play-on-monitor.bat",
-    "Clear-GEVR-cache.bat",
-    "RELEASE-NOTES.txt",
-    "filelist.gevr-images.csv"
+    "RELEASE-NOTES.txt"
+)
+
+# The live KEEP + PLAY0 allowlist. Every one of these must be assigned, with this
+# value, in gevr-*-boot.cmd. A stub or picture-only boot fails here.
+$requiredBootKnobs = [ordered]@{
+    # chair features vr440 never turned on
+    "GETV_VR_CORPSEKEEP"        = "1"
+    "GETV_VR_CORPSEKEEP_MAX"    = "48"
+    "GETV_VR_CORPSEKEEP_CEIL"   = "440"
+    "GETV_VR_TEXINVAL"          = "1"
+    "GETV_VR_TEXDLRETAG"        = "1"
+    "GETV_VR_VFXTMEM"           = "1"
+    "GETV_VR_VFXSHIFT"          = "1"
+    "GETV_TEX16BE"              = "1"
+    "GETV_RGBA16BE"             = "0"
+    "GETV_TEX32BE"              = "1"
+    # PLAY0 arm
+    "GETV_VR_VTXGUARD"          = "64"
+    "GETV_VR_ADSSIGHT"          = "1"
+    "GETV_VR_HITSNAP"           = "2"
+    "GETV_VR_SIGHTPX"           = "6"
+    "GETV_VR_ADSCULL"           = "1"
+    # aim / hands / gun / playspace
+    "GETV_VR_HEADYAW"           = "1"
+    "GETV_VR_HEADFRAME"         = "2"
+    "GETV_VR_HANDYAW"           = "2"
+    "GETV_VR_LEVELYAW"          = "1"
+    "GETV_VR_GUNAIM"            = "1"
+    "GETV_VR_GUNMOUNT"          = "1"
+    "GETV_VR_GUNARM"            = "1"
+    "GETV_VR_PLAYSPACE"         = "1"
+    "GETV_VR_BODY_NOARMS"       = "1"
+    "GETV_XR_FLOOR_M"           = "-0.200"
+    "GETV_VR_HANDCUBES"         = "1"
+    "GETV_VR_CASINGS"           = "1"
+    "GETV_VR_RETICLE"           = "1"
+    "GETV_VR_TOUCHUSE"          = "1"
+    "GETV_VR_HANDMELEE"         = "1"
+    # picture KEEP
+    "GETV_SUPERSAMPLE"          = "3"
+    "GETV_XR_PLAY_SRCFBO"       = "1"
+    "GETV_XR_PLAY_EYERECT"      = "1"
+    "GETV_VR_SKYMESH"           = "1"
+    "GETV_VR_SKYSCISSOR"        = "1"
+    # core VR
+    "GETV_VR"                   = "1"
+    "GETV_FPS"                  = "90"
+    "GETV_STEREO_SRC"           = "xr"
+    "GE_VR_XR"                  = "1"
+}
+
+# Knobs that must NOT be armed in a public boot.
+$forbiddenBootKnobs = @(
+    "GETV_XR_FOVMATCH",
+    "GETV_VR_WALLCENSUS",
+    "GETV_VR_ROOMLOADWHY",
+    "GETV_FIREDUMP",
+    "GETV_STAGE",
+    "GETV_CHR_DEBUG",
+    "GETV_INPUT_DEBUG",
+    "GETV_FRONTTRACE",
+    "GETV_CINETRACE",
+    "GETV_LOGFLUSH",
+    "GETV_SKYTRACE",
+    "GETV_ROOMTRACE",
+    "GETV_CULLWHY",
+    "GETV_XR_SHARPLOG"
+)
+
+# Names that are not knobs in goldeneye.exe. Setting them is a silent no-op and has
+# shipped before (vr440 set both). Fail rather than let a typo look like a feature.
+$deadBootKnobs = @(
+    "GETV_SRCFBO",
+    "GETV_MSGSCALE"
+)
+
+# Legacy names that are also no-ops but are deliberately kept. GE_VR_XR appears in no
+# getv source and in no binary string; the VR arm is gated on GETV_VR (gevr_xr.c
+# geVrXrEnabled -- unset means off). Play-on-monitor.bat's gate still requires
+# GE_VR_XR=0, so the name stays and is excepted here rather than failing the build.
+$knownNoOpKnobs = @(
+    "GE_VR_XR"
 )
 
 $romExtensions = @(".z64", ".n64", ".v64")
@@ -97,69 +182,95 @@ function Test-ExeGates([string]$exePath, [byte[]]$combinedHead) {
         Fail "goldeneye.exe missing file-backed marker string: $fileBackedMarker"
     }
     Pass "goldeneye.exe reports file-backed images"
+
+    return $ascii
 }
 
-function Test-BootCmdShipTag([string]$root, [string]$expectedTag) {
-    $bootName = "gevr-$expectedTag-boot.cmd"
-    $bootPath = Join-Path $root $bootName
-    if (-not (Test-Path -LiteralPath $bootPath)) {
-        Fail "Missing $bootName (must set GEVR_SHIP_TAG=$expectedTag)"
+function Get-BootCmd([string]$root) {
+    $boot = Get-ChildItem -LiteralPath $root -Filter "gevr-*-boot.cmd" | Select-Object -First 1
+    if (-not $boot) {
+        Fail "Missing gevr-*-boot.cmd (must set GEVR_SHIP_TAG and the KEEP allowlist)"
     }
-    $boot = Get-Item -LiteralPath $bootPath
+    return $boot
+}
+
+function Test-BootCmdShipTag($boot, [string]$expectedTag) {
     $text = Get-Content -LiteralPath $boot.FullName -Raw
     $pattern = '(?im)^\s*set\s+GEVR_SHIP_TAG\s*=\s*' + [regex]::Escape($expectedTag) + '\s*$'
     if ($text -notmatch $pattern) {
         Fail "$($boot.Name) must set GEVR_SHIP_TAG=$expectedTag"
     }
     Pass "$($boot.Name) sets GEVR_SHIP_TAG=$expectedTag"
-
-    if ($text -notmatch '(?im)^\s*set\s+GETV_STEREO_SRC\s*=\s*xr\s*$') {
-        Fail "$($boot.Name) must set GETV_STEREO_SRC=xr"
-    }
-    Pass "$($boot.Name) sets GETV_STEREO_SRC=xr"
-
-    if ($text -notmatch '(?im)^\s*set\s+GETV_XR_PLAY_SRCFBO\s*=\s*1\s*$') {
-        Fail "$($boot.Name) must set GETV_XR_PLAY_SRCFBO=1"
-    }
-    Pass "$($boot.Name) sets GETV_XR_PLAY_SRCFBO=1"
-
-    if ($text -notmatch '(?im)^\s*set\s+GETV_SUPERSAMPLE\s*=\s*3\s*$') {
-        Fail "$($boot.Name) must set GETV_SUPERSAMPLE=3"
-    }
-    Pass "$($boot.Name) sets GETV_SUPERSAMPLE=3"
-
-    if ($text -notmatch '(?im)^\s*set\s+GETV_VR_SKYMESH\s*=\s*1\s*$') {
-        Fail "$($boot.Name) must set GETV_VR_SKYMESH=1"
-    }
-    Pass "$($boot.Name) sets GETV_VR_SKYMESH=1"
-
-    if ($text -notmatch '(?im)^\s*set\s+GETV_VR_PLAYSPACE\s*=\s*1\s*$') {
-        Fail "$($boot.Name) must set GETV_VR_PLAYSPACE=1"
-    }
-    Pass "$($boot.Name) sets GETV_VR_PLAYSPACE=1"
-
-    $lines = Get-Content -LiteralPath $boot.FullName
-    $nonRem = @($lines | Where-Object { $_ -notmatch '^\s*rem\b' -and $_.Trim() -ne '' })
-    foreach ($line in $nonRem) {
-        if ($line -match '(?i)goldeneye\.exe') {
-            Fail "$($boot.Name) must not invoke goldeneye.exe (Start-GEVR.bat launches GevrRomStarter.exe)"
-        }
-    }
-    Pass "$($boot.Name) does not launch goldeneye.exe"
 }
 
-function Test-FilelistCsv([string]$csvPath) {
-    if (-not (Test-Path -LiteralPath $csvPath)) {
-        Fail "Missing filelist.gevr-images.csv (gevr_prepare exit 3 without it)"
+# THE GATE THAT WOULD HAVE CAUGHT vr440. A boot cmd that does not arm the live KEEP
+# and PLAY0 set is a stub, however well-formed it looks.
+function Test-BootCmdAllowlist($boot, [string]$exeAscii) {
+    $text = Get-Content -LiteralPath $boot.FullName -Raw
+
+    # A flattened file (no newlines) passes regexes by accident; refuse it outright.
+    if ($text -notmatch "`n") {
+        Fail "$($boot.Name) has no line breaks - the file is one line and cmd cannot read it"
     }
-    $text = Get-Content -LiteralPath $csvPath -Raw
-    if ([string]::IsNullOrWhiteSpace($text)) {
-        Fail "filelist.gevr-images.csv is empty (gevr_prepare exit 3)"
+
+    $missing = @()
+    foreach ($name in $requiredBootKnobs.Keys) {
+        $want = $requiredBootKnobs[$name]
+        $pattern = '(?im)^\s*set\s+' + [regex]::Escape($name) + '\s*=\s*' + [regex]::Escape($want) + '\s*$'
+        if ($text -notmatch $pattern) {
+            $missing += ("{0}={1}" -f $name, $want)
+        }
     }
-    if ($text -notmatch 'combined\.bin') {
-        Fail "filelist.gevr-images.csv must list images/combined.bin"
+    if ($missing.Count -gt 0) {
+        Fail ("$($boot.Name) is not the live KEEP boot - {0} knob(s) missing or wrong: {1}" -f $missing.Count, ($missing -join ", "))
     }
-    Pass "filelist.gevr-images.csv present (combined.bin row)"
+    Pass ("$($boot.Name) arms all {0} KEEP + PLAY0 knobs" -f $requiredBootKnobs.Count)
+
+    $armed = @()
+    foreach ($name in $forbiddenBootKnobs) {
+        # Armed means assigned a value that is neither empty nor 0, ON THE SAME LINE.
+        # "set X=" (the clear) and "set X=0" (pinned off) are both fine and expected.
+        # \s on the value side would cross the newline and match the next line, so the
+        # capture is [^\r\n] only.
+        $pattern = '(?im)^[ \t]*set[ \t]+' + [regex]::Escape($name) + '[ \t]*=([^\r\n]*)'
+        foreach ($m in [regex]::Matches($text, $pattern)) {
+            $val = $m.Groups[1].Value.Trim()
+            if ($val -ne '' -and $val -ne '0') {
+                $armed += ("{0}={1}" -f $name, $val)
+            }
+        }
+    }
+    if ($armed.Count -gt 0) {
+        Fail ("$($boot.Name) arms falsifier/instrument knob(s) in a public boot: {0}" -f (($armed | Sort-Object -Unique) -join ", "))
+    }
+    Pass "$($boot.Name) arms no falsifier or instrument knobs"
+
+    $dead = @()
+    foreach ($name in $deadBootKnobs) {
+        $pattern = '(?im)^[ \t]*set[ \t]+' + [regex]::Escape($name) + '[ \t]*=[ \t]*[^\s]'
+        if ($text -match $pattern) {
+            $dead += $name
+        }
+    }
+    if ($dead.Count -gt 0) {
+        Fail ("$($boot.Name) sets name(s) that are not knobs in this goldeneye.exe (silent no-op): {0}" -f ($dead -join ", "))
+    }
+    Pass "$($boot.Name) sets no dead knob names"
+
+    # Every GETV_/GEVR_ name the boot ARMS must actually exist in the binary.
+    $unknown = @()
+    foreach ($m in [regex]::Matches($text, '(?im)^[ \t]*set[ \t]+((?:GETV|GEVR|GE_VR)_[A-Z0-9_]+)[ \t]*=[ \t]*[^\s]')) {
+        $name = $m.Groups[1].Value
+        if ($name -eq "GEVR_SHIP_TAG") { continue }
+        if ($knownNoOpKnobs -contains $name) { continue }
+        if ($exeAscii.IndexOf($name) -lt 0) {
+            $unknown += $name
+        }
+    }
+    if ($unknown.Count -gt 0) {
+        Fail ("$($boot.Name) arms name(s) absent from goldeneye.exe: {0}" -f (($unknown | Sort-Object -Unique) -join ", "))
+    }
+    Pass "every knob the boot arms exists in goldeneye.exe"
 }
 
 function Test-ReleaseNotesShipStamp([string]$notesPath) {
@@ -173,48 +284,43 @@ function Test-ReleaseNotesShipStamp([string]$notesPath) {
     Pass "RELEASE-NOTES.txt documents ship stamp"
 }
 
-function Test-StartBat([string]$batPath, [string]$expectedTag) {
+function Test-StartBat([string]$batPath, $boot) {
     if (-not (Test-Path -LiteralPath $batPath)) {
         Fail "Missing Start-GEVR.bat"
     }
-    $bootName = "gevr-$expectedTag-boot.cmd"
     $lines = Get-Content -LiteralPath $batPath
-    $nonRem = @($lines | Where-Object { $_ -notmatch '^\s*rem\b' -and $_.Trim() -ne '' })
+    $nonRem = @($lines | Where-Object { $_ -notmatch '^\s*rem\b' -and $_ -notmatch '^\s*REM\b' -and $_.Trim() -ne '' })
     $text = $nonRem -join "`n"
-    $bootPattern = '(?i)' + [regex]::Escape($bootName)
-    if ($text -notmatch $bootPattern) {
-        Fail "Start-GEVR.bat must call $bootName"
-    }
     if ($text -notmatch '(?i)GevrRomStarter\.exe') {
         Fail "Start-GEVR.bat must launch GevrRomStarter.exe"
+    }
+    # It must call THIS zip's boot cmd, not a stale tag's.
+    if ($text -notmatch [regex]::Escape($boot.Name)) {
+        Fail "Start-GEVR.bat must call $($boot.Name)"
     }
     foreach ($line in $nonRem) {
         if ($line -match '(?i)goldeneye\.exe') {
             Fail "Start-GEVR.bat must not invoke goldeneye.exe directly"
         }
     }
-    Pass "Start-GEVR.bat calls $bootName then GevrRomStarter.exe"
+    Pass "Start-GEVR.bat calls $($boot.Name) then GevrRomStarter.exe"
 }
 
-function Test-MonitorBat([string]$batPath, [string]$expectedTag) {
+function Test-MonitorBat([string]$batPath) {
     if (-not (Test-Path -LiteralPath $batPath)) {
         Fail "Missing Play-on-monitor.bat"
     }
     $lines = Get-Content -LiteralPath $batPath
-    $nonRem = @($lines | Where-Object { $_ -notmatch '^\s*rem\b' -and $_.Trim() -ne '' })
+    $nonRem = @($lines | Where-Object { $_ -notmatch '^\s*rem\b' -and $_ -notmatch '^\s*REM\b' -and $_.Trim() -ne '' })
     $text = $nonRem -join "`n"
-    $tagPattern = '(?im)^\s*set\s+GEVR_SHIP_TAG\s*=\s*' + [regex]::Escape($expectedTag) + '\s*$'
-    if ($text -notmatch $tagPattern) {
-        Fail "Play-on-monitor.bat must set GEVR_SHIP_TAG=$expectedTag"
-    }
     if ($text -notmatch '(?im)^\s*set\s+GE_VR_XR\s*=\s*0\s*$') {
         Fail "Play-on-monitor.bat must set GE_VR_XR=0"
     }
     if ($text -notmatch '(?im)^\s*set\s+GETV_STEREO\s*=\s*0\s*$') {
         Fail "Play-on-monitor.bat must set GETV_STEREO=0"
     }
-    if ($text -match '(?i)gevr-.*-boot\.cmd') {
-        Fail "Play-on-monitor.bat must not call a gevr-*-boot.cmd"
+    if ($text -match '(?i)gevr-vr\d+-boot\.cmd') {
+        Fail "Play-on-monitor.bat must not call any gevr-*-boot.cmd"
     }
     if ($text -notmatch '(?i)GevrRomStarter\.exe') {
         Fail "Play-on-monitor.bat must launch GevrRomStarter.exe"
@@ -224,7 +330,7 @@ function Test-MonitorBat([string]$batPath, [string]$expectedTag) {
             Fail "Play-on-monitor.bat must not invoke goldeneye.exe directly"
         }
     }
-    Pass "Play-on-monitor.bat is flat (GEVR_SHIP_TAG=$expectedTag, GE_VR_XR=0, GETV_STEREO=0, no boot cmd)"
+    Pass "Play-on-monitor.bat is flat (GE_VR_XR=0, GETV_STEREO=0, no boot cmd)"
 }
 
 function Test-Tree([string]$root) {
@@ -258,12 +364,15 @@ function Test-Tree([string]$root) {
     Pass "No .z64/.n64/.v64/eeprom payloads in tree"
 
     $exe = Join-Path $root "goldeneye.exe"
-    Test-ExeGates $exe $script:CombinedHead
-    Test-StartBat (Join-Path $root "Start-GEVR.bat") $ShipTag
-    Test-MonitorBat (Join-Path $root "Play-on-monitor.bat") $ShipTag
-    Test-BootCmdShipTag $root $ShipTag
+    $exeAscii = Test-ExeGates $exe $script:CombinedHead
+
+    $boot = Get-BootCmd $root
+    Test-BootCmdShipTag $boot $ShipTag
+    Test-BootCmdAllowlist $boot $exeAscii
+
+    Test-StartBat (Join-Path $root "Start-GEVR.bat") $boot
+    Test-MonitorBat (Join-Path $root "Play-on-monitor.bat")
     Test-ReleaseNotesShipStamp (Join-Path $root "RELEASE-NOTES.txt")
-    Test-FilelistCsv (Join-Path $root "filelist.gevr-images.csv")
 }
 
 $script:CombinedHead = Get-CombinedHead64 $CombinedBin

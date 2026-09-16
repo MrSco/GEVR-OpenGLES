@@ -1,5 +1,7 @@
 # Assemble GEVR Beta vr440 staging folder (BYO-ROM, file-backed images).
 # Owner runs on SimRig after build + rom-starter binaries are present.
+# Copies gevr-vr440-boot.cmd (live KEEP: STEREO_SRC=xr, XR_PLAY_SRCFBO, SS3, sky, playspace)
+# and filelist.gevr-images.csv (gevr_prepare exit 3 without it).
 
 [CmdletBinding()]
 param(
@@ -24,8 +26,6 @@ if (-not $PackagingRoot) {
 
 $templates = Join-Path $PackagingRoot "templates"
 $romStarter = Join-Path $PackagingRoot "rom-starter"
-$bootName = "gevr-$Tag-boot.cmd"
-$releaseNotesName = "RELEASE-NOTES-$Tag.txt"
 
 $requiredDlls = @(
     "glew32.dll",
@@ -56,6 +56,7 @@ foreach ($dll in $requiredDlls) {
     Copy-IfExists $dllSrc $OutDir
 }
 
+# Copy any other DLLs sitting beside goldeneye.exe (dbghelp, etc.)
 Get-ChildItem -LiteralPath $BuildDir -Filter "*.dll" | ForEach-Object {
     $dest = Join-Path $OutDir $_.Name
     if (-not (Test-Path -LiteralPath $dest)) {
@@ -66,19 +67,26 @@ Get-ChildItem -LiteralPath $BuildDir -Filter "*.dll" | ForEach-Object {
 Copy-IfExists (Join-Path $romStarter "GevrRomStarter.exe") $OutDir
 Copy-IfExists (Join-Path $romStarter "gevr_prepare.exe") $OutDir
 Copy-IfExists (Join-Path $romStarter "EXPECTED-ROM.txt") $OutDir
-Copy-IfExists (Join-Path $BuildDir "filelist.gevr-images.csv") $OutDir
+
+# gevr_prepare exit 3 without this manifest (slice offsets, not ROM bytes).
+$filelistRepo = Join-Path $romStarter "filelist.gevr-images.csv"
+$filelistBuild = Join-Path $BuildDir "filelist.gevr-images.csv"
+if (Test-Path -LiteralPath $filelistRepo) {
+    Copy-IfExists $filelistRepo $OutDir
+} else {
+    Copy-IfExists $filelistBuild $OutDir
+}
 
 Copy-Item -LiteralPath (Join-Path $templates "Start-GEVR.bat") -Destination (Join-Path $OutDir "Start-GEVR.bat") -Force
 Copy-IfExists (Join-Path $templates "Play-on-monitor.bat") $OutDir
-Copy-IfExists (Join-Path $templates "Clear-GEVR-cache.bat") $OutDir
-Copy-Item -LiteralPath (Join-Path $templates $bootName) -Destination (Join-Path $OutDir $bootName) -Force
-Copy-Item -LiteralPath (Join-Path $templates $releaseNotesName) -Destination (Join-Path $OutDir "RELEASE-NOTES.txt") -Force
+Copy-Item -LiteralPath (Join-Path $templates "gevr-vr440-boot.cmd") -Destination (Join-Path $OutDir "gevr-vr440-boot.cmd") -Force
+Copy-Item -LiteralPath (Join-Path $templates "RELEASE-NOTES-vr440.txt") -Destination (Join-Path $OutDir "RELEASE-NOTES.txt") -Force
 
 $zipPath = Join-Path (Split-Path -Parent $OutDir) ("GEVR-Beta-{0}-win64.zip" -f $Tag)
 if (Test-Path -LiteralPath $zipPath) {
     Remove-Item -LiteralPath $zipPath -Force
 }
-Compress-Archive -LiteralPath (Join-Path $OutDir "*") -DestinationPath $zipPath -CompressionLevel Optimal
+Compress-Archive -Path (Join-Path $OutDir "*") -DestinationPath $zipPath -CompressionLevel Optimal
 
 Write-Host "[pack] Staging: $OutDir"
 Write-Host "[pack] Zip: $zipPath"

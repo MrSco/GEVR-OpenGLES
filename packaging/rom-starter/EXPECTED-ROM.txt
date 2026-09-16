@@ -37,4 +37,4 @@ Owner: refresh SHA-256 and byte size here after verifying on SimRig
 (do not commit ROM bytes).
 
 Expected size (USA [!] .z64): 12582912 bytes (12 MiB)
-Expected SHA-256: (fill on SimRig before public upload)
+Expected SHA-256: 2cdcec8a9f0cb6e36337f3ee39d8ad105dc8afa6ba1c02d466e8f5b771f9a162

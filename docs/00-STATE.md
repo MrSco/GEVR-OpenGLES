@@ -1,4 +1,13 @@
-﻿# 00-STATE â€” READ THIS FIRST. NOTHING ELSE, UNTIL YOU NEED IT.
+﻿# 00-STATE - READ THIS FIRST. NOTHING ELSE, UNTIL YOU NEED IT.
+
+**Currency: 2026-09-16 (public ship `vr441`)**
+
+- **Latest public Beta:** [GEVR Beta vr441](https://github.com/no6969el/GEVR/releases/tag/vr441) (`GEVR_SHIP_TAG=vr441`, full KEEP + PLAY0 boot).
+- **vr440** remains published but is no longer Latest. Same `goldeneye.exe` as vr441; vr440's boot armed picture KEEP only, not the chair feature set (see [`docs/ship-feature-checklist.md`](ship-feature-checklist.md)).
+- **Binary:** unchanged between vr440 and vr441; the cut is boot + pack smoke + docs.
+- **Pack smoke:** `_smoke-ship-zip.ps1` rewritten 2026-09-16 (prior flattened copy gated nothing).
+
+---
 
 **Currency: 2026-09-05 (session `330` -- **`xrWaitFrame` BLOCKS IN `goldeneye.exe`, TO
 `11.1111 ms`, AND `xrEndSession` RETURNED `XR_SUCCESS` FOR THE FIRST TIME IN THIS PROJECT.** Two
