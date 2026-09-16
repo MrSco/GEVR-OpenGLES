@@ -6,7 +6,7 @@ param(
     [string]$StagingDir = "",
     [Parameter(Mandatory = $true)]
     [string]$CombinedBin,
-    [string]$ShipTag = "vr438"
+    [string]$ShipTag = "vr439"
 )
 
 $ErrorActionPreference = "Stop"
@@ -34,7 +34,8 @@ $requiredFiles = @(
     "EXPECTED-ROM.txt",
     "Start-GEVR.bat",
     "Play-on-monitor.bat",
-    "RELEASE-NOTES.txt"
+    "RELEASE-NOTES.txt",
+    "filelist.gevr-images.csv"
 )
 
 $romExtensions = @(".z64", ".n64", ".v64")
@@ -98,10 +99,12 @@ function Test-ExeGates([string]$exePath, [byte[]]$combinedHead) {
 }
 
 function Test-BootCmdShipTag([string]$root, [string]$expectedTag) {
-    $boot = Get-ChildItem -LiteralPath $root -Filter "gevr-*-boot.cmd" | Select-Object -First 1
-    if (-not $boot) {
-        Fail "Missing gevr-*-boot.cmd (must set GEVR_SHIP_TAG)"
+    $bootName = "gevr-$expectedTag-boot.cmd"
+    $bootPath = Join-Path $root $bootName
+    if (-not (Test-Path -LiteralPath $bootPath)) {
+        Fail "Missing $bootName (must set GEVR_SHIP_TAG=$expectedTag)"
     }
+    $boot = Get-Item -LiteralPath $bootPath
     $text = Get-Content -LiteralPath $boot.FullName -Raw
     $pattern = '(?im)^\s*set\s+GEVR_SHIP_TAG\s*=\s*' + [regex]::Escape($expectedTag) + '\s*$'
     if ($text -notmatch $pattern) {
@@ -140,15 +143,17 @@ function Test-ReleaseNotesShipStamp([string]$notesPath) {
     Pass "RELEASE-NOTES.txt documents ship stamp"
 }
 
-function Test-StartBat([string]$batPath) {
+function Test-StartBat([string]$batPath, [string]$expectedTag) {
     if (-not (Test-Path -LiteralPath $batPath)) {
         Fail "Missing Start-GEVR.bat"
     }
+    $bootName = "gevr-$expectedTag-boot.cmd"
     $lines = Get-Content -LiteralPath $batPath
     $nonRem = @($lines | Where-Object { $_ -notmatch '^\s*rem\b' -and $_.Trim() -ne '' })
     $text = $nonRem -join "`n"
-    if ($text -notmatch '(?i)gevr-vr438-boot\.cmd') {
-        Fail "Start-GEVR.bat must call gevr-vr438-boot.cmd"
+    $bootPattern = '(?i)' + [regex]::Escape($bootName)
+    if ($text -notmatch $bootPattern) {
+        Fail "Start-GEVR.bat must call $bootName"
     }
     if ($text -notmatch '(?i)GevrRomStarter\.exe') {
         Fail "Start-GEVR.bat must launch GevrRomStarter.exe"
@@ -158,24 +163,28 @@ function Test-StartBat([string]$batPath) {
             Fail "Start-GEVR.bat must not invoke goldeneye.exe directly"
         }
     }
-    Pass "Start-GEVR.bat calls gevr-vr438-boot.cmd then GevrRomStarter.exe"
+    Pass "Start-GEVR.bat calls $bootName then GevrRomStarter.exe"
 }
 
-function Test-MonitorBat([string]$batPath) {
+function Test-MonitorBat([string]$batPath, [string]$expectedTag) {
     if (-not (Test-Path -LiteralPath $batPath)) {
         Fail "Missing Play-on-monitor.bat"
     }
     $lines = Get-Content -LiteralPath $batPath
     $nonRem = @($lines | Where-Object { $_ -notmatch '^\s*rem\b' -and $_.Trim() -ne '' })
     $text = $nonRem -join "`n"
+    $tagPattern = '(?im)^\s*set\s+GEVR_SHIP_TAG\s*=\s*' + [regex]::Escape($expectedTag) + '\s*$'
+    if ($text -notmatch $tagPattern) {
+        Fail "Play-on-monitor.bat must set GEVR_SHIP_TAG=$expectedTag"
+    }
     if ($text -notmatch '(?im)^\s*set\s+GE_VR_XR\s*=\s*0\s*$') {
         Fail "Play-on-monitor.bat must set GE_VR_XR=0"
     }
     if ($text -notmatch '(?im)^\s*set\s+GETV_STEREO\s*=\s*0\s*$') {
         Fail "Play-on-monitor.bat must set GETV_STEREO=0"
     }
-    if ($text -match '(?i)gevr-vr438-boot\.cmd') {
-        Fail "Play-on-monitor.bat must not call gevr-vr438-boot.cmd"
+    if ($text -match '(?i)gevr-.*-boot\.cmd') {
+        Fail "Play-on-monitor.bat must not call a gevr-*-boot.cmd"
     }
     if ($text -notmatch '(?i)GevrRomStarter\.exe') {
         Fail "Play-on-monitor.bat must launch GevrRomStarter.exe"
@@ -185,7 +194,7 @@ function Test-MonitorBat([string]$batPath) {
             Fail "Play-on-monitor.bat must not invoke goldeneye.exe directly"
         }
     }
-    Pass "Play-on-monitor.bat is flat (GE_VR_XR=0, GETV_STEREO=0, no vr438 boot cmd)"
+    Pass "Play-on-monitor.bat is flat (GEVR_SHIP_TAG=$expectedTag, GE_VR_XR=0, GETV_STEREO=0, no boot cmd)"
 }
 
 function Test-Tree([string]$root) {
@@ -220,8 +229,8 @@ function Test-Tree([string]$root) {
 
     $exe = Join-Path $root "goldeneye.exe"
     Test-ExeGates $exe $script:CombinedHead
-    Test-StartBat (Join-Path $root "Start-GEVR.bat")
-    Test-MonitorBat (Join-Path $root "Play-on-monitor.bat")
+    Test-StartBat (Join-Path $root "Start-GEVR.bat") $ShipTag
+    Test-MonitorBat (Join-Path $root "Play-on-monitor.bat") $ShipTag
     Test-BootCmdShipTag $root $ShipTag
     Test-ReleaseNotesShipStamp (Join-Path $root "RELEASE-NOTES.txt")
 }

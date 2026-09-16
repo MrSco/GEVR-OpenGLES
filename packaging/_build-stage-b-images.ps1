@@ -26,7 +26,7 @@ if (-not $SkipBuild) {
     Write-Host "[pack] Building -Vr -ImagesFileBacked ..."
     Push-Location $GetvDir
     try {
-        & $buildScript -Target all -Vr -ImagesFileBacked 2>&1 | Tee-Object -FilePath (Join-Path $ProductRoot "build_vr438_filebacked.log")
+        & $buildScript -Target all -Vr -ImagesFileBacked 2>&1 | Tee-Object -FilePath (Join-Path $ProductRoot "build_vr439_filebacked.log")
         if ($LASTEXITCODE -ne 0) {
             throw "build_windows.ps1 exited $LASTEXITCODE"
         }
@@ -47,4 +47,4 @@ Copy-Item -LiteralPath $exe -Destination $stageB -Force
 $len = (Get-Item -LiteralPath $exe).Length
 Write-Host "[pack] goldeneye.exe bytes: $len"
 Write-Host "[pack] stageb copy: $stageB"
-Write-Host "[pack] Next: run _pack-vr438.ps1 -BuildDir $buildWindows"
+Write-Host "[pack] Next: run _pack-vr439.ps1 -BuildDir $buildWindows"

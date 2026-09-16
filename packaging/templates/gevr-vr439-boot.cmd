@@ -1,9 +1,9 @@
 @echo off
-rem VR KEEP boot knobs for vr438. Same quality stack as public vr434 Start-GEVR.bat.
+rem VR KEEP boot knobs for vr439. Same quality stack as public vr434 Start-GEVR.bat.
 rem Applied before GevrRomStarter runs goldeneye.exe. Do not launch the exe from here.
 
 rem Cache generation stamp - bump each public Beta tag so LocalAppData image cache rebuilds once.
-set GEVR_SHIP_TAG=vr438
+set GEVR_SHIP_TAG=vr439
 
 set GETV_FPS=90
 set GETV_MSGSCALE=434

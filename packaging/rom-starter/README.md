@@ -2,7 +2,7 @@
 
 ## Runtime flow (Start)
 
-Always launch via **`Start-GEVR.bat`**. That bat calls `gevr-vr438-boot.cmd` (sets `GEVR_SHIP_TAG=vr438` and VR knobs), then **`GevrRomStarter.exe`**.
+Always launch via **`Start-GEVR.bat`**. That bat calls `gevr-vr439-boot.cmd` (sets `GEVR_SHIP_TAG=vr439` and VR KEEP knobs), then **`GevrRomStarter.exe`**.
 
 On Start, GevrRomStarter:
 
@@ -27,7 +27,7 @@ Copy into the **GoldenEyeVR** product tree and build. See the APPLY note above.
 
 ## Binaries (not committed)
 
-Git ignores `*.exe` here. Before running `_pack-vr438.ps1`, copy from the product tree build output:
+Git ignores `*.exe` here. Before running `_pack-vr439.ps1`, copy from the product tree build output:
 
 - `GevrRomStarter.exe` (must call prepare on Start, then launch the game)
 - `gevr_prepare.exe` (must honor `GEVR_SHIP_TAG` / `ship.txt`)

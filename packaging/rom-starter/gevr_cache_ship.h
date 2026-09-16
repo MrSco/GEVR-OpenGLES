@@ -1,7 +1,7 @@
 /* GEVR cache ship stamp - shared between gevr_prepare and GevrRomStarter.
  * Copy into GoldenEyeVR: packaging/rom-starter/ (product tree).
  *
- * Each public Beta tag (vr438, vr439, ...) sets GEVR_SHIP_TAG in gevr-*-boot.cmd.
+ * Each public Beta tag (vr439, ...) sets GEVR_SHIP_TAG in gevr-*-boot.cmd.
  * On prepare, if %LOCALAPPDATA%\GEVR\cache\<rom-sha>\ship.txt != this tag,
  * drop the ready marker and force a full re-slice from the player's ROM.
  */
@@ -11,7 +11,7 @@
 #include <stddef.h>
 
 #ifndef GEVR_SHIP_TAG_DEFAULT
-#define GEVR_SHIP_TAG_DEFAULT "vr438"
+#define GEVR_SHIP_TAG_DEFAULT "vr439"
 #endif
 
 #define GEVR_CACHE_SHIP_FILE "ship.txt"
