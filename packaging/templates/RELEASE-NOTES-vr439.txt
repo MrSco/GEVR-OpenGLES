@@ -36,6 +36,8 @@ Why older zips
 
 Headset notes
 -------------
+In headset, B/Y opens pause and options. Tab on keyboard/monitor still works.
+
 Pimax Crystal Super + SteamVR OpenXR, native PimaxXR, Quest 3 +
 Virtual Desktop OpenXR.
 
