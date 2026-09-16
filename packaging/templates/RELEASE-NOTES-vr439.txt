@@ -36,7 +36,7 @@ Why older zips
 
 Headset notes
 -------------
-In headset, B/Y opens pause and options. Tab on keyboard/monitor still works.
+In headset, B/Y opens and closes pause. A/X selects a highlighted option. Left stick moves the highlight. Tab still works on keyboard/monitor.
 
 Pimax Crystal Super + SteamVR OpenXR, native PimaxXR, Quest 3 +
 Virtual Desktop OpenXR.

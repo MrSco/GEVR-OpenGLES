@@ -19,7 +19,7 @@ The shipped `goldeneye.exe` must **not** embed ROM-derived `images/combined.bin`
 
 Headset KEEP is the same quality stack as vr434. vr438 shipped a broken boot stub; vr439 replaces it.
 
-`gevr-vr439-boot.cmd` sets `GETV_XR_BUTTONS=1` and `GETV_XR_BTN_B=start` so B/Y maps to Start; `GETV_XR_BTN_B=weapon` puts weapon cycle back.
+`gevr-vr439-boot.cmd` sets `GETV_XR_BTN_A=weapon` so A/X is N64 A (confirm) and `GETV_XR_BTN_B=start` so B/Y is Start; `GETV_XR_BTN_A=use` restores doors/reload on A.
 
 Use `_pack-vr439.ps1`. `_pack-vr438.ps1` is retired and will throw.
 
