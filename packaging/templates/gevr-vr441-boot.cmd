@@ -134,9 +134,9 @@ set GETV_XR_INPUT_EVERY=0
 set GETV_XR_HAPTICS=1
 
 rem Button maps: SHIP choice, NOT chair. 425w clears BTN_A/BTN_B and runs on the
-rem binary defaults. B/Y = Start so pause works in the headset; A/X = N64 A.
-rem Falsifier for a controller-feel complaint: clear both and you are on chair.
-set GETV_XR_BTN_B=start
+rem binary defaults. B = use (reload); pause = Menu / system button (not B/Y).
+rem A = weapon (N64 A cycle). Falsifier: clear both and you are on chair.
+set GETV_XR_BTN_B=use
 set GETV_XR_BTN_A=weapon
 set GETV_AUTOAIM=0
 
