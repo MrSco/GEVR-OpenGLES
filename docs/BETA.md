@@ -35,14 +35,14 @@ Use the bats. Do not double-click `goldeneye.exe`. Details: [CONTROLS.md](CONTRO
 1. Download and unzip **vr441** from the release page.
 2. Headset: `Start-GEVR.bat`. Monitor / no headset: `Play-on-monitor.bat`.
 3. Point at your USA `.z64`.
-4. First prepare waits once while images land in `%LOCALAPPDATA%\GEVR\cache`. Then play.
+4. First prepare waits once while images land in `%LOCALAPPDATA%\\GEVR\\cache`. Then play.
 5. Recenter in VR with **both thumbstick clicks**.
 
 ## First run vs updating
 
 - **New install:** run `Start-GEVR.bat` (headset) or `Play-on-monitor.bat` (no headset), pick your USA `.z64`, wait once, play.
 - **After a Beta update:** keep the same `.z64`. The ship stamp forces one re-prepare. **Saves are kept.** You do not delete the cache for a normal update.
-- **Troubleshooting only:** run **`Clear-GEVR-cache.bat`** from the vr441 zip (type **YES**) to wipe **`%LOCALAPPDATA%\GEVR\cache`** only (keeps saves). You can delete that folder by hand instead. Optional: delete all **`%LOCALAPPDATA%\GEVR`** if you want cache **and** saves gone - not the default path. See `RELEASE-NOTES.txt` in the zip.
+- **Troubleshooting only:** run **`Clear-GEVR-cache.bat`** from the vr441 zip (type **YES**) to wipe **`%LOCALAPPDATA%\\GEVR\\cache`** only (keeps saves). You can delete that folder by hand instead. Optional: delete all **`%LOCALAPPDATA%\\GEVR`** if you want cache **and** saves gone - not the default path. See `RELEASE-NOTES.txt` in the zip.
 
 ## vr441 wear notes
 
@@ -59,10 +59,12 @@ Use the bats. Do not double-click `goldeneye.exe`. Details: [CONTROLS.md](CONTRO
 - SteamVR on/off
 - HMD vs monitor
 - **`Start-GEVR.bat` yes/no** (if no headset, use **`Play-on-monitor.bat`** and pick No)
-
-Map / action if it crashed. First install vs first launch after a new zip vs a later launch also helps.
+- Map / what you were doing
+- A log from the zip folder or the console window, or a short clip
 
 Do **not** upload your ROM. We do not need it and we do not want it. Forms: [CONTRIBUTING.md](../CONTRIBUTING.md).
+
+If the world goes glitchy, empty, or you spawn in junk space after finishing a level and sitting on the character / folder screen: **fully quit the game and run the bat again**. Loading another mission in the same process often stays broken. Then file the Issue so we can fix the leftover state.
 
 ## What to test first
 
@@ -73,6 +75,7 @@ Do **not** upload your ROM. We do not need it and we do not want it. Forms: [CON
 - Dam mid-range crates (known pop - still useful)
 - Dam water look (known murky - still useful)
 - One-eye glass bullet holes (known - still useful)
+- Finish a level, wait on the character / folder screen, load again (known dirty-spawn - still useful; quit the exe if it breaks)
 - Facility halls / guards
 - Local split-screen on a monitor if you have a friend on the couch
 - Note any crash: what map, what action

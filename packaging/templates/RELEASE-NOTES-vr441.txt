@@ -30,15 +30,29 @@ Play
 
 First time
   The first launch waits once while images prepare into
-  %LOCALAPPDATA%\GEVR\cache, then you play.
+  %LOCALAPPDATA%\\GEVR\\cache, then you play.
 
 Updating from an older Beta
   Keep the same .z64. Each cut carries a ship stamp, so the first
   launch after an update rebuilds that cache once automatically.
   You do not need to delete the cache folder by hand.
 
-If the picture still looks wrong: delete %LOCALAPPDATA%\GEVR and
+If the picture still looks wrong: delete %LOCALAPPDATA%\\GEVR and
 run the bat again.
+
+If anything goes weird
+----------------------
+If the world turns glitchy, empty, or you load into junk space after
+finishing a level and waiting on the character / folder screen:
+fully close the game and run Start-GEVR.bat again. Loading another
+mission in the same process often stays broken.
+
+Please file a report so we can fix it:
+https://github.com/no6969el/GEVR/issues/new/choose
+
+Include headset, OpenXR runtime, SteamVR on/off, HMD vs monitor,
+Start-GEVR.bat yes/no, the map, and a log or short clip if you have
+one. Do not upload your ROM.
 
 Why older zips
 --------------
@@ -63,6 +77,8 @@ Still rough
 -----------
 - Occasional crashes (file an Issue: headset, OpenXR runtime,
   SteamVR on/off, HMD vs monitor, Start-GEVR.bat yes/no)
+- After a finished level + character / folder wait, next load can
+  dump you in junk space until you fully quit and relaunch
 - Dam crates can still pop in
 - Dam water can look murky
 - Glass bullet holes can be one-eye

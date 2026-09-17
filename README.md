@@ -23,7 +23,7 @@ If this brings you back, **Star** the repo so you can catch the next drops. **Wa
 1. Download the **[vr441 Release zip](https://github.com/no6969el/GEVR/releases/tag/vr441)** (exe, `glew32.dll`, other runtime DLLs, ROM starter, launcher, notes). **No ROM inside the zip.**
 2. Unzip anywhere.
 3. Run **`Start-GEVR.bat`** - it sets VR boot knobs and starts **GevrRomStarter.exe**.
-4. Point at your **USA GoldenEye `.z64`** when asked. Images extract to `%LOCALAPPDATA%\GEVR\cache\<ROM-hash>\`. Each Beta tag bumps a **ship stamp** so the first launch after an update rebuilds that cache once from your ROM.
+4. Point at your **USA GoldenEye `.z64`** when asked. Images extract to `%LOCALAPPDATA%\\GEVR\\cache\\<ROM-hash>\\`. Each Beta tag bumps a **ship stamp** so the first launch after an update rebuilds that cache once from your ROM.
 5. Put the headset on. Recenter with **both thumbstick clicks**. Enjoy.
 
 **Please use the bat** - it locks in the good VR settings and runs the ROM starter we ship for this cut (not bare `goldeneye.exe`).
@@ -77,7 +77,7 @@ These paths are what this Beta was built and stared on:
 
 **Refresh rates:** 72 Hz, 80 Hz, and **90 Hz** should work. This zip defaults to **90**. Anything **over 90** (120 / 144 and friends) is still beta-test territory - try it, and [file an Issue](https://github.com/no6969el/GEVR/issues/new/choose) if something feels off.
 
-When you report a bug or crash, please include: **headset**, **OpenXR runtime**, **SteamVR on/off**, **HMD vs monitor**, whether you used **`Start-GEVR.bat`**, and your **`gevr-*-boot.cmd`** filename from the zip folder.
+When you report a bug or crash, please include: **headset**, **OpenXR runtime**, **SteamVR on/off**, **HMD vs monitor**, whether you used **`Start-GEVR.bat`**, your **`gevr-*-boot.cmd`** filename from the zip folder, and any log next to the zip or in the console. Do **not** upload your ROM. [Open an Issue](https://github.com/no6969el/GEVR/issues/new/choose).
 
 ---
 
@@ -89,6 +89,7 @@ We would rather tell you than surprise you:
 - **Dam water** can look flat or murky - researched; not locked on for this cut.
 - **Glass bullet holes** can still show in one eye in places.
 - Expect occasional **crashes** while we keep optimizing.
+- After you **finish a level**, sit on the **character / folder screen**, then load again, you can spawn in junk space (glitchy / empty). **Quit the game fully and run `Start-GEVR.bat` again** - loading another mission in the same process often stays broken. Please [file an Issue](https://github.com/no6969el/GEVR/issues/new/choose) with headset, runtime, map, and a log or short clip if you have one. No ROM files.
 
 Still worth playing - absolutely. Especially if you miss levels like Facility and want to get brushed up for when we eventually ship the multiplayer add-on. Dam, Facility, that first-person Bond feeling: we are shipping updates as fast as we can.
 
