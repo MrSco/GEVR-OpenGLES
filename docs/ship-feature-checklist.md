@@ -11,6 +11,32 @@ Censuses stay **off** in public boots (`GETV_VR_WALLCENSUS=0`, `GETV_VR_ROOMLOAD
 Pause / N64 A confirm is **not** claimed fixed; vr441 keeps the same `GETV_XR_BTN_A` /
 `GETV_XR_BTN_B` map vr440 shipped.
 
+## Sit gates (knobs assigned is not enough)
+
+Pack smoke only proves the boot *writes* the env. A zip is not Latest until both
+bats are *played* and the features fire. Headset KEEP passing does not clear the
+monitor path. vr440 already taught that lesson.
+
+Do this on the staged zip, not a chair launcher.
+
+### `Start-GEVR.bat` (headset)
+
+- Banner / boot cmd is the ship tag (`gevr-vr441-boot.cmd` or the current cut).
+- Recenter: both sticks (or Home) resets the playspace.
+- Trigger fires. Left stick walks. Right stick turns.
+- Squeeze ADS mark sits on the gun ray.
+- Touch-use: poke a door / console with either hand.
+- Casings leave the gun. A kill stays on the floor (up to 48).
+- Audio: first gunshot is on time and stays on time after a hitch.
+
+### `Play-on-monitor.bat` (flat)
+
+- Boots with no HMD session. No one-eye / OpenXR requirement.
+- Audio is in sync from the first shot. [#48](https://github.com/no6969el/GEVR/issues/48)
+- Keyboard / pad still work. Local split-screen still starts.
+
+A FAIL on the monitor bat blocks Latest even if the headset sit was clean.
+
 ## Chair features vr440 never turned on
 
 | Knob | Ship value | Notes |
@@ -107,3 +133,5 @@ Silent no-ops in `goldeneye.exe` - do not use in ship boots:
 
 Run [`packaging/_pack-vr441.ps1`](../packaging/_pack-vr441.ps1) without `-SkipSmoke`. Expect
 `[smoke] PASS all gates` on staging and on the zip. See [`packaging/README.md`](../packaging/README.md).
+
+Smoke PASS is necessary. Sit gates above are also necessary. Do not publish Latest on smoke alone.
