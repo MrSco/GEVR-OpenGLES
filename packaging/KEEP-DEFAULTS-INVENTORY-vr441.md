@@ -8,6 +8,8 @@ code default at exe startup when the boot does not assign the knob; that default
 is **UNKNOWN** here (classify from boot and comments only).
 
 Pack smoke allowlist (39 knobs): `packaging/_smoke-ship-zip.ps1` (`$requiredBootKnobs`).
+Graduation smoke (KEEP must not depend on boot assigns): `packaging/_smoke-keep-nobat.ps1`
+and `packaging/KEEP-SHIP-DEFAULTS.md` (C unset = ON, then tag).
 Human sit gates: `docs/ship-feature-checklist.md`.
 
 Blank `set FOO=` wipe lines in section 0 are **not** listed in the KEEP arms

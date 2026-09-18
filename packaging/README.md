@@ -80,6 +80,17 @@ Player templates live under `packaging/templates/`.
 
 ## Smoke gates (`_smoke-ship-zip.ps1`)
 
+Full ship blocker (requires `-CombinedBin` on SimRig). Also run
+`_smoke-keep-nobat.ps1` on the same staging or zip when validating the
+ship-default-ON graduation path - it never runs `gevr-*-boot.cmd` and does not
+gate KEEP on boot.cmd assignments (C defaults in getv are source of truth; see
+`KEEP-SHIP-DEFAULTS.md`).
+
+```powershell
+& "$repo\packaging\_smoke-keep-nobat.ps1" -StagingDir "$repo\packaging\out\vr441-staging"
+& "$repo\packaging\_smoke-keep-nobat.ps1" -ZipPath "$repo\packaging\out\GEVR-Beta-vr441-win64.zip"
+```
+
 Fails the run if any of these are true:
 
 - `goldeneye.exe` contains the first 64 bytes of local `combined.bin` (requires `-CombinedBin` on the build machine).
@@ -93,6 +104,15 @@ Fails the run if any of these are true:
 - `gevr-<tag>-boot.cmd` missing `GETV_STEREO_SRC=xr` or `GETV_XR_PLAY_SRCFBO=1`, or it launches `goldeneye.exe`.
 - `Start-GEVR.bat` does not call `gevr-<tag>-boot.cmd` before `GevrRomStarter.exe`.
 - `RELEASE-NOTES.txt` missing the **ship stamp** phrase / cache rebuild documentation.
+
+### KEEP nobat smoke (`_smoke-keep-nobat.ps1`)
+
+Fails if `gevr-*-boot.cmd` is missing or lacks the pack `GEVR_SHIP_TAG`, if
+`Start-GEVR.bat` does not call that boot cmd before `GevrRomStarter.exe`, if
+`Play-on-monitor.bat` does not set `GE_VR_XR=0` and `GETV_STEREO=0`, if the
+monitor bat calls a boot cmd, if `goldeneye.exe` is missing any of the top-15
+KEEP knob names in `KEEP-SHIP-DEFAULTS.md`, or if that doc is missing from
+`packaging/`. It does **not** require boot.cmd to arm the 39-knob allowlist.
 
 ### Verify force-rebuild (owner)
 
