@@ -51,18 +51,18 @@ No ROM in the download. You bring yours.
 
 ---
 
-## What's coming (stay on vr441)
+## What's coming (stay on vr441 until Latest moves)
 
-No new zip yet. Keep playing **vr441**. When the next wear-passed cut lands, it will be a GitHub Release. **Watch** this repo (Watch -> Releases) so you get pinged. Star it if you want the next Bond drop without hunting.
+Next zip is packing now — **aiming for tonight** (19 Sep). Keep playing **vr441** until a new GitHub Release appears. **Watch** this repo (Watch -> Releases) so you get pinged.
 
-**In the chair right now** (working on, not in your unzip):
-- **Watch finger + pause menu** - so the watch and pause actually work in VR: confirm, highlight in both eyes, that stretched finger when you pull the watch. This is the current EXE project. Several open Issues live here.
-- **Ammo HUD picture** - ammo icons can look stretched or fat in the headset. That is **render** distortion, not clip or overlap (placement already moved). Picture first. Not wear-passed, so not shipped.
+**In the next cut:**
+- **Black flicker fixed** — Facility gas tanks and Bunker-after-Surface no longer punch to black in VR ([issue #55](https://github.com/no6969el/GEVR/issues/55)). That one is done for the next zip.
+- **Watch works in VR** — you can read it, confirm, and use it on Secret Agent / 00 Agent so those objectives can actually be finished in the headset ([issues #32](https://github.com/no6969el/GEVR/issues/32) / watch finger). This is the reason higher difficulties were a dead end on vr441.
 
-**Known, looking at** (not promising it in the next drop):
-- **Black flicker** in VR at Facility gas tanks and Bunker after Surface ([issue #55](https://github.com/no6969el/GEVR/issues/55)). Dig exists. Not chaired. File more sits if you hit it.
+**Still in the chair after that** (not promising it in tonight's zip):
+- **Ammo HUD picture** — ammo icons can look stretched or fat in the headset. Render distortion, not clip. Picture first.
 
-Keep shooting. Watch GitHub. We will tell you when Latest moves.
+Keep shooting. When Latest moves, grab that zip.
 
 ---
 
@@ -100,18 +100,18 @@ When you report a bug or crash, please include: **headset**, **OpenXR runtime**,
 
 ## Known quirks (honest Beta)
 
-We would rather tell you than surprise you:
+We would rather tell you than surprise you. These are **vr441 today**. The next zip is meant to retire the two called out above.
 
 - Mid-range **crates / props on Dam** can still pop in and out - measured hard; not fixed in this zip yet.
 - **Dam water** can look flat or murky - researched; not locked on for this cut.
 - **Glass bullet holes** can still show in one eye in places.
-- **Pause / watch** confirm is still rough; watch highlight can miss an eye; watch finger can stretch when you pull it (in the chair now - see What's coming).
-- **Ammo HUD picture** can look stretched or fat in VR (render, not clip - in the chair, not wear-passed).
-- **Black flicker** in VR (Facility gas tanks; Bunker after Surface) - looking at it, not a shipped fix. [Issue #55](https://github.com/no6969el/GEVR/issues/55).
+- **Pause / watch** on vr441 is still rough (confirm, highlight, stretched finger) — that is the watch fix landing in the next zip so Secret Agent / 00 Agent can be finished.
+- **Ammo HUD picture** can look stretched or fat in VR (render, not clip).
+- **Black flicker** on vr441 (Facility gas tanks; Bunker after Surface) — fixed for the next zip ([issue #55](https://github.com/no6969el/GEVR/issues/55)).
 - Expect occasional **crashes** while we keep optimizing.
 - After you **finish a level**, sit on the **character / folder screen**, then load again, you can spawn in junk space (glitchy / empty). **Quit the game fully and run `Start-GEVR.bat` again** - loading another mission in the same process often stays broken. Please [file an Issue](https://github.com/no6969el/GEVR/issues/new/choose) with headset, runtime, map, and a log or short clip if you have one. No ROM files.
 
-Still worth playing - absolutely. Facility, Dam, that first-person Bond feeling. Stay on **vr441**, Watch GitHub, and we will ping you when Latest moves.
+Still worth playing - absolutely. Facility, Dam, that first-person Bond feeling. Stay on **vr441** until Latest moves.
 
 On a **flat / monitor** setup, classic **local multiplayer** is still there - split-screen couch chaos, same as you remember. LAN / same-network is later, not the next zip. True online is further after that.
 
@@ -137,11 +137,12 @@ More pitch and cover energy: [FEATURES.md](FEATURES.md).
 - Comfort, aim, and picture quality
 - “It boots, it shoots, it sometimes crashes” honesty
 
-**Next (in the chair, not in the zip)**
-- Watch finger + pause menu (usable watch / confirm in VR)
-- Ammo HUD picture (render first; not wear-passed)
+**Next zip (packing now, aiming tonight)**
+- Black flicker gone in VR
+- Watch usable so higher difficulties can be completed in the headset
 
 **Also on the board**
+- Ammo HUD picture
 - Fewer freezes and softer landings
 - Clearer first-run (ROM drop-in, saves that survive updates)
 - Those Dam crates / water / glass quirks above
