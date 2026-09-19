@@ -23,6 +23,8 @@ Landing in the next Release:
 - **Black flicker fixed** in VR — Facility gas tanks and Bunker after Surface ([issue #55](https://github.com/no6969el/GEVR/issues/55)).
 - **Watch works in VR** — confirm / read / use it so Secret Agent and 00 Agent objectives can be finished in the headset ([issue #32](https://github.com/no6969el/GEVR/issues/32)).
 
+When the zip ships we will **close a lot of open Issues** that this cut actually covers. Anything still broken on the new tag stays open — comment on it.
+
 Still in the chair after that (not promised tonight):
 - **Ammo HUD picture** — icons can look stretched or fat. Render first, not clip.
 
