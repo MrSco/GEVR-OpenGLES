@@ -61,9 +61,7 @@ When that zip goes up we will **close a batch of open Issues** that this cut act
 - **Black flicker fixed** — Facility gas tanks and Bunker-after-Surface no longer punch to black in VR ([issue #55](https://github.com/no6969el/GEVR/issues/55)).
 - **Watch works in VR** — you can read it, confirm, and use it on Secret Agent / 00 Agent so those objectives can actually be finished in the headset ([#32](https://github.com/no6969el/GEVR/issues/32) confirm, [#56](https://github.com/no6969el/GEVR/issues/56) stretched hand, [#58](https://github.com/no6969el/GEVR/issues/58) highlight in both eyes).
 - **Dam mid-range crates stay drawn** — the chair that never shipped in public vr441 is hard-wired in the next exe ([issue #29](https://github.com/no6969el/GEVR/issues/29)).
-
-**Still in the chair after that** (not promising it in tonight's zip):
-- **Ammo HUD picture** — ammo icons can look stretched or fat in the headset. Render distortion, not clip. Picture first.
+- **Ammo HUD picture corrected** — stretched / fat icons in VR ([issue #34](https://github.com/no6969el/GEVR/issues/34)).
 
 Keep shooting. When Latest moves, grab that zip.
 
@@ -114,6 +112,7 @@ Still true on **vr441**. Gone when Latest moves:
 - **Watch hand stretches or breaks** when you pull it — [#56](https://github.com/no6969el/GEVR/issues/56)
 - **Watch / pause highlight only in one eye** — [#58](https://github.com/no6969el/GEVR/issues/58)
 - **Dam mid-range crates / props pop in and out** — [#29](https://github.com/no6969el/GEVR/issues/29) (the distance-crate keep, hard-wired in the next exe)
+- **Ammo HUD picture** stretched or fat in VR — [#34](https://github.com/no6969el/GEVR/issues/34)
 
 Watch items are why Secret Agent / 00 Agent could not be finished in the headset on vr441.
 
@@ -121,7 +120,6 @@ Watch items are why Secret Agent / 00 Agent could not be finished in the headset
 
 - **Dam water** can look flat or murky — [#30](https://github.com/no6969el/GEVR/issues/30)
 - **Glass bullet holes** can still show in one eye — [#31](https://github.com/no6969el/GEVR/issues/31)
-- **Ammo HUD picture** can look stretched or fat in VR (render, not clip) — [#34](https://github.com/no6969el/GEVR/issues/34)
 - **HUD text** can sit too close or hard to read in depth — [#33](https://github.com/no6969el/GEVR/issues/33)
 - **Headset refresh:** Virtual Desktop / some runtimes only enter VR at 90 Hz — [#49](https://github.com/no6969el/GEVR/issues/49)
 - Expect occasional **crashes** while we keep optimizing.
@@ -157,13 +155,13 @@ More pitch and cover energy: [FEATURES.md](FEATURES.md).
 - Black flicker gone in VR
 - Watch usable so higher difficulties can be completed in the headset
 - Dam mid-range crates stay drawn
+- Ammo HUD picture corrected
 - A batch of GitHub Issues closed against that zip
 
 **Also on the board**
-- Ammo HUD picture
 - Fewer freezes and softer landings
 - Clearer first-run (ROM drop-in, saves that survive updates)
-- Dam water / glass quirks above
+- Dam water / glass / HUD-depth quirks above
 
 **Later - the fun extras**
 - **Multiplayer add-on** - LAN / same-network first, full online further after that (not the next zip)
