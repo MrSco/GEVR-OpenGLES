@@ -59,7 +59,7 @@ When that zip goes up we will **close a batch of open Issues** that this cut act
 
 **In the next cut:**
 - **Black flicker fixed** — Facility gas tanks and Bunker-after-Surface no longer punch to black in VR ([issue #55](https://github.com/no6969el/GEVR/issues/55)). That one is done for the next zip.
-- **Watch works in VR** — you can read it, confirm, and use it on Secret Agent / 00 Agent so those objectives can actually be finished in the headset ([issues #32](https://github.com/no6969el/GEVR/issues/32) / watch finger). This is the reason higher difficulties were a dead end on vr441.
+- **Watch works in VR** — you can read it, confirm, and use it on Secret Agent / 00 Agent so those objectives can actually be finished in the headset ([#32](https://github.com/no6969el/GEVR/issues/32) confirm, [#56](https://github.com/no6969el/GEVR/issues/56) stretched hand, [#58](https://github.com/no6969el/GEVR/issues/58) highlight in both eyes). This is the reason higher difficulties were a dead end on vr441.
 
 **Still in the chair after that** (not promising it in tonight's zip):
 - **Ammo HUD picture** — ammo icons can look stretched or fat in the headset. Render distortion, not clip. Picture first.
@@ -102,16 +102,29 @@ When you report a bug or crash, please include: **headset**, **OpenXR runtime**,
 
 ## Known quirks (honest Beta)
 
-We would rather tell you than surprise you. These are **vr441 today**. The next zip is meant to retire the two called out above.
+We would rather tell you than surprise you.
 
-- Mid-range **crates / props on Dam** can still pop in and out - measured hard; not fixed in this zip yet.
-- **Dam water** can look flat or murky - researched; not locked on for this cut.
-- **Glass bullet holes** can still show in one eye in places.
-- **Pause / watch** on vr441 is still rough (confirm, highlight, stretched finger) — that is the watch fix landing in the next zip so Secret Agent / 00 Agent can be finished.
-- **Ammo HUD picture** can look stretched or fat in VR (render, not clip).
-- **Black flicker** on vr441 (Facility gas tanks; Bunker after Surface) — fixed for the next zip ([issue #55](https://github.com/no6969el/GEVR/issues/55)).
+### Fixed in the next zip (aiming tonight)
+
+Still true on **vr441**. Gone when Latest moves:
+
+- **Black flicker** in VR at Facility gas tanks and Bunker after Surface — [#55](https://github.com/no6969el/GEVR/issues/55)
+- **Pause / watch confirm** rough on face buttons — [#32](https://github.com/no6969el/GEVR/issues/32)
+- **Watch hand stretches or breaks** when you pull it — [#56](https://github.com/no6969el/GEVR/issues/56)
+- **Watch / pause highlight only in one eye** — [#58](https://github.com/no6969el/GEVR/issues/58)
+
+Those four are why Secret Agent / 00 Agent could not be finished in the headset on vr441. Next zip is meant to make the watch usable.
+
+### Still on vr441 (not tonight)
+
+- Mid-range **crates / props on Dam** can still pop in and out — [#29](https://github.com/no6969el/GEVR/issues/29)
+- **Dam water** can look flat or murky — [#30](https://github.com/no6969el/GEVR/issues/30)
+- **Glass bullet holes** can still show in one eye — [#31](https://github.com/no6969el/GEVR/issues/31)
+- **Ammo HUD picture** can look stretched or fat in VR (render, not clip) — [#34](https://github.com/no6969el/GEVR/issues/34)
+- **HUD text** can sit too close or hard to read in depth — [#33](https://github.com/no6969el/GEVR/issues/33)
+- **Headset refresh:** Virtual Desktop / some runtimes only enter VR at 90 Hz — [#49](https://github.com/no6969el/GEVR/issues/49)
 - Expect occasional **crashes** while we keep optimizing.
-- After you **finish a level**, sit on the **character / folder screen**, then load again, you can spawn in junk space (glitchy / empty). **Quit the game fully and run `Start-GEVR.bat` again** - loading another mission in the same process often stays broken. Please [file an Issue](https://github.com/no6969el/GEVR/issues/new/choose) with headset, runtime, map, and a log or short clip if you have one. No ROM files.
+- After you **finish a level**, sit on the **character / folder screen**, then load again, you can spawn in junk space (glitchy / empty) — [#38](https://github.com/no6969el/GEVR/issues/38). **Quit the game fully and run `Start-GEVR.bat` again** — loading another mission in the same process often stays broken. Please [file an Issue](https://github.com/no6969el/GEVR/issues/new/choose) with headset, runtime, map, and a log or short clip if you have one. No ROM files.
 
 Still worth playing - absolutely. Facility, Dam, that first-person Bond feeling. Stay on **vr441** until Latest moves.
 
