@@ -55,6 +55,8 @@ No ROM in the download. You bring yours.
 
 Next zip is packing now — **aiming for tonight** (19 Sep). Keep playing **vr441** until a new GitHub Release appears. **Watch** this repo (Watch -> Releases) so you get pinged.
 
+When that zip goes up we will **close a batch of open Issues** that this cut actually ships. If yours stays open, it is still in the chair — comment there if it is still broken on the new tag.
+
 **In the next cut:**
 - **Black flicker fixed** — Facility gas tanks and Bunker-after-Surface no longer punch to black in VR ([issue #55](https://github.com/no6969el/GEVR/issues/55)). That one is done for the next zip.
 - **Watch works in VR** — you can read it, confirm, and use it on Secret Agent / 00 Agent so those objectives can actually be finished in the headset ([issues #32](https://github.com/no6969el/GEVR/issues/32) / watch finger). This is the reason higher difficulties were a dead end on vr441.
@@ -140,6 +142,7 @@ More pitch and cover energy: [FEATURES.md](FEATURES.md).
 **Next zip (packing now, aiming tonight)**
 - Black flicker gone in VR
 - Watch usable so higher difficulties can be completed in the headset
+- A batch of GitHub Issues closed against that zip
 
 **Also on the board**
 - Ammo HUD picture
