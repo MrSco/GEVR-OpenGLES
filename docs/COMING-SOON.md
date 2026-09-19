@@ -17,14 +17,14 @@ Stay on **vr441** until a new wear-passed cut lands. There is no new tag yet. **
 - 72 / 80 / **90** Hz should work (headset default 90). Over 90 is still beta-test territory.
 - Local split-screen works on a monitor.
 
-## What's coming (in the chair, not in the zip)
+## What's coming (next zip — packing now, aiming tonight)
 
-Working on:
-- **Watch finger + pause menu** - so the watch and pause actually work in VR (confirm, highlight, that stretched finger). Current EXE project.
-- **Ammo HUD picture** - icons can look stretched or fat in the headset. Render first, not clip. Not wear-passed, so not shipped.
+Landing in the next Release:
+- **Black flicker fixed** in VR — Facility gas tanks and Bunker after Surface ([issue #55](https://github.com/no6969el/GEVR/issues/55)).
+- **Watch works in VR** — confirm / read / use it so Secret Agent and 00 Agent objectives can be finished in the headset ([issue #32](https://github.com/no6969el/GEVR/issues/32)).
 
-Looking at (not promising the next drop):
-- **Black flicker** in VR (Facility gas tanks; Bunker after Surface) - [issue #55](https://github.com/no6969el/GEVR/issues/55). Not chaired.
+Still in the chair after that (not promised tonight):
+- **Ammo HUD picture** — icons can look stretched or fat. Render first, not clip.
 
 ## Later (not this zip, not the next tease)
 
