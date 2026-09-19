@@ -11,30 +11,33 @@ How to run it: [README](../README.md). Hands: [CONTROLS.md](CONTROLS.md). Tester
 - Solo VR GoldenEye (OpenXR)
 - Bring your own USA ROM
 - Headset via `Start-GEVR.bat`, or monitor via `Play-on-monitor.bat`
-- Local split-screen multiplayer on a monitor
+- Local / split-screen multiplayer on a monitor
 
-## Next zip (packing now, aiming tonight 19 Sep)
+## In the current test wear / next update (not tagged yet)
 
-- **Black flicker fixed** in VR (Facility gas tanks; Bunker after Surface) — [issue #55](https://github.com/no6969el/GEVR/issues/55)
-- **Watch usable in VR** so Secret Agent / 00 Agent can be completed in the headset — [issue #32](https://github.com/no6969el/GEVR/issues/32)
-- **Dam mid-range crates stay drawn** — [issue #29](https://github.com/no6969el/GEVR/issues/29)
-- **Ammo HUD picture corrected** — [issue #34](https://github.com/no6969el/GEVR/issues/34)
+- Dual-wield fire and per-hand tracers
+- Thrown grenades and rockets following the hand
+- Cleaner Magnum drum and ammo HUD digits
+- Tank climb after you get onto the hatch
+- Ammo HUD picture polish in the wear stack
 
-## Still in the chair after that
+## Cooking (do not call these shipped)
 
-- Fewer crashes and softer landings
-- Murky Dam water, one-eye glass holes
-- HUD text depth
-- Comfort (playspace, aiming, HUD)
-- Saves that survive updates (cache already rebuilds once when the Beta tag changes)
+- Ghost see-through empty hand (fingers, not boxes)
+- Hands / guns stopping at walls
+- Touch-to-enter tank
+- Rocket model facing the flight path
+- Grenade-launcher double-spawn and self-blast
+- Tank turret pitch on the right stick
+- Reload or die-continue without restarting the exe ([issue #38](https://github.com/no6969el/GEVR/issues/38))
+- Explosion rooms less likely to hard-crash, plus better crash logs
 
 ## Later
 
-- **LAN / same-network multiplayer add-on** (not the next zip)
+- **LAN / local-network multiplayer add-on** (not a mod; not this polish pack)
 - Online play after that
-- More campaign coverage as the base hardens
-- Optional quality / accessibility without killing the classic feel
-
-We are calling the multiplayer path an **add-on**, not a mod.
+- Nicer hand mesh after ghost fingers
+- Full-body Bond later
+- Dam water, one-eye glass holes, comfort knobs
 
 Star the repo and Watch -> Releases if you want the next cut without hunting.
