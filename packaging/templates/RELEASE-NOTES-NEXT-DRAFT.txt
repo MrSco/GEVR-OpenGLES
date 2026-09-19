@@ -1,0 +1,61 @@
+GEVR Beta - NEXT ZIP DRAFT (not Latest)
+=======================================
+
+This file is a wording draft for the pack after vr441.
+It is NOT a shipped tag. Latest playable is still:
+
+  https://github.com/no6969el/GEVR/releases/tag/vr441
+
+Do not treat anything below as "fixed in the zip you downloaded"
+until GitHub Latest moves off vr441.
+
+Play now
+--------
+Stay on vr441. Start-GEVR.bat for headset.
+Play-on-monitor.bat for no headset.
+Bring your own USA GoldenEye .z64. No ROM in the zip.
+
+In the current test wear / coming in the next update
+----------------------------------------------------
+- Dual-wield fire from each hand (not a right-hand mirror)
+- Per-hand tracers that stay on their own beam
+- Thrown grenades follow controller aim
+- Rockets fly where the hand aims (model nose may still face your head)
+- Magnum drum hinge narrowed (less warped cylinder)
+- Ammo HUD digit spacing + icon pad crop in the wear stack
+- Tank climb after you fidget onto the hatch
+- Orange hand cubes hide when dual-wielding
+
+Cooking (do not call these shipped)
+-----------------------------------
+- See-through ghost fingers for the empty hand
+- Hands / guns stopping at walls; gun depth
+- Touch the tank hatch to climb in
+- Rocket body pointing where it flies
+- Grenade-launcher double-spawn and self-blast
+- Tank turret pitch on the right stick (yaw already works)
+- Die / quit / reload a mission without restarting goldeneye.exe
+- Explosion arena raise + better crash logs
+
+Known on vr441 today
+--------------------
+- After you finish a level or die, loading again in the same process
+  can spawn junk / floating doors. Fully quit goldeneye.exe and
+  run the bat again. That is issue #38.
+- Alarm can keep ringing after a death / stage return.
+- Mass explosions can crash.
+- Tank turret pitch on XR is still yaw-only.
+
+Report a bug
+------------
+https://github.com/no6969el/GEVR/issues/new/choose
+
+Please include: headset, OpenXR runtime, SteamVR on/off,
+HMD vs monitor, Start-GEVR.bat yes/no.
+Do not upload your ROM.
+
+Roadmap wording
+---------------
+Local / split-screen multiplayer exists now.
+Next social step is a LAN / local-network multiplayer add-on
+(not a mod). True online is later.
