@@ -10,7 +10,7 @@ Older tag **pages** stay for history. **Latest is vr441.** Do not download from 
 - **vr440** stays published (not Latest) - picture-only boot; see [README - What went wrong in vr440](../README.md#what-went-wrong-in-vr440).
 - **vr439** zip removed when vr440 shipped. Tag page stays for record.
 
-Player door: [00-START-HERE.md](00-START-HERE.md). Play steps: [README](../README.md#play-vr441---the-one-to-grab). Hands: [CONTROLS.md](CONTROLS.md). What is coming: [ROADMAP.md](ROADMAP.md). Pitch: [FEATURES.md](../FEATURES.md). How to report: [CONTRIBUTING.md](../CONTRIBUTING.md). License map: [LICENSE-MAP.md](../LICENSE-MAP.md).
+Player door: [00-START-HERE.md](00-START-HERE.md). Play steps: [README](../README.md#play-vr441---the-one-to-grab). Hands: [CONTROLS.md](CONTROLS.md). What is coming: [ROADMAP.md](ROADMAP.md) and [COMING-SOON.md](COMING-SOON.md). Pitch: [FEATURES.md](../FEATURES.md). How to report: [CONTRIBUTING.md](../CONTRIBUTING.md). License map: [LICENSE-MAP.md](../LICENSE-MAP.md).
 
 ## Before you start
 
@@ -28,7 +28,7 @@ Use the bats. Do not double-click `goldeneye.exe`. Details: [CONTROLS.md](CONTRO
 
 **Verified:** Pimax Crystal Super + SteamVR OpenXR via [CustomHeadsetOpenVR](https://github.com/sboys3/CustomHeadsetOpenVR), native **PimaxXR**, **Quest 3 + Virtual Desktop OpenXR**.
 
-**Hz:** 72 / 80 / 90 should work. Headset default is 90. Over 90 is still beta-test territory. Report what you see.
+**Hz:** 72 / 80 should work. Wear recommendation is **90**. Over 90 is still beta-test territory. Report what you see. We do not call 120 / 144 signed off.
 
 ## Install and run
 
@@ -64,18 +64,19 @@ Use the bats. Do not double-click `goldeneye.exe`. Details: [CONTROLS.md](CONTRO
 
 Do **not** upload your ROM. We do not need it and we do not want it. Forms: [CONTRIBUTING.md](../CONTRIBUTING.md).
 
-If the world goes glitchy, empty, or you spawn in junk space after finishing a level and sitting on the character / folder screen: **fully quit the game and run the bat again**. Loading another mission in the same process often stays broken. Then file the Issue so we can fix the leftover state.
+If the world goes glitchy, empty, or you spawn in junk space after finishing a level and sitting on the character / folder screen: **fully quit `goldeneye.exe` and run the bat again**. Loading another mission in the same process often stays broken ([issue #38](https://github.com/no6969el/GEVR/issues/38)). Then file the Issue so we can fix the leftover state.
 
 ## What to test first
 
 - Boot into VR and look around
 - Aim and shoot (Auto-Aim should default OFF)
+- Dual-wield if you pick up a second gun (each hand should fire on its own)
 - Pause watch: move highlight with **left stick**
-- Explosions and sparks
-- Dam mid-range crates (known pop - still useful)
-- Dam water look (known murky - still useful)
-- One-eye glass bullet holes (known - still useful)
-- Finish a level, wait on the character / folder screen, load again (known dirty-spawn - still useful; quit the exe if it breaks)
+- Climb a tank and drive (turret pitch on XR is still yaw-only)
+- Explosions and sparks (mass blow-ups can still crash)
+- Dam mid-range crates and Dam water look
+- One-eye glass bullet holes
+- Finish a level, wait on the character / folder screen, load again (known dirty-spawn - quit the exe if it breaks)
 - Facility halls / guards
 - Local split-screen on a monitor if you have a friend on the couch
 - Note any crash: what map, what action
@@ -83,7 +84,9 @@ If the world goes glitchy, empty, or you spawn in junk space after finishing a l
 ## What not to expect yet
 
 - Store-polish stability
-- Perfect body / hands
+- Perfect body / hands (ghost fingers are cooking; boxy mesh was rejected)
+- Reload-without-restart of the exe (workaround: full quit)
+- Tank turret pitch on the stick
 - LAN or online multiplayer (local split-screen works now; a LAN **add-on** is later; online is later than that)
 
 Jump in and enjoy finally being Bond in GoldenEye VR.
