@@ -17,12 +17,13 @@ How to run it: [README](../README.md). Hands: [CONTROLS.md](CONTROLS.md). Tester
 
 - **Black flicker fixed** in VR (Facility gas tanks; Bunker after Surface) — [issue #55](https://github.com/no6969el/GEVR/issues/55)
 - **Watch usable in VR** so Secret Agent / 00 Agent can be completed in the headset — [issue #32](https://github.com/no6969el/GEVR/issues/32)
+- **Dam mid-range crates stay drawn** — [issue #29](https://github.com/no6969el/GEVR/issues/29)
 
 ## Still in the chair after that
 
 - **Ammo HUD picture** — render first (distortion, not clip). Not wear-passed.
 - Fewer crashes and softer landings
-- Dam crate pop, murky Dam water, one-eye glass holes
+- Murky Dam water, one-eye glass holes
 - Comfort (playspace, aiming, HUD)
 - Saves that survive updates (cache already rebuilds once when the Beta tag changes)
 
