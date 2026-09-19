@@ -53,15 +53,29 @@ No ROM in the download. You bring yours.
 
 ## What's coming (stay on vr441 until Latest moves)
 
-Next zip is packing now — **aiming for tonight** (19 Sep). Keep playing **vr441** until a new GitHub Release appears. **Watch** this repo (Watch -> Releases) so you get pinged.
+There is **no newer public tag** yet. Keep playing [**vr441**](https://github.com/no6969el/GEVR/releases/tag/vr441). **Watch -> Releases** for the ping.
 
-When that zip goes up we will **close a batch of open Issues** that this cut actually ships. If yours stays open, it is still in the chair — comment there if it is still broken on the new tag.
+**In the current test wear / coming in the next update** (not shipped until a new Latest tag):
 
-**In the next cut:**
-- **Black flicker fixed** — Facility gas tanks and Bunker-after-Surface no longer punch to black in VR ([issue #55](https://github.com/no6969el/GEVR/issues/55)).
-- **Watch works in VR** — you can read it, confirm, and use it on Secret Agent / 00 Agent so those objectives can actually be finished in the headset ([#32](https://github.com/no6969el/GEVR/issues/32) confirm, [#56](https://github.com/no6969el/GEVR/issues/56) stretched hand, [#58](https://github.com/no6969el/GEVR/issues/58) highlight in both eyes).
-- **Dam mid-range crates stay drawn** — the chair that never shipped in public vr441 is hard-wired in the next exe ([issue #29](https://github.com/no6969el/GEVR/issues/29)).
-- **Ammo HUD picture corrected** — stretched / fat icons in VR ([issue #34](https://github.com/no6969el/GEVR/issues/34)).
+- Dual-wield fire from each hand, not a right-hand mirror
+- Per-hand tracers that stay on their own beam
+- Thrown grenades and rockets that follow the hand (the rocket body may still face your head)
+- Magnum drum no longer warped; ammo HUD digits spaced cleaner
+- Tank climb after you fidget onto the hatch
+- Orange hand cubes hide when you dual-wield
+
+**Cooking - do not treat these as fixed on vr441:**
+
+- See-through ghost fingers for the empty hand (not a boxy mesh)
+- Hands and guns stopping at walls instead of painting through them
+- Touch the tank hatch to climb in
+- Rocket model pointing where it flies
+- Grenade-launcher double-spawn and self-blast
+- Tank turret pitch on the right stick (yaw already works)
+- Die / quit / reload a mission without restarting the whole game ([issue #38](https://github.com/no6969el/GEVR/issues/38))
+- Fewer hard crashes when you blow everything, plus better crash logs
+
+Ideas filed for later: hold weapon-change for a spin wheel; left X for dual different guns. Not this drop.
 
 Keep shooting. When Latest moves, grab that zip.
 
@@ -69,7 +83,7 @@ Keep shooting. When Latest moves, grab that zip.
 
 ## What vr438 introduced (still true)
 
-- **BYO-ROM enforced** - `Start-GEVR.bat` → **GevrRomStarter**; you must supply a USA GoldenEye `.z64` you own.
+- **BYO-ROM enforced** - `Start-GEVR.bat` -> **GevrRomStarter**; you must supply a USA GoldenEye `.z64` you own.
 - **File-backed images** - in-game textures and UI art come from your ROM on disk; the zip does not ship Nintendo cart data.
 - **Full runtime in the zip** - includes `glew32.dll` and the other Windows DLLs the build needs.
 - **Sharper VR** (carried forward) - supersample 3 with the SrcFbo path we chaired and kept.
@@ -93,7 +107,7 @@ These paths are what this Beta was built and stared on:
 | **Meta Quest 3 + Virtual Desktop OpenXR** | Verified attach / play |
 | **RTX 5060 laptop + Quest 3 + Virtual Desktop VDXR** | BarZ wear **vr441**, 2026-09-17; ran surprisingly well (one data point, not a minimum spec) |
 
-**Refresh rates:** 72 Hz, 80 Hz, and **90 Hz** should work. This zip defaults to **90**. Anything **over 90** (120 / 144 and friends) is still beta-test territory - try it, and [file an Issue](https://github.com/no6969el/GEVR/issues/new/choose) if something feels off.
+**Refresh rates:** 72 Hz and 80 Hz should work. Wear recommendation is **90**. Anything **over 90** (120 / 144 and friends) is still beta-test territory - try it, and [file an Issue](https://github.com/no6969el/GEVR/issues/new/choose) if something feels off. We do not call 120 / 144 signed off.
 
 When you report a bug or crash, please include: **headset**, **OpenXR runtime**, **SteamVR on/off**, **HMD vs monitor**, whether you used **`Start-GEVR.bat`**, your **`gevr-*-boot.cmd`** filename from the zip folder, and any log next to the zip or in the console. Do **not** upload your ROM. [Open an Issue](https://github.com/no6969el/GEVR/issues/new/choose).
 
@@ -101,39 +115,31 @@ When you report a bug or crash, please include: **headset**, **OpenXR runtime**,
 
 ## Known quirks (honest Beta)
 
-We would rather tell you than surprise you.
+We would rather tell you than surprise you. These are **vr441 today**.
 
-### Fixed in the next zip (aiming tonight)
-
-Still true on **vr441**. Gone when Latest moves:
-
-- **Black flicker** in VR at Facility gas tanks and Bunker after Surface — [#55](https://github.com/no6969el/GEVR/issues/55)
-- **Pause / watch confirm** rough on face buttons — [#32](https://github.com/no6969el/GEVR/issues/32)
-- **Watch hand stretches or breaks** when you pull it — [#56](https://github.com/no6969el/GEVR/issues/56)
-- **Watch / pause highlight only in one eye** — [#58](https://github.com/no6969el/GEVR/issues/58)
-- **Dam mid-range crates / props pop in and out** — [#29](https://github.com/no6969el/GEVR/issues/29) (the distance-crate keep, hard-wired in the next exe)
-- **Ammo HUD picture** stretched or fat in VR — [#34](https://github.com/no6969el/GEVR/issues/34)
-
-Watch items are why Secret Agent / 00 Agent could not be finished in the headset on vr441.
-
-### Still on vr441 (not tonight)
-
-- **Dam water** can look flat or murky — [#30](https://github.com/no6969el/GEVR/issues/30)
-- **Glass bullet holes** can still show in one eye — [#31](https://github.com/no6969el/GEVR/issues/31)
-- **HUD text** can sit too close or hard to read in depth — [#33](https://github.com/no6969el/GEVR/issues/33)
-- **Headset refresh:** Virtual Desktop / some runtimes only enter VR at 90 Hz — [#49](https://github.com/no6969el/GEVR/issues/49)
+- After you **finish a level** or die, sit on the **character / folder screen**, then load again, the world can go weird (junk spawn, floating doors, wrong props) - [issue #38](https://github.com/no6969el/GEVR/issues/38). **Fully quit `goldeneye.exe` and run `Start-GEVR.bat` again.** Loading another mission in the same process often stays broken. A reload-without-restart fix is cooking for a later tag.
+- Alarm can keep ringing after a death or stage return.
+- **Grenade launcher** can spit two rounds or blast your own feet when you aim off-flat.
+- **Tank turret** on XR is yaw-only for now. Pitch on the right stick is cooking.
+- **Rockets** fly with the hand; the mesh may still face your head.
+- **Mass explosions** can crash. We are raising pools and adding better crash logs - not tagged yet.
+- Mid-range **crates / props on Dam** can still pop in and out.
+- **Dam water** can look flat or murky.
+- **Glass bullet holes** can still show in one eye.
+- **HUD text** can sit too close or hard to read in depth.
+- **Headset refresh:** some Virtual Desktop / runtime setups only enter VR at 90 Hz - [issue #49](https://github.com/no6969el/GEVR/issues/49).
 - Expect occasional **crashes** while we keep optimizing.
-- After you **finish a level**, sit on the **character / folder screen**, then load again, you can spawn in junk space (glitchy / empty) — [#38](https://github.com/no6969el/GEVR/issues/38). **Quit the game fully and run `Start-GEVR.bat` again** — loading another mission in the same process often stays broken. Please [file an Issue](https://github.com/no6969el/GEVR/issues/new/choose) with headset, runtime, map, and a log or short clip if you have one. No ROM files.
+- We are **not** promising full-body Bond or fancy glove meshes yet. Ghost fingers first, nicer mesh later.
 
 Still worth playing - absolutely. Facility, Dam, that first-person Bond feeling. Stay on **vr441** until Latest moves.
 
-On a **flat / monitor** setup, classic **local multiplayer** is still there - split-screen couch chaos, same as you remember. LAN / same-network is later, not the next zip. True online is further after that.
+On a **flat / monitor** setup, classic **local / split-screen multiplayer** is still there - couch chaos, same as you remember. Next social step is a **LAN / local-network multiplayer add-on** (not a mod). True online is further after that.
 
 ---
 
 ## Why this exists
 
-GoldenEye is one of the most-wanted “I wish I could stand inside it” games on Earth. GEVR’s north star:
+GoldenEye is one of the most-wanted "I wish I could stand inside it" games on Earth. GEVR's north star:
 
 - **Native / from-source** - full ownership of the game loop for proper VR
 - **OpenXR** - Crystal, Quest via PC, SteamVR-class HMDs
@@ -149,24 +155,25 @@ More pitch and cover energy: [FEATURES.md](FEATURES.md).
 **Now - enjoy the Beta**
 - Solo VR campaign feel
 - Comfort, aim, and picture quality
-- “It boots, it shoots, it sometimes crashes” honesty
+- "It boots, it shoots, it sometimes crashes" honesty
+- Local / split-screen multiplayer on a monitor
 
-**Next zip (packing now, aiming tonight)**
-- Black flicker gone in VR
-- Watch usable so higher difficulties can be completed in the headset
-- Dam mid-range crates stay drawn
-- Ammo HUD picture corrected
-- A batch of GitHub Issues closed against that zip
+**In the current test wear / next update** (not tagged yet)
+- Dual-wield fire, per-hand tracers, thrown / rocket aim
+- Cleaner Magnum drum and ammo HUD digits
+- Tank climb after you get onto the hatch
 
-**Also on the board**
-- Fewer freezes and softer landings
-- Clearer first-run (ROM drop-in, saves that survive updates)
-- Dam water / glass / HUD-depth quirks above
+**Cooking**
+- Ghost empty hand, wall-solid hands / guns, touch-to-enter tank
+- Rocket model facing flight, grenade-launcher double-spawn, tank stick pitch
+- Reload-without-restart ([issue #38](https://github.com/no6969el/GEVR/issues/38))
+- Softer landings when explosions go loud
 
-**Later - the fun extras**
-- **Multiplayer add-on** - LAN / same-network first, full online further after that (not the next zip)
-- More levels / modes once the base stays stable
-- Optional quality knobs without breaking the classic feel
+**Later**
+- **LAN / local-network multiplayer add-on** (not a mod; not this polish pack)
+- True online after that
+- Nicer hand mesh after ghost fingers
+- Dam water / glass / HUD-depth polish
 
 Fuller list: [`docs/ROADMAP.md`](docs/ROADMAP.md). Star + **Watch -> Releases** if you want the next zip without refreshing every day.
 
@@ -178,7 +185,7 @@ Fuller list: [`docs/ROADMAP.md`](docs/ROADMAP.md). Star + **Watch -> Releases** 
 
 **Longer:** GEVR rebuilds GoldenEye on PC so VR can be done properly (stereo, 6DOF, controller aim), instead of stretching an emulator. Beta means playable and imperfect on purpose while we clear crashes and comfort. Multiplayer and bigger social features sit on the roadmap after the solo VR base is something we are proud to hand strangers.
 
-Credits: [CREDITS.md](CREDITS.md). Boundaries: [PRIOR-ART.md](PRIOR-ART.md), [LICENSE](LICENSE). We do not claim Nintendo’s game data, Rare’s assets, or third-party engines we did not write.
+Credits: [CREDITS.md](CREDITS.md). Boundaries: [PRIOR-ART.md](PRIOR-ART.md), [LICENSE](LICENSE). We do not claim Nintendo's game data, Rare's assets, or third-party engines we did not write.
 
 ---
 
