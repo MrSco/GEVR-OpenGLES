@@ -8,7 +8,7 @@
 
 The N64 classic you can finally *stand inside* - not an emulator overlay, not a flat game with a headset stuck on. GEVR is a from-source PC port of *GoldenEye 007* built for real OpenXR VR. You supply a **USA GoldenEye ROM you legally own**; the starter prepares a local cache and **`Start-GEVR.bat`** launches through **GevrRomStarter** (not bare `goldeneye.exe`).
 
-**Latest playable cut:** [**GEVR Beta vr443**](https://github.com/no6969el/GEVR/releases/latest) - public Beta (BYO-ROM, file-backed images from your cart). Zip: **`GEVR-Beta-vr443-win64.zip`**. Download it, unzip, play. VR comfort rethink: Settings glass, in-app Update, prefs that survive zip updates.
+**Latest playable cut:** [**GEVR Beta vr443**](https://github.com/no6969el/GEVR/releases/latest) - public Beta (BYO-ROM). Zip: **GEVR-Beta-vr443-win64.zip**. **New: in-app Update** (checks Latest on open, one click to download + launch). Plus VR Settings glass, Dam SKYPIN, prefs that survive zip updates.
 
 **vr442** / **vr441** / **vr440** tag pages stay for history. Their **zips are gone**. Grab [**vr443**](https://github.com/no6969el/GEVR/releases/tag/vr443).
 
@@ -20,7 +20,7 @@ If this brings you back, **Star** the repo and [**follow @no6969el**](https://gi
 
 ## Play (vr443 - the one to grab)
 
-1. Download **[`GEVR-Beta-vr443-win64.zip`](https://github.com/no6969el/GEVR/releases/latest)** from [Latest](https://github.com/no6969el/GEVR/releases/latest) / [tag vr443](https://github.com/no6969el/GEVR/releases/tag/vr443) (exe, `glew32.dll`, other runtime DLLs, ROM starter, launcher, notes). **No ROM inside the zip.**
+1. Download **[GEVR-Beta-vr443-win64.zip](https://github.com/no6969el/GEVR/releases/latest)** from [Latest](https://github.com/no6969el/GEVR/releases/latest) / [tag vr443](https://github.com/no6969el/GEVR/releases/tag/vr443) (exe, `glew32.dll`, other runtime DLLs, ROM starter, launcher, notes). **No ROM inside the zip.**
 2. Unzip anywhere.
 3. Run **`Start-GEVR.bat`** - it sets VR boot knobs and starts **GevrRomStarter.exe**.
 4. Point at your **USA GoldenEye `.z64`** when asked. Images extract to `%LOCALAPPDATA%\GEVR\\cache\\<ROM-hash>\\`. Each Beta tag bumps a **ship stamp** so the first launch after an update rebuilds that cache once from your ROM.
@@ -45,21 +45,40 @@ No ROM in the download. You bring yours.
 
 From the [vr443 RELEASE-NOTES](https://github.com/no6969el/GEVR/releases/tag/vr443). Internal cook **453**.
 
-This cut is a **VR comfort / motion rethink** - movement, turning, and the open play space so the headset feels more like standing inside the game.
+### 1) In-app Update (start here)
 
-- **VR Settings** glass on the intro / cinema hub (**look right**). Right stick: up/down picks a row, left/right changes it live
-  - **TURN SPEED**
-  - **TURN STYLE** (Smooth or Snap)
-  - **SNAP SIZE** (25-150%, grayed while Smooth)
-- Comfort picks save under `%LOCALAPPDATA%\GEVR` **with your saves**. Zip updates do not wipe them. `Clear-GEVR-cache.bat` keeps them too
-- **In-app Update:** the starter checks GitHub Latest when you open it and tells you if a newer cut is waiting. Click **Update** to pull the win64 zip into this folder. Saves, prefs, cache, and your `.z64` beside the exe stay put
-- Dam sky look-up stays pinned (**SKYPIN** - on by default)
-- vr442 keepers stay in: tank auto-mount + stick pitch, GL single-shot, rocket nose, die/continue ([#38](https://github.com/no6969el/GEVR/issues/38)), far guards, left-hand cube, `gevr-fault-*.txt`
+Open **GevrRomStarter** and it **checks GitHub Latest** for you. If a newer cut is waiting, it says so.
 
-Full player notes ship inside the zip as `RELEASE-NOTES.txt` and on the [tag](https://github.com/no6969el/GEVR/releases/tag/vr443).
+Click **Update** once: downloads the win64 zip, unpacks into this folder, leaves saves / prefs / cache / your .z64 alone, then **launches Start-GEVR.bat** and closes. **One click to play.**
 
+### 2) VR comfort / motion rethink
 
----
+- **VR Settings** glass on the intro / cinema hub (**look right**), world-locked, facing you
+- **Right stick only**: up/down = row, left/right = change live
+  - **TURN SPEED** / **TURN STYLE** (Smooth or Snap) / **SNAP SIZE** (25-150%, grayed on Smooth)
+- Height row removed; Snap Size took that slot
+- Prefs under %LOCALAPPDATA%\GEVR with your saves (survive zip Update and Clear-GEVR-cache.bat)
+
+### 3) Dam sky (SKYPIN)
+
+Look-up on Dam stays pinned. **On by default**.
+
+### 4) Also in this cut
+
+- Open play space / dual-wield fire / picture KEEP still on
+- Recenter = both thumbstick clicks
+- Public zip still has **no** cheat unlock dump
+- One automatic cache rebuild after a new tag from your same ROM
+
+### Worked this week, not public-on yet
+
+- #74 arms / playspace translate - still cooking
+- #75 swing-required melee - not the ship headline yet
+- #70 TEXGUARD / SCRAPDROP - parked
+- Pause-menu VR Settings / laser select - parked
+
+Full notes: RELEASE-NOTES.txt in the zip / [tag](https://github.com/no6969el/GEVR/releases/tag/vr443).
+
 
 ## What's cooking (later update)
 
