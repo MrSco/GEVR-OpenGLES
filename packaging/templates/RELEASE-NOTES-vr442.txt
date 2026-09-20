@@ -5,31 +5,21 @@ From-source GoldenEye 007 in real OpenXR VR. Bring your own USA ROM.
 
 This zip has no ROM. You supply a USA GoldenEye .z64 you legally own.
 
+Internal cook: 452 (public tag vr442).
+
 Latest: https://github.com/no6969el/GEVR/releases/latest
+Tag:    https://github.com/no6969el/GEVR/releases/tag/vr442
+Zip:    GEVR-Beta-vr442-win64.zip
 
-What is new in vr442
---------------------
-Internal cook 452. Play this cut.
-
-- Tank auto-mount when you are standing on the chassis.
-  Stick pitch aims the shells (yaw already worked).
-- Grenade launcher is single-shot again (no double-spawn / self-blast).
-- Rockets point their nose along the flight path.
-- Die / continue / pad reload no longer needs a full quit
-  (issue #38).
-- Far characters are easier to see (007 visibility boost).
-- Empty left hand shows a temporary cube (MASK left).
-- Hard-crash writes gevr-fault-*.txt beside the exe
-  (helps big-explosion digs).
-
-Already in this zip from recent cooks
--------------------------------------
-- Dual-wield fire from each hand, not a right-hand mirror
-- Per-hand tracers that stay on their own beam
-- Thrown grenades follow the hand
-- Magnum drum / ammo HUD polish
-- Full chair boot from vr441 (bodies stay, explosion / fire color,
-  tuned aim / ADS)
+What changed since vr441
+------------------------
+- Tank auto-mount and stick pitch for tank shells
+- GL single-shot / muzzle feel OK (projectile-spawn experiment left off)
+- Rockets point their nose along the flight path
+- Die / continue reload no longer dumps you in junk space (#38 SETUPCOPY)
+- Far guards are more visible (007 far-vis)
+- Empty left hand draws a cube for now (temporary stand-in)
+- Hard crashes can leave a gevr-fault-*.txt beside goldeneye.exe to help reports
 
 Play
 ----
@@ -46,29 +36,18 @@ First time
 Updating from an older Beta
   Keep the same .z64. Each cut carries a ship stamp, so the first
   launch after an update rebuilds that cache once automatically.
-  Saves are kept. You do not need to delete the cache folder by hand.
+  You do not need to delete the cache folder by hand.
 
-If the picture still looks wrong: run Clear-GEVR-cache.bat (type YES)
-or delete %LOCALAPPDATA%\GEVR\cache. Deleting all of
-%LOCALAPPDATA%\GEVR also drops saves - not the default path.
-
-What's cooking (later update)
------------------------------
-Soft list only. Not shipped in this zip.
-
-- Two-hand support snap, and the cube hiding when hands get near
-- Hertz: boot is still 90-pinned. Runtime request is issue #49
-  for a later EXE
-- Ghost hand is parked. Nicer hands after that
-- Big object / plane-shell explosion hard crash can still happen
-  (you now get the fault file)
+If the picture still looks wrong: delete %LOCALAPPDATA%\GEVR and
+run the bat again.
 
 Why older zips
 --------------
 - vr434 was pulled: ROM images were baked into goldeneye.exe.
 - vr438 required your ROM but shipped a stripped VR boot.
 - vr440 had the right picture but never turned the chair features on.
-- vr441 turned the chair boot on. Grab vr442.
+- vr441 was the prior Latest. Grab vr442.
+  vr441 and vr440 tag pages stay; their zips were stripped.
 
 Headset notes
 -------------
@@ -79,23 +58,23 @@ Tab on keyboard/monitor still works.
 
 Pimax Crystal Super + SteamVR OpenXR via
 https://github.com/sboys3/CustomHeadsetOpenVR
-Native PimaxXR. Quest 3 + Virtual Desktop OpenXR (VDXR).
+Native PimaxXR. Quest 3 + Virtual Desktop OpenXR.
 
-72 / 80 Hz should work. Default and recommended is 90. Over 90 is
-still beta-test territory. Please report issues. We do not call
-120 / 144 signed off.
+72 / 80 Hz should work. 90 Hz is recommended (default). Over 90 is
+still beta-test territory. Please report issues.
 
-Still rough
------------
-- Occasional crashes (file an Issue: headset, OpenXR runtime,
-  SteamVR on/off, HMD vs monitor, Start-GEVR.bat yes/no,
-  plus any gevr-fault-*.txt beside the exe)
-- Mass explosions can still hard-crash
-- Dam crates can still pop in
-- Dam water can look murky
+Still rough / coming soon
+-------------------------
+- Big explosion / plane shell can still hard-crash (the fault file helps)
+- Higher Hertz requests are not signed off yet - stick to 72/80/90 for now
+- Two-hand snap is still cooking (coming later)
+- Ghost hand is parked for this cut
+- Empty left hand cube is temporary
+- Gun vanish below chest (GUNZ / HANDSOLID) left off until fixed
+- Dam crates can still pop in; Dam water can look murky
 - Glass bullet holes can be one-eye
 - Local split-screen MP works. A LAN / same-network multiplayer
-  add-on is later.
+  add-on is later
 
 https://github.com/no6969el/GEVR/issues/new/choose
 

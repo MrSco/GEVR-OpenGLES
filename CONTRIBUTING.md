@@ -4,14 +4,14 @@ Fan testers first. Thanks for helping GEVR Beta.
 
 ## Play the current zip
 
-Current zip is **vr442**. Grab **[GEVR-Beta-vr442-win64.zip](https://github.com/no6969el/GEVR/releases/latest)** and follow [README Play](README.md#play-vr442---the-one-to-grab).
+Current zip is **vr442**. Grab **[GEVR-Beta-vr442-win64.zip](https://github.com/no6969el/GEVR/releases/latest)** from [Latest](https://github.com/no6969el/GEVR/releases/latest) / [tag vr442](https://github.com/no6969el/GEVR/releases/tag/vr442) and follow [README Play](README.md#play-vr442---the-one-to-grab).
 
 - **Headset:** `Start-GEVR.bat`
 - **No headset / monitor only:** `Play-on-monitor.bat`
 
 Bring a **USA GoldenEye `.z64` you own**. The zip has no ROM. We will not ask you to upload one.
 
-Older tags may still show on GitHub. **Latest is vr442.** **vr441** and **vr440** stay published for history (not Latest). Do not hunt vr439 or older tag downloads.
+Older tag **pages** may still show on GitHub. **Latest is vr442.** **vr441** and **vr440** pages stay; their **zips were stripped**. Do not hunt those downloads.
 
 ## File a bug or crash
 

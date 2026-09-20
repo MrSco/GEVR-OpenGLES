@@ -2,9 +2,8 @@
 
 **Currency: 2026-09-20 (public ship `vr442` / cook 452)**
 
-- **Latest public Beta:** [GEVR Beta vr442](https://github.com/no6969el/GEVR/releases/latest) (`GEVR_SHIP_TAG=vr442`). Player door: [`README.md`](../README.md).
-- **vr441** remains published but is no longer Latest (full chair boot / PLAY0 KEEP).
-- **vr440** remains published but is not Latest. Picture KEEP only; chair features were in the exe and unarmed (see [`docs/ship-feature-checklist.md`](ship-feature-checklist.md)).
+- **Latest public Beta:** [GEVR Beta vr442](https://github.com/no6969el/GEVR/releases/latest) (`GEVR-Beta-vr442-win64.zip`, `GEVR_SHIP_TAG=vr442`). Tag: [vr442](https://github.com/no6969el/GEVR/releases/tag/vr442). Player door: [`README.md`](../README.md).
+- **vr441** / **vr440** tag pages stay. Their **zips were stripped** when vr442 shipped.
 - **Pack smoke:** `_smoke-ship-zip.ps1` rewritten 2026-09-16 (prior flattened copy gated nothing). Historical vr441 boot notes stay below.
 
 ---
