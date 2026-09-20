@@ -6,14 +6,14 @@
 
 **GoldenEye. Native. In VR. Bring your own ROM.**
 
-> **HOLD (2026-09-20):** **vr443 is pulled.** We took the zip down while we fix a motion / playspace bug (physical move strafes the world). **Do not download vr443.** Working on a fixed cut - Star / Watch Releases for the next good Latest. Sorry for the churn.
+> **vr443.1 (2026-09-20):** Point fix. **vr443** shipped the comfort cut but the motion / playspace KEEP was **not on by default in the binary** (only chair batlines, which do not stick). Physical step/strafe could slide the world. We pulled that zip. **Grab [vr443.1](https://github.com/no6969el/GEVR/releases/tag/vr443.1)** or hit **Update** in GevrRomStarter.
 
 ---
 The N64 classic you can finally *stand inside* - not an emulator overlay, not a flat game with a headset stuck on. GEVR is a from-source PC port of *GoldenEye 007* built for real OpenXR VR. You supply a **USA GoldenEye ROM you legally own**; the starter prepares a local cache and **`Start-GEVR.bat`** launches through **GevrRomStarter** (not bare `goldeneye.exe`).
 
-**Latest playable cut:** **on hold.** vr443 zip removed for a motion fix. Watch [Releases](https://github.com/no6969el/GEVR/releases) for the next good cut. Do not grab vr443.
+**Latest playable cut:** [**vr443.1**](https://github.com/no6969el/GEVR/releases/latest) - zip **`GEVR-Beta-vr443.1-win64.zip`**. Point fix on vr443 (motion KEEP baked into the exe).
 
-**vr442** / **vr441** / **vr440** tag pages stay for history. Their **zips are gone**. Grab [**vr443**](https://github.com/no6969el/GEVR/releases/tag/vr443).
+**vr443** / **vr442** / **vr441** / **vr440** tag pages stay for history. Their **zips are gone** (vr443 was HOLD). Grab [**vr443.1**](https://github.com/no6969el/GEVR/releases/tag/vr443.1).
 
 If this brings you back, **Star** the repo and [**follow @no6969el**](https://github.com/no6969el) so you can catch the next drops. **Watch -> Releases** if you want a ping when we ship. Between cuts, we keep a [living status on Reddit](https://www.reddit.com/r/QuietWindows/comments/1whmk8l/gevr_living_status_goldeneye_in_native_openxr_vr/) - honest fan wear notes, not a second readme. Want to fund the next cuts? [Patreon](https://www.patreon.com/cw/GEVR) - the zip stays free.
 
@@ -21,9 +21,9 @@ If this brings you back, **Star** the repo and [**follow @no6969el**](https://gi
 
 ---
 
-## Play (HOLD - wait for the next cut)
+## Play (vr443.1 - the one to grab)
 
-1. Download **[GEVR-Beta-vr443-win64.zip](https://github.com/no6969el/GEVR/releases/latest)** from [Latest](https://github.com/no6969el/GEVR/releases/latest) / [tag vr443](https://github.com/no6969el/GEVR/releases/tag/vr443) (exe, `glew32.dll`, other runtime DLLs, ROM starter, launcher, notes). **No ROM inside the zip.**
+1. Download **[GEVR-Beta-vr443.1-win64.zip](https://github.com/no6969el/GEVR/releases/latest)** from [Latest](https://github.com/no6969el/GEVR/releases/latest) / [tag vr443.1](https://github.com/no6969el/GEVR/releases/tag/vr443.1) (exe, `glew32.dll`, other runtime DLLs, ROM starter, launcher, notes). **No ROM inside the zip.**
 2. Unzip anywhere.
 3. Run **`Start-GEVR.bat`** - it sets VR boot knobs and starts **GevrRomStarter.exe**.
 4. Point at your **USA GoldenEye `.z64`** when asked. Images extract to `%LOCALAPPDATA%\GEVR\\cache\\<ROM-hash>\\`. Each Beta tag bumps a **ship stamp** so the first launch after an update rebuilds that cache once from your ROM.
@@ -44,9 +44,13 @@ No ROM in the download. You bring yours.
 
 ---
 
-## What is new in vr443
+## What is new in vr443.1
 
-From the [vr443 RELEASE-NOTES](https://github.com/no6969el/GEVR/releases/tag/vr443). Internal cook **453**.
+From the [vr443.1 RELEASE-NOTES](https://github.com/no6969el/GEVR/releases/tag/vr443.1). Internal cook **453**.
+
+### Why the point release
+
+**vr443** said physical walk should move you (and guns should stick). Those KEEP features were **not on by default in the shipped binary** - only chair batlines, which do not stick for a normal download. Physical step/strafe could **slide the world left/right**. We pulled that zip (HOLD). **vr443.1** bakes those KEEP features **C-default ON** in the exe. New tag so **Update** notices.
 
 ### 1) In-app Update (start here)
 
@@ -54,8 +58,10 @@ Open **GevrRomStarter** and it **checks GitHub Latest** for you. If a newer cut 
 
 Click **Update** once: downloads the win64 zip, unpacks into this folder, leaves saves / prefs / cache / your .z64 alone, then **launches Start-GEVR.bat** and closes. **One click to play.**
 
-### 2) VR comfort / motion rethink
+### 2) VR comfort / motion (fixed)
 
+- Physical walk/strafe moves **you**, not the world (baked in)
+- Guns stay with your hands when you lean/strafe (baked in)
 - **VR Settings** glass on the intro / cinema hub (**look right**), world-locked, facing you
 - **Right stick only**: up/down = row, left/right = change live
   - **TURN SPEED** / **TURN STYLE** (Smooth or Snap) / **SNAP SIZE** (25-150%, grayed on Smooth)
@@ -75,12 +81,12 @@ Look-up on Dam stays pinned. **On by default**.
 
 ### Worked this week, not public-on yet
 
-- #74 arms / playspace translate - still cooking
+- #74 arms body - still cooking as a product story (playspace translate KEEP is on)
 - #75 swing-required melee - not the ship headline yet
 - #70 TEXGUARD / SCRAPDROP - parked
 - Pause-menu VR Settings / laser select - parked
 
-Full notes: RELEASE-NOTES.txt in the zip / [tag](https://github.com/no6969el/GEVR/releases/tag/vr443).
+Full notes: RELEASE-NOTES.txt in the zip / [tag](https://github.com/no6969el/GEVR/releases/tag/vr443.1).
 
 
 ## What's cooking (later update)
@@ -108,7 +114,7 @@ Stay tuned. **Star** this repo and [**follow @no6969el**](https://github.com/no6
 - **Boot that actually hands over** - the bat sets FPS + stereo / view-restore so eyes fuse.
 - **Movement feel** locked to the 90 Hz loco reference we preferred in the chair.
 
-**Older tags (history only):** **vr434** was pulled (ROM images baked into `goldeneye.exe`). **vr442** / **vr441** / **vr440** tag pages stay; their **zips were stripped**. Do not hunt an old zip. Play [vr443](https://github.com/no6969el/GEVR/releases/latest).
+**Older tags (history only):** **vr434** was pulled (ROM images baked into `goldeneye.exe`). **vr442** / **vr441** / **vr440** tag pages stay; their **zips were stripped**. Do not hunt an old zip. Play [vr443.1](https://github.com/no6969el/GEVR/releases/latest).
 
 ---
 
@@ -131,7 +137,7 @@ When you report a bug or crash, please include: **headset**, **OpenXR runtime**,
 
 ## Known quirks (honest Beta)
 
-We would rather tell you than surprise you. These are **vr443 today**.
+We would rather tell you than surprise you. These are **vr443.1 today**.
 
 - **Big explosions** (large objects, plane shells) can still hard-crash. If they do, grab `gevr-fault-*.txt` beside the exe before you relaunch.
 - Alarm can keep ringing after a death or stage return.
@@ -168,7 +174,7 @@ More pitch and cover energy: [FEATURES.md](FEATURES.md).
 
 ## Roadmap (honest, not a calendar promise)
 
-**Now - enjoy the Beta (vr443)**
+**Now - enjoy the Beta (vr443.1)**
 - Solo VR campaign feel
 - Tank climb + turret pitch, dual-wield fire, rockets that point where they fly
 - Comfort, aim, and picture quality
