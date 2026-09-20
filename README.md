@@ -6,9 +6,12 @@
 
 **GoldenEye. Native. In VR. Bring your own ROM.**
 
+> **HOLD (2026-09-20):** **vr443 is pulled.** We took the zip down while we fix a motion / playspace bug (physical move strafes the world). **Do not download vr443.** Working on a fixed cut - Star / Watch Releases for the next good Latest. Sorry for the churn.
+
+---
 The N64 classic you can finally *stand inside* - not an emulator overlay, not a flat game with a headset stuck on. GEVR is a from-source PC port of *GoldenEye 007* built for real OpenXR VR. You supply a **USA GoldenEye ROM you legally own**; the starter prepares a local cache and **`Start-GEVR.bat`** launches through **GevrRomStarter** (not bare `goldeneye.exe`).
 
-**Latest playable cut:** [**GEVR Beta vr443**](https://github.com/no6969el/GEVR/releases/latest) - public Beta (BYO-ROM). Zip: **GEVR-Beta-vr443-win64.zip**. **New: in-app Update** (checks Latest on open, one click to download + launch). Plus VR Settings glass, Dam SKYPIN, prefs that survive zip updates.
+**Latest playable cut:** **on hold.** vr443 zip removed for a motion fix. Watch [Releases](https://github.com/no6969el/GEVR/releases) for the next good cut. Do not grab vr443.
 
 **vr442** / **vr441** / **vr440** tag pages stay for history. Their **zips are gone**. Grab [**vr443**](https://github.com/no6969el/GEVR/releases/tag/vr443).
 
@@ -18,7 +21,7 @@ If this brings you back, **Star** the repo and [**follow @no6969el**](https://gi
 
 ---
 
-## Play (vr443 - the one to grab)
+## Play (HOLD - wait for the next cut)
 
 1. Download **[GEVR-Beta-vr443-win64.zip](https://github.com/no6969el/GEVR/releases/latest)** from [Latest](https://github.com/no6969el/GEVR/releases/latest) / [tag vr443](https://github.com/no6969el/GEVR/releases/tag/vr443) (exe, `glew32.dll`, other runtime DLLs, ROM starter, launcher, notes). **No ROM inside the zip.**
 2. Unzip anywhere.

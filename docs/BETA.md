@@ -1,3 +1,5 @@
+> **HOLD (2026-09-20):** vr443 zip pulled for a motion / playspace fix. Do not download vr443. Wait for the next Latest.
+
 # Beta testing guide
 
 GEVR's public label is **Beta**. Expect crashes and unfinished corners. File them on Issues. We would rather hear from you than guess.
