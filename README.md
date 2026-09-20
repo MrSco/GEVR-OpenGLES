@@ -83,7 +83,6 @@ Look-up on Dam stays pinned. **On by default**.
 
 - **Dam blue flicker / convert-modem flicker** ([#70](https://github.com/no6969el/GEVR/issues/70)) - **known, being worked on**
 - #74 arms body - still cooking as a product story (playspace translate KEEP is on)
-- #75 swing-required melee - not the ship headline yet
 - Pause-menu VR Settings / laser select - parked
 
 Full notes: RELEASE-NOTES.txt in the zip / [tag](https://github.com/no6969el/GEVR/releases/tag/vr443.1).
@@ -140,6 +139,7 @@ When you report a bug or crash, please include: **headset**, **OpenXR runtime**,
 We would rather tell you than surprise you. These are **vr443.1 today**.
 
 - **Dam blue flicker** (end section) and **convert-modem flicker** - **known and being worked on** ([issue #70](https://github.com/no6969el/GEVR/issues/70)).
+- **Melee / fist** is in (swing-based), but **not finely tuned yet** - be careful standing next to characters you are not supposed to harm ([issue #75](https://github.com/no6969el/GEVR/issues/75)).
 - **Big explosions** (large objects, plane shells) can still hard-crash. If they do, grab `gevr-fault-*.txt` beside the exe before you relaunch.
 - Alarm can keep ringing after a death or stage return.
 - **Dam water** can look flat or murky.
