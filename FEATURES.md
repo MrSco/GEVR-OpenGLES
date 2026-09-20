@@ -8,9 +8,9 @@
 
 Not an emulator overlay. Not a flat game with a 3D wrapper. GEVR rebuilds GoldenEye on PC for real OpenXR stereo, 6DOF, and controller aim so you can actually *be* in the Facility.
 
-**Latest playable cut:** [**GEVR Beta vr442**](https://github.com/no6969el/GEVR/releases/latest) - public Beta (BYO-ROM, file-backed images from your cart). Zip: **`GEVR-Beta-vr442-win64.zip`**.
+**Latest playable cut:** [**GEVR Beta vr443**](https://github.com/no6969el/GEVR/releases/latest) - public Beta (BYO-ROM, file-backed images from your cart). Zip: **`GEVR-Beta-vr443-win64.zip`**.
 
-[Play the Beta](https://github.com/no6969el/GEVR/releases/latest) | [vr442 tag](https://github.com/no6969el/GEVR/releases/tag/vr442) | [Controls](docs/CONTROLS.md) | [Credits](CREDITS.md) | [Roadmap](docs/ROADMAP.md) | [Coming soon](docs/COMING-SOON.md)
+[Play the Beta](https://github.com/no6969el/GEVR/releases/latest) | [vr443 tag](https://github.com/no6969el/GEVR/releases/tag/vr443) | [Controls](docs/CONTROLS.md) | [Credits](CREDITS.md) | [Roadmap](docs/ROADMAP.md) | [Coming soon](docs/COMING-SOON.md)
 
 ---
 
@@ -39,7 +39,7 @@ Facility and friends, OpenXR on PC. Die / continue / pad reload works in the sam
 
 ---
 
-## What we tested (vr442)
+## What we tested (vr443)
 
 These paths are what this Beta was built and stared on:
 
@@ -61,7 +61,7 @@ When you report a bug or crash, please include: **headset**, **OpenXR runtime**,
 - Crashes and rough edges are expected. That is why it is Beta.
 - You bring a **USA GoldenEye `.z64` you own**. No ROM in the download. Run **`Start-GEVR.bat`** so **GevrRomStarter** can bind your ROM (not bare `goldeneye.exe`).
 - **New install** waits once while cache prepares. **After an update**, keep the same `.z64`; the ship stamp rebuilds cache once. Saves stay.
-- Use **[vr442 Latest](https://github.com/no6969el/GEVR/releases/latest)** (`GEVR-Beta-vr442-win64.zip`). **vr441** / **vr440** tag pages stay; their **zips were stripped**. **vr434** tag history: pulled build with ROM images baked into `goldeneye.exe`.
+- Use **[vr443 Latest](https://github.com/no6969el/GEVR/releases/latest)** (`GEVR-Beta-vr443-win64.zip`). **vr441** / **vr440** tag pages stay; their **zips were stripped**. **vr434** tag history: pulled build with ROM images baked into `goldeneye.exe`.
 - The zip includes **`glew32.dll`** and the other runtime DLLs Windows needs.
 - **Dam crates** can still pop in and out; **Dam water** can look flat or murky; **glass bullet holes** can show in one eye in places.
 - Big explosions can still hard-crash. The fault file is new; the crash is not fully gone.
@@ -73,7 +73,7 @@ When you report a bug or crash, please include: **headset**, **OpenXR runtime**,
 
 ## Start
 
-1. Grab **[`GEVR-Beta-vr442-win64.zip`](https://github.com/no6969el/GEVR/releases/latest)** from [Latest](https://github.com/no6969el/GEVR/releases/latest) / [vr442](https://github.com/no6969el/GEVR/releases/tag/vr442) (no ROM in the archive).
+1. Grab **[`GEVR-Beta-vr443-win64.zip`](https://github.com/no6969el/GEVR/releases/latest)** from [Latest](https://github.com/no6969el/GEVR/releases/latest) / [vr443](https://github.com/no6969el/GEVR/releases/tag/vr443) (no ROM in the archive).
 2. Unzip. Run **`Start-GEVR.bat`** (**GevrRomStarter** - point at your USA `.z64`; the bat also locks in sharper VR with supersample 3 and the SrcFbo path, plus stereo / view-restore knobs that help eyes fuse).
 3. Drop in your **USA `.z64`** when the starter asks.
 4. Headset on. Recenter (both sticks). Enjoy.

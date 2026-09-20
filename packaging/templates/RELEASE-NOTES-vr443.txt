@@ -1,0 +1,87 @@
+GEVR Beta vr443
+===============
+
+From-source GoldenEye 007 in real OpenXR VR. Bring your own USA ROM.
+
+This zip has no ROM. You supply a USA GoldenEye .z64 you legally own.
+
+Internal cook: 453 (public tag vr443).
+
+This cut is a VR comfort / motion rethink
+----------------------------------------
+Movement, turning, and the open play space got another pass so the headset
+feels more like standing inside the game - not fighting the old flat controls.
+
+What is new in vr443
+--------------------
+- VR Settings glass on the intro / cinema hub (look right). Right stick:
+  up/down picks a row, left/right changes it live.
+  - TURN SPEED
+  - TURN STYLE (Smooth or Snap)
+  - SNAP SIZE (25-150%, grayed out while Smooth)
+- Those comfort picks save under %LOCALAPPDATA%\GEVR (with your saves).
+  Updating the zip does not wipe them. Clear-GEVR-cache.bat keeps them too.
+- Dam sky look-up stays pinned (SKYPIN - on by default).
+- In-app Update: open the starter and it checks GitHub Latest for you.
+  If a newer cut exists it says so. Click Update to pull the win64 zip into
+  this folder. No more hunting the Releases page every time.
+  Saves, prefs, cache, and your .z64 beside the exe are left alone.
+
+Play
+----
+1. Unzip anywhere.
+2. Headset: run Start-GEVR.bat
+   Monitor / no headset: run Play-on-monitor.bat
+3. Point it at your USA .z64.
+4. In VR, recenter with both thumbstick clicks.
+5. On the intro hub, look right for VR SETTINGS and tune turn comfort.
+
+First time
+  The first launch waits once while images prepare into
+  %LOCALAPPDATA%\GEVR\cache, then you play.
+
+Updating from an older Beta
+  Keep the same .z64. Each cut carries a ship stamp, so the first
+  launch after an update rebuilds that cache once automatically.
+  Or open Start-GEVR.bat / the starter and use Update when it offers a
+  newer tag.
+  Your saves and VR Settings prefs stay under %LOCALAPPDATA%\GEVR.
+
+If the picture still looks wrong: prefer Clear-GEVR-cache.bat (keeps saves).
+Only delete %LOCALAPPDATA%\GEVR if you are okay losing saves too.
+
+Why older zips
+--------------
+- vr434 was pulled: ROM images were baked into goldeneye.exe.
+- vr438 required your ROM but shipped a stripped VR boot.
+- vr440 had the right picture but never turned the chair features on.
+- vr441 / vr442 were prior Latest cuts. Grab vr443.
+
+Headset notes
+-------------
+Auto-Aim defaults OFF. Left stick moves the pause highlight in VR.
+
+In headset, B reloads. Menu / system button opens pause and options.
+Tab on keyboard/monitor still works.
+
+Pimax Crystal Super + SteamVR OpenXR, native PimaxXR, Quest 3 +
+Virtual Desktop OpenXR.
+
+72 / 80 Hz should work. 90 Hz is recommended (default). Over 90 is
+still beta-test territory. Please report issues.
+
+Still rough / coming soon
+-------------------------
+- Big explosion / plane shell can still hard-crash (gevr-fault-*.txt helps)
+- Higher Hertz requests are not signed off yet - stick to 72/80/90 for now
+- Two-hand snap is still cooking (coming later)
+- Ghost hand is parked for this cut
+- Empty left hand cube is temporary
+- Gun vanish below chest (GUNZ / HANDSOLID) left off until fixed
+- Dam crates can still pop in; Dam water can look murky
+- Glass bullet holes can be one-eye
+- Local split-screen MP works. A LAN / same-network multiplayer add-on is later
+
+https://github.com/no6969el/GEVR/issues/new/choose
+
+Do not upload your ROM.

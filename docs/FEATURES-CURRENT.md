@@ -1,8 +1,8 @@
 # Feature snapshot (public) - 2026-09-20
 
-> Player snapshot: [FEATURES.md](../FEATURES.md). Play [vr442](https://github.com/no6969el/GEVR/releases/latest) (GitHub Latest). This page is not a second Play guide.
+> Player snapshot: [FEATURES.md](../FEATURES.md). Play [vr443](https://github.com/no6969el/GEVR/releases/latest) (GitHub Latest). This page is not a second Play guide.
 
-High-level status of the playable wear. Current zip is **[`GEVR-Beta-vr442-win64.zip`](https://github.com/no6969el/GEVR/releases/latest)**. Play steps: [README Play](../README.md#play-vr442---the-one-to-grab). Download: [Latest](https://github.com/no6969el/GEVR/releases/latest) / [vr442](https://github.com/no6969el/GEVR/releases/tag/vr442).
+High-level status of the playable wear. Current zip is **[`GEVR-Beta-vr443-win64.zip`](https://github.com/no6969el/GEVR/releases/latest)**. Play steps: [README Play](../README.md#play-vr443---the-one-to-grab). Download: [Latest](https://github.com/no6969el/GEVR/releases/latest) / [vr443](https://github.com/no6969el/GEVR/releases/tag/vr443).
 
 ## Working enough for Beta focus
 - OpenXR VR present (true stereo path)
@@ -22,7 +22,7 @@ High-level status of the playable wear. Current zip is **[`GEVR-Beta-vr442-win64
 - Local / split-screen multiplayer on a monitor
 
 ## Cooking / later (not shipped)
-Soft list only (matches [vr442 RELEASE-NOTES](https://github.com/no6969el/GEVR/releases/tag/vr442)):
+Soft list only (matches [vr443 RELEASE-NOTES](https://github.com/no6969el/GEVR/releases/tag/vr443)):
 - Two-hand snap is still cooking
 - Higher Hertz requests not signed off - stick to 72 / 80 / 90 ([issue #49](https://github.com/no6969el/GEVR/issues/49))
 - Ghost empty hand parked; cube is temporary
@@ -40,7 +40,7 @@ Soft list only (matches [vr442 RELEASE-NOTES](https://github.com/no6969el/GEVR/r
 - Boxy articulated hand mesh was rejected in the chair
 - No ROM redistribution (do not upload ROM files)
 
-## Headset / runtime (vr442)
+## Headset / runtime (vr443)
 
 Verified on this Beta (details in README Play):
 

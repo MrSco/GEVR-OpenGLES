@@ -2,8 +2,8 @@
 setlocal
 cd /d "%~dp0"
 
-rem GEVR Beta vr441 - ROM starter + KEEP VR boot.
-call "%~dp0gevr-vr441-boot.cmd"
+rem GEVR Beta vr443 - ROM starter + KEEP VR boot.
+call "%~dp0gevr-vr443-boot.cmd"
 
 if not exist "%~dp0GevrRomStarter.exe" (
   echo FATAL: GevrRomStarter.exe missing. Re-download the full GEVR Beta zip.
@@ -11,4 +11,4 @@ if not exist "%~dp0GevrRomStarter.exe" (
 )
 
 "%~dp0GevrRomStarter.exe"
-exit /b %ERRORLEVEL%
+exit /b %ERRORLEVEL%
