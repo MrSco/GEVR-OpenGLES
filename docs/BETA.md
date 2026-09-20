@@ -89,7 +89,7 @@ Die / continue / pad reload was fixed in vr443 ([issue #38](https://github.com/n
 - Empty left hand shows the cube
 - Die / continue / load another mission in the same process (should stay clean)
 - Explosions and sparks (mass blow-ups can still crash - keep the fault file)
-- Dam mid-range crates and Dam water look
+- Dam blue flicker / convert-modem flicker (known, being worked on - issue #70); Dam water look
 - One-eye glass bullet holes
 - Facility halls / guards
 - Local split-screen on a monitor if you have a friend on the couch
