@@ -1,11 +1,10 @@
 # Coming soon / watch this space
 
-**Play now:** [GEVR Beta vr442](https://github.com/no6969el/GEVR/releases/latest) (GitHub Latest). Full zip, two bats, no ROM. You bring a USA GoldenEye `.z64`. Play steps: [README Play](../README.md#play-vr442---the-one-to-grab).
+**Play now:** [GEVR Beta vr442](https://github.com/no6969el/GEVR/releases/latest) (GitHub Latest). Zip: **`GEVR-Beta-vr442-win64.zip`**. Full zip, two bats, no ROM. You bring a USA GoldenEye `.z64`. Play steps: [README Play](../README.md#play-vr442---the-one-to-grab). Tag: [vr442](https://github.com/no6969el/GEVR/releases/tag/vr442).
 
 **Star** the repo and [**follow @no6969el**](https://github.com/no6969el). **Watch -> Releases** so the next zip shows up without you refreshing every day.
 
-- **vr441** stays published (full chair boot; not Latest).
-- **vr440** stays published for comparison. Same era exe family, picture-only boot. Not Latest.
+- **vr441** / **vr440** tag pages stay. Their **zips were stripped**. Do not download those tags.
 - **vr434** was pulled (baked ROM images).
 - **vr438** was BYO-ROM with a stub VR boot. Do not use.
 - **vr439** zip removed when vr440 shipped. Tag page stays.
@@ -16,22 +15,22 @@
 - Auto-Aim defaults OFF. Pause watch: left stick moves the highlight in VR. **B** reloads. Pause is the Menu / system button (Tab on keyboard / monitor).
 - **Pimax Crystal Super + SteamVR OpenXR** via [CustomHeadsetOpenVR](https://github.com/sboys3/CustomHeadsetOpenVR), **native PimaxXR**, **Quest 3 + Virtual Desktop OpenXR (VDXR)**.
 - 72 / 80 should work. Default / recommended is **90**. Over 90 is still beta-test territory - please report issues. We do not call 120 / 144 signed off.
-- Tank auto-mount on the chassis + stick pitch for shells.
-- Grenade launcher single-shot. Rockets nose along the flight path.
-- Die / continue / pad reload fixed ([issue #38](https://github.com/no6969el/GEVR/issues/38)).
-- Far character visibility boost. Empty left hand is a temporary cube.
+- Tank auto-mount and stick pitch for tank shells.
+- GL single-shot / muzzle feel OK (projectile-spawn experiment left off). Rockets nose along the flight path.
+- Die / continue reload no longer dumps you in junk space ([issue #38](https://github.com/no6969el/GEVR/issues/38) SETUPCOPY).
+- Far guards more visible (007 far-vis). Empty left hand is a temporary cube.
 - Hard-crash writes `gevr-fault-*.txt` beside the exe.
-- Dual-wield fire, per-hand tracers, thrown grenades, Magnum / ammo polish - already in this zip from recent cooks.
 - Local / split-screen multiplayer works on a monitor.
 
 ## Cooking for a later update
 
-Soft list only. Do **not** treat these as shipped on vr442.
+Soft list only. Matches the [vr442 RELEASE-NOTES](https://github.com/no6969el/GEVR/releases/tag/vr442). Do **not** treat these as shipped.
 
-- Two-hand support snap, and the cube hiding when your hands get near
-- Hertz: still 90-pinned in boot. Runtime request is [issue #49](https://github.com/no6969el/GEVR/issues/49) for a later EXE
-- Ghost empty hand (parked). Nicer hands after that
-- Big object / plane-shell explosion hard crash can still happen (fault file now)
+- Two-hand snap is still cooking (coming later)
+- Higher Hertz requests are not signed off yet - stick to 72 / 80 / 90 for now ([issue #49](https://github.com/no6969el/GEVR/issues/49))
+- Ghost hand is parked for this cut. Empty left hand cube is temporary
+- Gun vanish below chest (GUNZ / HANDSOLID) left off until fixed
+- Big explosion / plane shell can still hard-crash (the fault file helps)
 
 ## Later (separate track)
 

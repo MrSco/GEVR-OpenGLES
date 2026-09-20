@@ -2,14 +2,14 @@
 
 How to move, aim, and reset your position in [GEVR Beta vr442](https://github.com/no6969el/GEVR/releases/latest).
 
-Play steps: [README Play](../README.md#play-vr442---the-one-to-grab). Download: [Latest zip](https://github.com/no6969el/GEVR/releases/latest). Tester notes: [BETA.md](BETA.md). Pitch: [FEATURES.md](../FEATURES.md). What is next: [ROADMAP.md](ROADMAP.md). How to report: [CONTRIBUTING.md](../CONTRIBUTING.md).
+Play steps: [README Play](../README.md#play-vr442---the-one-to-grab). Download: [`GEVR-Beta-vr442-win64.zip`](https://github.com/no6969el/GEVR/releases/latest) ([Latest](https://github.com/no6969el/GEVR/releases/latest) / [vr442](https://github.com/no6969el/GEVR/releases/tag/vr442)). Tester notes: [BETA.md](BETA.md). Pitch: [FEATURES.md](../FEATURES.md). What is next: [ROADMAP.md](ROADMAP.md). How to report: [CONTRIBUTING.md](../CONTRIBUTING.md).
 
 ## Which bat
 
 - **Headset:** `Start-GEVR.bat` - KEEP VR picture (XR stereo source, SrcFbo, supersample 3, sky / playspace) plus recenter / stick-turn.
 - **Monitor / no headset:** `Play-on-monitor.bat` - VR off, no stereo eyes. This is also the path for **local split-screen**.
 
-Use those bats from the vr442 zip. Do not double-click `goldeneye.exe`. Bare exe can skip the ROM cache update and leave VR input off.
+Use those bats from **`GEVR-Beta-vr442-win64.zip`**. Do not double-click `goldeneye.exe`. Bare exe can skip the ROM cache update and leave VR input off.
 
 ## Reset position (recenter)
 
@@ -44,14 +44,15 @@ After recenter, standing still and turning your head should not slide the world.
 | **A** | Cycle weapon |
 | **Squeeze / grip** | ADS / aim mark on the gun ray (not stuck in face centre) |
 
-**vr442:** Auto-Aim defaults **OFF** in this build. Dual-wield fire and per-hand tracers are in this zip. Two-hand support snap (and hiding the cube when hands get near) is **not** shipped yet.
+**vr442:** Auto-Aim defaults **OFF** in this build. Two-hand snap is **not** shipped yet (still cooking).
 
-Thrown grenades follow the hand. Rockets point their nose along the flight path. Grenade launcher is single-shot.
+Rockets point their nose along the flight path. Grenade launcher is single-shot / muzzle feel OK (projectile-spawn experiment left off).
 
 ## Hands (vr442)
 
-- **Empty left hand** shows a temporary cube (MASK left) so you can see where it is.
-- Ghost fingers are parked. Nicer hands come later. See [COMING-SOON.md](COMING-SOON.md).
+- **Empty left hand** draws a cube for now (temporary stand-in).
+- Ghost hand is parked for this cut. Nicer hands come later. See [COMING-SOON.md](COMING-SOON.md).
+- Gun vanish below chest (GUNZ / HANDSOLID) is left off until fixed.
 
 ## Tank (vr442)
 
@@ -65,7 +66,7 @@ Thrown grenades follow the hand. Rockets point their nose along the flight path.
 - **Menu / system button** opens pause and options in headset (not B, not Y). **Tab** still works on keyboard / monitor.
 - In the **pause watch**, **left stick** moves the menu highlight in VR.
 - Face-button confirm in menus is still partly wired. If a face button does nothing, that may still be a known gap - file an Issue with your headset and bat.
-- Die / continue / pad reload should work in the same process now ([issue #38](https://github.com/no6969el/GEVR/issues/38)). If it still breaks, quit the exe, run the bat again, and report it.
+- Die / continue reload should no longer dump you in junk space ([issue #38](https://github.com/no6969el/GEVR/issues/38) SETUPCOPY). If it still breaks, quit the exe, run the bat again, and report it.
 
 ## Cinema / menus
 
@@ -73,7 +74,7 @@ While the flat cinema or frontend menus are up, you are in a small hub room look
 
 ## Getting VR working
 
-GEVR uses **OpenXR**. Which runtime Windows hands us matters. Current zip: [README Play](../README.md#play-vr442---the-one-to-grab) / [Latest release](https://github.com/no6969el/GEVR/releases/latest).
+GEVR uses **OpenXR**. Which runtime Windows hands us matters. Current zip: [README Play](../README.md#play-vr442---the-one-to-grab) / [`GEVR-Beta-vr442-win64.zip`](https://github.com/no6969el/GEVR/releases/latest).
 
 **Verified on vr442:**
 
@@ -81,9 +82,9 @@ GEVR uses **OpenXR**. Which runtime Windows hands us matters. Current zip: [READ
 - **Native PimaxXR**
 - **Quest 3 + Virtual Desktop OpenXR (VDXR)**
 
-**Hz:** 72 / 80 should work. Default and wear recommendation is **90**. The headset bat is still **90-pinned**. Over 90 is still beta-test territory. Try it and [file an Issue](https://github.com/no6969el/GEVR/issues/new/choose) if it feels off. We do not call 120 / 144 signed off. Runtime Hertz request is later ([issue #49](https://github.com/no6969el/GEVR/issues/49)).
+**Hz:** 72 / 80 should work. **90 Hz** is recommended (default). Over 90 is still beta-test territory. Higher Hertz requests are not signed off - stick to 72 / 80 / 90 for now. We do not call 120 / 144 signed off ([issue #49](https://github.com/no6969el/GEVR/issues/49)).
 
-**Headset recipe:** unzip vr442, run **`Start-GEVR.bat`**, point at your USA `.z64`, put the headset on, recenter with both stick clicks.
+**Headset recipe:** unzip **`GEVR-Beta-vr442-win64.zip`**, run **`Start-GEVR.bat`**, point at your USA `.z64`, put the headset on, recenter with both stick clicks.
 
 **No headset:** **`Play-on-monitor.bat`** (flat 2D, no OpenXR).
 

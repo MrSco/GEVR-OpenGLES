@@ -17,10 +17,10 @@ Bring your own USA GoldenEye .z64. No ROM in the zip.
 
 Cooking (do not call these shipped)
 -----------------------------------
-- Two-hand support snap, and the cube hiding when hands get near
-- Hertz: still 90-pinned in boot. Runtime request is issue #49
-  for a later EXE
+- Two-hand snap is still cooking (coming later)
+- Higher Hertz requests are not signed off yet - stick to 72/80/90
 - See-through ghost fingers for the empty hand (parked; cube is interim)
+- Gun vanish below chest (GUNZ / HANDSOLID) left off until fixed
 - Nicer hands after the ghost hand
 - Explosion arena raise (fault file is already in vr442)
 

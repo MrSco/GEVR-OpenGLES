@@ -8,9 +8,9 @@
 
 The N64 classic you can finally *stand inside* - not an emulator overlay, not a flat game with a headset stuck on. GEVR is a from-source PC port of *GoldenEye 007* built for real OpenXR VR. You supply a **USA GoldenEye ROM you legally own**; the starter prepares a local cache and **`Start-GEVR.bat`** launches through **GevrRomStarter** (not bare `goldeneye.exe`).
 
-**Latest playable cut:** [**GEVR Beta vr442**](https://github.com/no6969el/GEVR/releases/latest) - public Beta (BYO-ROM, file-backed images from your cart). Download it, unzip, play.
+**Latest playable cut:** [**GEVR Beta vr442**](https://github.com/no6969el/GEVR/releases/latest) - public Beta (BYO-ROM, file-backed images from your cart). Zip: **`GEVR-Beta-vr442-win64.zip`**. Download it, unzip, play.
 
-**vr441** and **vr440** stay on Releases for history. Grab **vr442** unless you are deliberately comparing older boots.
+**vr441** and **vr440** tag pages stay for history. Their **zips are gone**. Grab [**vr442**](https://github.com/no6969el/GEVR/releases/tag/vr442).
 
 If this brings you back, **Star** the repo and [**follow @no6969el**](https://github.com/no6969el) so you can catch the next drops. **Watch -> Releases** if you want a ping when we ship. Between cuts, we keep a [living status on Reddit](https://www.reddit.com/r/QuietWindows/comments/1whmk8l/gevr_living_status_goldeneye_in_native_openxr_vr/) - honest fan wear notes, not a second readme. Want to fund the next cuts? [Patreon](https://www.patreon.com/cw/GEVR) - the zip stays free.
 
@@ -20,7 +20,7 @@ If this brings you back, **Star** the repo and [**follow @no6969el**](https://gi
 
 ## Play (vr442 - the one to grab)
 
-1. Download the **[Latest Release zip](https://github.com/no6969el/GEVR/releases/latest)** (exe, `glew32.dll`, other runtime DLLs, ROM starter, launcher, notes). **No ROM inside the zip.**
+1. Download **[`GEVR-Beta-vr442-win64.zip`](https://github.com/no6969el/GEVR/releases/latest)** from [Latest](https://github.com/no6969el/GEVR/releases/latest) / [tag vr442](https://github.com/no6969el/GEVR/releases/tag/vr442) (exe, `glew32.dll`, other runtime DLLs, ROM starter, launcher, notes). **No ROM inside the zip.**
 2. Unzip anywhere.
 3. Run **`Start-GEVR.bat`** - it sets VR boot knobs and starts **GevrRomStarter.exe**.
 4. Point at your **USA GoldenEye `.z64`** when asked. Images extract to `%LOCALAPPDATA%\\GEVR\\cache\\<ROM-hash>\\`. Each Beta tag bumps a **ship stamp** so the first launch after an update rebuilds that cache once from your ROM.
@@ -36,42 +36,38 @@ No ROM in the download. You bring yours.
 
 - **New install:** first launch waits once while images prepare into `%LOCALAPPDATA%\\GEVR\\cache`, then you play. Saves start empty.
 - **Returning after a Beta update:** keep the same USA `.z64`. The ship stamp forces **one** automatic re-prepare. **Saves are kept.** You do not delete the cache folder for a normal update.
-- **Picture still looks wrong:** run **`Clear-GEVR-cache.bat`** from the zip (type **YES**) to wipe cache only. Optional last resort: delete `%LOCALAPPDATA%\\GEVR` (that also drops saves). See `RELEASE-NOTES.txt` in the zip.
+- **Picture still looks wrong:** the tag notes say delete `%LOCALAPPDATA%\\GEVR` and run the bat again (that also drops saves). Prefer **`Clear-GEVR-cache.bat`** first (type **YES**) if you want to keep saves. See `RELEASE-NOTES.txt` in the zip.
 
 ---
 
 ## What is new in vr442
 
-Internal cook **452**. Same honest Beta, more of the chair wear you asked for.
+From the [vr442 RELEASE-NOTES](https://github.com/no6969el/GEVR/releases/tag/vr442). Internal cook **452**.
 
-- **Tank auto-mount** when you are standing on the chassis. **Stick pitch** aims the shells (yaw already worked).
-- **Grenade launcher** is single-shot again - no more double-spawn or blasting your own feet.
-- **Rockets** point their nose along the flight path.
-- **Die / continue / pad reload** no longer needs a full quit of `goldeneye.exe` ([issue #38](https://github.com/no6969el/GEVR/issues/38)).
-- **Far characters** are easier to see (007 visibility boost).
-- **Empty left hand** shows a temporary cube (MASK left) so you know where it is.
-- **Hard-crash fault file** - if the exe dies hard, look for `gevr-fault-*.txt` beside it. That file helps us dig big-explosion crashes.
+- **Tank auto-mount** and **stick pitch** for tank shells
+- **GL** single-shot / muzzle feel OK (projectile-spawn experiment left off)
+- **Rockets** point their nose along the flight path
+- **Die / continue reload** no longer dumps you in junk space ([#38](https://github.com/no6969el/GEVR/issues/38) SETUPCOPY)
+- **Far guards** are more visible (007 far-vis)
+- **Empty left hand** draws a cube for now (temporary stand-in)
+- Hard crashes can leave a **`gevr-fault-*.txt`** beside `goldeneye.exe` to help reports
 
-**Already in this zip** from recent cooks (still true on vr442):
+Same chair keepers as vr441 are still on (bodies stay, explosion / fire color, tuned aim). Dual-wield fire and gun-aim keepers from recent cooks stay in this zip.
 
-- Dual-wield fire from each hand, not a right-hand mirror
-- Per-hand tracers that stay on their own beam
-- Thrown grenades follow the hand
-- Magnum drum / ammo HUD polish
-- Full chair boot from vr441 (bodies stay after kills, explosion / fire color, tuned aim / ADS)
-
-Full player notes ship inside the zip as `RELEASE-NOTES.txt`.
+Full player notes ship inside the zip as `RELEASE-NOTES.txt` and on the [tag](https://github.com/no6969el/GEVR/releases/tag/vr442).
 
 ---
 
 ## What's cooking (later update)
 
-Soft list only. **Not** in the vr442 zip as finished work. Do not treat these as shipped.
+Soft list only. Matches the tag's **Still rough / coming soon**. Do not treat these as shipped.
 
-- Two-hand support snap, and the cube hiding when your hands get near
-- Hertz: boot is still **90-pinned**. Runtime refresh request is [issue #49](https://github.com/no6969el/GEVR/issues/49) for a later EXE
-- Ghost hand is parked. Nicer hands after that
-- Big object / plane-shell explosion hard crash can still happen (you now get the fault file)
+- Two-hand snap is still cooking (coming later)
+- Higher Hertz requests are not signed off yet - stick to 72 / 80 / 90 for now ([issue #49](https://github.com/no6969el/GEVR/issues/49))
+- Ghost hand is parked for this cut
+- Empty left hand cube is temporary
+- Gun vanish below chest (GUNZ / HANDSOLID) left off until fixed
+- Big explosion / plane shell can still hard-crash (the fault file helps)
 
 Stay tuned. **Star** this repo and [**follow @no6969el**](https://github.com/no6969el). **Watch -> Releases** for the next zip.
 
@@ -87,7 +83,7 @@ Stay tuned. **Star** this repo and [**follow @no6969el**](https://github.com/no6
 - **Boot that actually hands over** - the bat sets FPS + stereo / view-restore so eyes fuse.
 - **Movement feel** locked to the 90 Hz loco reference we preferred in the chair.
 
-**Older tag (history):** **vr434** was pulled because ROM-derived images were still linked into `goldeneye.exe`. The tag page stays; do not use an old vr434 download. **vr440** is still published if you want to compare the picture-only boot.
+**Older tags (history only):** **vr434** was pulled (ROM images baked into `goldeneye.exe`). **vr441** / **vr440** tag pages stay; their **zips were stripped**. Do not hunt an old zip. Play [vr442](https://github.com/no6969el/GEVR/releases/latest).
 
 ---
 
@@ -102,7 +98,7 @@ These paths are what this Beta was built and stared on:
 | **Meta Quest 3 + Virtual Desktop OpenXR (VDXR)** | Verified attach / play |
 | **RTX 5060 laptop + Quest 3 + Virtual Desktop VDXR** | BarZ wear **vr441**, 2026-09-17; ran surprisingly well (one data point, not a minimum spec) |
 
-**Refresh rates:** 72 Hz and 80 Hz should work. Default and wear recommendation is **90**. Anything **over 90** is still beta-test territory - try it, and [file an Issue](https://github.com/no6969el/GEVR/issues/new/choose) if something feels off. We do **not** call 120 / 144 signed off. The public boot is still **90-pinned**; asking the runtime for another rate is later ([issue #49](https://github.com/no6969el/GEVR/issues/49)).
+**Refresh rates:** 72 Hz and 80 Hz should work. **90 Hz** is recommended (default). Over 90 is still beta-test territory - try it, and [file an Issue](https://github.com/no6969el/GEVR/issues/new/choose) if something feels off. Higher Hertz requests are **not** signed off. Stick to 72 / 80 / 90 for now. We do **not** call 120 / 144 signed off ([issue #49](https://github.com/no6969el/GEVR/issues/49)).
 
 When you report a bug or crash, please include: **headset**, **OpenXR runtime**, **SteamVR on/off**, **HMD vs monitor**, whether you used **`Start-GEVR.bat`**, your **`gevr-*-boot.cmd`** filename from the zip folder, any log next to the zip or in the console, and any **`gevr-fault-*.txt`** beside the exe. Do **not** upload your ROM. [Open an Issue](https://github.com/no6969el/GEVR/issues/new/choose).
 
@@ -119,7 +115,8 @@ We would rather tell you than surprise you. These are **vr442 today**.
 - **Glass bullet holes** can still show in one eye.
 - **HUD text** can sit too close or hard to read in depth.
 - **Headset refresh:** public boot stays 90-pinned. Some Virtual Desktop / runtime setups only enter VR at 90 Hz - [issue #49](https://github.com/no6969el/GEVR/issues/49).
-- Empty left hand is a **cube** for now. Ghost fingers and nicer hands are later.
+- Empty left hand is a **cube** for now (temporary stand-in). Ghost fingers are parked.
+- **Gun vanish below chest** (GUNZ / HANDSOLID) is left off until it is fixed.
 - Expect occasional **crashes** while we keep optimizing.
 - We are **not** promising full-body Bond or fancy glove meshes yet.
 
@@ -154,9 +151,10 @@ More pitch and cover energy: [FEATURES.md](FEATURES.md).
 - Local / split-screen multiplayer on a monitor
 
 **Cooking**
-- Two-hand support snap and cube hide-on-near
-- Runtime Hertz request ([issue #49](https://github.com/no6969el/GEVR/issues/49))
+- Two-hand snap (coming later)
+- Higher Hertz request ([issue #49](https://github.com/no6969el/GEVR/issues/49))
 - Ghost empty hand (parked); nicer mesh after that
+- Gun vanish below chest (GUNZ / HANDSOLID)
 - Softer landings when the big explosions go loud
 
 **Later**
